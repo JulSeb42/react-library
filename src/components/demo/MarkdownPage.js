@@ -15,6 +15,7 @@ import DemoShadows from "./DemoShadows"
 import Wrapper from "../layouts/Wrapper"
 import Main from "../layouts/Main"
 import Aside from "../layouts/Aside"
+import Icon from "../ui/Icon"
 
 const options = {
     forceBlock: true,
@@ -124,6 +125,7 @@ const options = {
         Wrapper,
         Main,
         Aside,
+        Icon,
     },
 }
 

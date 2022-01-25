@@ -1,3 +1,3 @@
-const pages = ["index", "colors", "fonts", "shadows", "container"]
+const pages = ["index", "colors", "fonts", "shadows", "container", "icon"]
 
 export default pages
