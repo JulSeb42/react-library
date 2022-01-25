@@ -1,19 +1,25 @@
 // Packages
 import React from "react"
-import { Link } from "react-router-dom"
+import styled from "styled-components"
 
 // Components
 import * as Font from "../components/styles/Font"
+import * as Variables from "../components/styles/Variables"
+
+// Styles
+const Container = styled.main`
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: ${Variables.Margins.S};
+    margin-left: 200px;
+    padding: ${Variables.Margins.XXL};
+`
 
 function NotFound(props) {
     return (
-        <div>
+        <Container>
             <Font.H1>Not found!</Font.H1>
-
-            <Font.P>
-                <Link to="/">Back to homepage</Link>
-            </Font.P>
-        </div>
+        </Container>
     )
 }
 

@@ -152,7 +152,8 @@ export const Radiuses = {
 // Container template
 export const Container = {
     Template1Col: "1fr 600px 1fr",
-    Template2Cols: "1fr 250px 600px 1fr",
+    TemplateAsideLeft: "1fr 250px 600px 1fr",
+    TemplateAsideRight: "1fr 600px 250px 1fr",
     TemplateForm: "1fr 400px 1fr",
     Column: 2,
     Padding: `${Margins.XXL} 0`,

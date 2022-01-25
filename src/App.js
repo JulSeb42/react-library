@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom"
 // Components
 import DemoNav from "./components/demo/DemoNav"
 import MarkdownPage from "./components/demo/MarkdownPage"
+import NotFound from "./pages/NotFound"
 
 // Styles
 import GlobalStyles from "./components/styles/GlobalStyles"
@@ -16,10 +17,12 @@ function App() {
     return (
         <>
             <GlobalStyles />
-            
+
             <DemoNav />
 
             <Routes>
+                <Route path="*" element={<NotFound />} />
+
                 {pages.map((page, i) => (
                     <Route
                         path={`/${page === "index" ? "" : page}`}
