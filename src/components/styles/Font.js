@@ -264,7 +264,7 @@ export const List = styled.ul`
                 size: 16,
                 color: "currentColor",
             })}
-            margin-top: 1px;
+            margin-top: 4.5px;
         }
     }
 `
