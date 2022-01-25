@@ -11,6 +11,7 @@ import CodeContainer from "./CodeContainer"
 // Components to import
 import Grid from "../layouts/Grid"
 import DemoColors from "../demo/DemoColors"
+import DemoShadows from "./DemoShadows"
 
 const options = {
     forceBlock: true,
@@ -120,6 +121,10 @@ const options = {
 
         pre: {
             component: CodeContainer,
+        },
+
+        DemoShadows: {
+            component: DemoShadows,
         },
     },
 }
