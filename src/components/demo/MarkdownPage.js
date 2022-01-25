@@ -16,6 +16,7 @@ import Wrapper from "../layouts/Wrapper"
 import Main from "../layouts/Main"
 import Aside from "../layouts/Aside"
 import Icon from "../ui/Icon"
+import Image from "../ui/Image"
 
 const options = {
     forceBlock: true,
@@ -119,6 +120,10 @@ const options = {
             component: CodeContainer,
         },
 
+        img: {
+            component: Image,
+        },
+
         DemoColors,
         Grid,
         DemoShadows,
@@ -126,6 +131,7 @@ const options = {
         Main,
         Aside,
         Icon,
+        Image,
     },
 }
 

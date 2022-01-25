@@ -67,10 +67,10 @@ export const Colors = {
 // Overlays
 export const Overlays = {
     Plain: {
-        Black50: `rgba(${Colors.Black}, 0.5)`,
-        Black80: `rgba(${Colors.Black}, 0.8)`,
-        White50: `rgba(${Colors.White}, 0.5)`,
-        White80: `rgba(${Colors.White}, 0.8)`,
+        Black50: "rgba(0, 0, 0, 0.5)",
+        Black80: "rgba(0, 0, 0, 0.8)",
+        White50: "rgba(255, 255, 255, 0.5)",
+        White80: "rgba($255, 255, 255, 0.8)",
     },
 
     Gradient: {

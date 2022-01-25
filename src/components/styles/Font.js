@@ -3,7 +3,6 @@ import styled, { css } from "styled-components"
 
 // Components
 import * as Variables from "./Variables"
-import { IconMixin } from "../ui/Icon"
 
 // Styles
 // Styles
@@ -233,15 +232,17 @@ export const List = styled.ul`
     padding: 0;
     margin: 0;
     font-size: ${Variables.FontSizes.Body};
-    padding-left: calc(${Variables.Margins.M} - 2px);
+    padding-left: ${Variables.Margins.S};
     display: grid;
     grid-template-columns: 1fr;
     gap: ${Variables.Margins.XS};
+    list-style: none;
 
     li {
-        --icon-size: 16px;
-        display: grid;
-        grid-template-columns: var(--icon-size) 1fr;
+        padding-inline-start: ${Variables.Margins.XS};
+        line-height: calc(
+            ${Variables.LineHeight} * ${Variables.FontSizes.Body}
+        );
 
         a {
             color: ${Variables.Colors.Primary500};
@@ -258,13 +259,8 @@ export const List = styled.ul`
             }
         }
 
-        &:before {
-            ${IconMixin({
-                icon: "chevron-right",
-                size: 16,
-                color: "currentColor",
-            })}
-            margin-top: 4.5px;
+        &::marker {
+            content: url(/icons/list-marker.svg);
         }
     }
 `

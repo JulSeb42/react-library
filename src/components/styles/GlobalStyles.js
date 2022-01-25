@@ -14,10 +14,6 @@ const GlobalStyles = createGlobalStyle`
         font-weight: ${Variables.FontWeights.Regular};
         line-height: ${Variables.LineHeight};
     }
-
-    .sc-ksdxgE.jUVESz {
-        padding: ${Variables.Margins.M} !important;
-    }
 `
 
 export default GlobalStyles

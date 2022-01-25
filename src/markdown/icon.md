@@ -24,3 +24,17 @@ name: string, mandatory (name of the icon without ".svg")
 size: number, mandatory
 color: string / variable, not mandatory (default "currentColor")
 ```
+
+## Mixin
+
+You can also use a mixin with styled components: 
+
+```
+div:before {
+    ${IconMixin({
+        icon: "name-of-icon",
+        size: 12,
+        color: "black",
+    })}
+}
+```
