@@ -21,6 +21,7 @@ const Container = styled.button`
     display: inline-flex;
     align-items: center;
     text-align: center;
+    text-decoration: none;
 
     &:disabled {
         cursor: not-allowed;

@@ -8,10 +8,13 @@ import * as Font from "../styles/Font"
 import PageLayout from "./PageLayout"
 import CodeContainer from "./CodeContainer"
 
-// Components to import
-import Grid from "../layouts/Grid"
+// Demo components
 import DemoColors from "../demo/DemoColors"
 import DemoShadows from "./DemoShadows"
+import DemoInputs from "./DemoInputs"
+
+// Components to import
+import Grid from "../layouts/Grid"
 import Wrapper from "../layouts/Wrapper"
 import Main from "../layouts/Main"
 import Aside from "../layouts/Aside"
@@ -23,6 +26,11 @@ import Button from "../ui/Button"
 import ButtonIcon from "../ui/ButtonIcon"
 import Tag from "../ui/Tag"
 import Badge from "../ui/Badge"
+import Input from "../ui/Input"
+import CheckInput from "../ui/CheckInput"
+import ListSuggestions from "../ui/ListSuggestions"
+import ButtonsContainer from "../ui/ButtonsContainer"
+import Form from "../ui/Form"
 
 const options = {
     forceBlock: true,
@@ -131,8 +139,10 @@ const options = {
         },
 
         DemoColors,
-        Grid,
         DemoShadows,
+        DemoInputs,
+
+        Grid,
         Wrapper,
         Main,
         Aside,
@@ -144,6 +154,11 @@ const options = {
         ButtonIcon,
         Tag,
         Badge,
+        Input,
+        CheckInput,
+        ListSuggestions,
+        ButtonsContainer,
+        Form,
     },
 }
 

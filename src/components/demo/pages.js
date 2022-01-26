@@ -11,6 +11,9 @@ const pages = [
     "button",
     "tag",
     "badge",
+    "input",
+    "buttons-container",
+    "form",
 ]
 
 export default pages

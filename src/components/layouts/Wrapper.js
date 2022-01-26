@@ -13,6 +13,8 @@ const Wrapper = styled.div`
             ? Variables.Container.TemplateAsideLeft
             : props.template === "aside-right"
             ? Variables.Container.TemplateAsideRight
+            : props.template === "form"
+            ? Variables.Container.TemplateForm
             : "" || Variables.Container.Template1Col};
     padding: ${Variables.Container.Padding};
 

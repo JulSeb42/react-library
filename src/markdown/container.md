@@ -51,3 +51,9 @@
     </Aside>
 </Wrapper>
 ```
+
+<Wrapper template="form">
+    <Main>
+        ## Container for form pages
+    </Main>
+</Wrapper>

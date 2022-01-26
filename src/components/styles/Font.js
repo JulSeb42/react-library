@@ -172,7 +172,7 @@ export const P = styled.p`
 `
 
 export const Small = styled.small`
-    font-size: ${Variables.FontSizes.Label};
+    font-size: ${Variables.FontSizes.Small};
     font-style: italic;
     color: ${Variables.Colors.Gray500};
 
