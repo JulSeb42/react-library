@@ -66,6 +66,7 @@ const InputStyled = styled.input`
     ${props =>
         props.validation &&
         props.validation !== "passed" &&
+        props.value.length > 0 &&
         css`
             background-color: ${Variables.Colors.Danger50};
 
