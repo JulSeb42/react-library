@@ -1,6 +1,6 @@
 // Packages
 import React from "react"
-import { Link } from "react-router-dom"
+import Link from "../components/utils/LinkScroll"
 
 // Components
 import * as Font from "../components/styles/Font"

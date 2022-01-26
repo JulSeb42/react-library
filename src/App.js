@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom"
 import DemoNav from "./components/demo/DemoNav"
 import MarkdownPage from "./components/demo/MarkdownPage"
 import NotFound from "./pages/NotFound"
+import scrollToTop from "./components/utils/scrollToTop"
 
 // Styles
 import GlobalStyles from "./components/styles/GlobalStyles"
@@ -25,8 +26,9 @@ function App() {
 
                 {pages.map((page, i) => (
                     <Route
-                        path={`/${page === "index" ? "" : page}`}
-                        element={<MarkdownPage content={page} />}
+                        path={`/${page === "index" ? "" : page.toLowerCase()}`}
+                        element={<MarkdownPage content={page.toLowerCase()} />}
+                        preload={scrollToTop()}
                         key={i}
                     />
                 ))}

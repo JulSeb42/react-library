@@ -1,7 +1,7 @@
 // Packages
 import React, { useState, useEffect } from "react"
 import Markdown from "markdown-to-jsx"
-import { Link } from "react-router-dom"
+import Link from "../utils/LinkScroll"
 
 // Components
 import * as Font from "../styles/Font"
@@ -17,6 +17,7 @@ import Main from "../layouts/Main"
 import Aside from "../layouts/Aside"
 import Icon from "../ui/Icon"
 import Image from "../ui/Image"
+import Video from "../ui/Video"
 
 const options = {
     forceBlock: true,
@@ -132,6 +133,7 @@ const options = {
         Aside,
         Icon,
         Image,
+        Video,
     },
 }
 
@@ -139,7 +141,7 @@ function MarkdownPage({ content }) {
     const [post, setPost] = useState("")
 
     useEffect(() => {
-        import(`../../markdown/${content}.md`)
+        import(`../../markdown/${content.toLowerCase()}.md`)
             .then(res => {
                 fetch(res.default)
                     .then(res => res.text())

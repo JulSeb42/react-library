@@ -63,13 +63,12 @@ function AsyncImage(props) {
 
     if (loadedSrc === props.src) {
         return props.caption ? (
-            <Container width={props.width} height={props.height}>
+            <Container width={props.width} height={props.height} {...props}>
                 <Img
                     width={props.width}
                     height={props.height}
                     src={props.src}
                     alt={props.alt}
-                    {...props}
                 />
 
                 <Caption>{props.caption}</Caption>
