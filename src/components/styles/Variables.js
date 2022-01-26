@@ -101,7 +101,7 @@ export const Margins = {
 }
 
 // Font family
-export const FontFamily = {
+export const FontFamilies = {
     Body: '"Lato", sans-serif',
     Code: "Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New",
 }

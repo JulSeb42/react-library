@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
     body {
         background-color: ${Variables.Colors.White};
         color: ${Variables.Colors.Black};
-        font-family: ${Variables.FontFamily.Body};
+        font-family: ${Variables.FontFamilies.Body};
         font-weight: ${Variables.FontWeights.Regular};
         line-height: ${Variables.LineHeight};
     }

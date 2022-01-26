@@ -19,6 +19,8 @@ import Icon from "../ui/Icon"
 import Image from "../ui/Image"
 import Video from "../ui/Video"
 import Avatar from "../ui/Avatar"
+import Button from "../ui/Button"
+import ButtonIcon from "../ui/ButtonIcon"
 
 const options = {
     forceBlock: true,
@@ -136,6 +138,8 @@ const options = {
         Image,
         Video,
         Avatar,
+        Button,
+        ButtonIcon,
     },
 }
 
