@@ -77,14 +77,15 @@
 ## Props
 
 ```
-btnstyle: string, required, can be plain, text or outline
-color: string, required, can be primary, secondary, success, danger, warning, white, or a custom color
+btnstyle: string, required, can be plain, text or outline, default plain
+color: string, required, can be primary, secondary, success, danger, warning, white, or a custom color, default primary
 colorHover: string, not required, if you are using a custom color
 colorActive: string, not required, if you are using a custom color
 justify: string, not required, in case the button is inside a grid
 iconleft: string, not required, name of the icon
 iconright: string, not required, name of the icon
 to: string, not required, if you want to use the button as a link
+nopadding: not required, if you want to have the paddings at 0
 ```
 
 ## With icon only

@@ -5,7 +5,3 @@ const convertYoutube = str => {
 }
 
 export default convertYoutube
-
-
-// https://www.youtube.com/watch?v=RZsRgBGfXz0
-// https://www.youtube.com/embed/RZsRgBGfXz0

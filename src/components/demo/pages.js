@@ -9,6 +9,7 @@ const pages = [
     "video",
     "avatar",
     "button",
+    "tag",
 ]
 
 export default pages

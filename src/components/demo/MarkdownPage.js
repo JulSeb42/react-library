@@ -21,6 +21,7 @@ import Video from "../ui/Video"
 import Avatar from "../ui/Avatar"
 import Button from "../ui/Button"
 import ButtonIcon from "../ui/ButtonIcon"
+import Tag from "../ui/Tag"
 
 const options = {
     forceBlock: true,
@@ -140,6 +141,7 @@ const options = {
         Avatar,
         Button,
         ButtonIcon,
+        Tag,
     },
 }
 

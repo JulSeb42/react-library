@@ -35,7 +35,7 @@ const Container = styled.button`
     }
 
     ${props =>
-        (props.btnstyle === "plain" || props.icon) &&
+        props.btnstyle === "plain" &&
         css`
             background-color: ${props =>
                 props.color === "primary"
@@ -266,7 +266,12 @@ const Container = styled.button`
 
 function Button(props) {
     return (
-        <Container as={props.to && Link} {...props}>
+        <Container
+            as={props.to && Link}
+            color={props.color || "primary"}
+            btnstyle={props.btnstyle || "plain"}
+            {...props}
+        >
             {props.iconleft && (
                 <Icon name={props.iconleft} size={16} className="icon-left" />
             )}
