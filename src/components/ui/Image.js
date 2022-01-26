@@ -1,13 +1,14 @@
 // Packages
-import React, { useState, useEffect } from "react"
+import React from "react"
 import styled, { css } from "styled-components"
+import Async from "react-async-image"
 
 // Components
 import * as Variables from "../styles/Variables"
 import * as Font from "../styles/Font"
 
 // Styles
-const Img = styled.img`
+const Img = styled(Async)`
     width: ${props => props.width || "100%"};
     height: ${props => props.height || "auto"};
     position: relative;
@@ -38,53 +39,28 @@ const Caption = styled(Font.P)`
     color: ${Variables.Colors.White};
 `
 
-function AsyncImage(props) {
-    const [loadedSrc, setLoadedSrc] = useState(null)
-
-    useEffect(() => {
-        setLoadedSrc(null)
-
-        if (props.src) {
-            const handleLoad = () => {
-                setLoadedSrc(props.src)
-            }
-
-            const image = new Image()
-
-            image.addEventListener("load", handleLoad)
-
-            image.src = props.src
-
-            return () => {
-                image.removeEventListener("load", handleLoad)
-            }
-        }
-    }, [props.src])
-
-    if (loadedSrc === props.src) {
-        return props.caption ? (
-            <Container width={props.width} height={props.height} {...props}>
-                <Img
-                    width={props.width}
-                    height={props.height}
-                    src={props.src}
-                    alt={props.alt}
-                />
-
-                <Caption>{props.caption}</Caption>
-            </Container>
-        ) : (
+function Image(props) {
+    return props.caption ? (
+        <Container width={props.width} height={props.height} {...props}>
             <Img
-                src={props.src}
-                alt={props.alt}
                 width={props.width}
                 height={props.height}
-                {...props}
+                src={props.src}
+                alt={props.alt}
+                fit={props.fit}
             />
-        )
-    }
 
-    return null
+            <Caption>{props.caption}</Caption>
+        </Container>
+    ) : (
+        <Img
+            src={props.src}
+            alt={props.alt}
+            width={props.width}
+            height={props.height}
+            {...props}
+        />
+    )
 }
 
-export default AsyncImage
+export default Image

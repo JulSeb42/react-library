@@ -20,9 +20,9 @@ Download icons and put them in `/public/icons`
 ## Props
 
 ```
-name: string, mandatory (name of the icon without ".svg")
-size: number, mandatory
-color: string / variable, not mandatory (default "currentColor")
+name: string, required (name of the icon without ".svg")
+size: number, required
+color: string / variable, not required (default "currentColor")
 ```
 
 ## Mixin

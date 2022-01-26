@@ -18,6 +18,7 @@ import Aside from "../layouts/Aside"
 import Icon from "../ui/Icon"
 import Image from "../ui/Image"
 import Video from "../ui/Video"
+import Avatar from "../ui/Avatar"
 
 const options = {
     forceBlock: true,
@@ -134,6 +135,7 @@ const options = {
         Icon,
         Image,
         Video,
+        Avatar,
     },
 }
 

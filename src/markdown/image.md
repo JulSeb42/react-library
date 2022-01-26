@@ -97,9 +97,9 @@
 ## Props
 
 ```
-src: mandatory, path to the image
-alt: mandatory, alt text for image
-width: not mandatory, default at 100%
-height: not mandatory, default at auto
-fit: not mandatory
+src: string, required, path to the image
+alt: string, required, alt text for image
+width: string, not required, default 100%
+height: string, not required, default auto
+fit: string, not required, possible values: cover, contain, fill, scale-down
 ```
