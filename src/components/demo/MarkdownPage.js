@@ -22,6 +22,7 @@ import Avatar from "../ui/Avatar"
 import Button from "../ui/Button"
 import ButtonIcon from "../ui/ButtonIcon"
 import Tag from "../ui/Tag"
+import Badge from "../ui/Badge"
 
 const options = {
     forceBlock: true,
@@ -142,6 +143,7 @@ const options = {
         Button,
         ButtonIcon,
         Tag,
+        Badge,
     },
 }
 

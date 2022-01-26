@@ -10,10 +10,10 @@ import Icon from "./Icon"
 const Container = styled.span`
     display: inline-flex;
     align-items: center;
-    cursor: ${props => props.color === "disabled" ? "not-allowed" : "pointer"};
     transition: ${Variables.Transitions.Short};
     padding: ${Variables.Margins.XXS} ${Variables.Margins.S};
-    border-radius: ${props => props.pill ? Variables.Radiuses.Round : Variables.Radiuses.M};
+    border-radius: ${props =>
+        props.pill ? Variables.Radiuses.Round : Variables.Radiuses.M};
 
     background-color: ${props =>
         props.color === "primary"
@@ -39,39 +39,46 @@ const Container = styled.span`
             ? Variables.Colors.Gray500
             : Variables.Colors.White};
 
-    &:hover {
-        background-color: ${props =>
-            props.color === "primary"
-                ? Variables.Colors.Primary300
-                : props.color === "secondary"
-                ? Variables.Colors.Secondary300
-                : props.color === "success"
-                ? Variables.Colors.Success300
-                : props.color === "danger"
-                ? Variables.Colors.Danger300
-                : props.color === "warning"
-                ? Variables.Colors.Warning300
-                : props.color === "white"
-                ? Variables.Colors.Gray100
-                : props.colorHover};
-    }
+    ${props =>
+        props.select &&
+        css`
+            cursor: ${props =>
+                props.color === "disabled" ? "not-allowed" : "pointer"};
 
-    &:active {
-        background-color: ${props =>
-            props.color === "primary"
-                ? Variables.Colors.Primary600
-                : props.color === "secondary"
-                ? Variables.Colors.Secondary600
-                : props.color === "success"
-                ? Variables.Colors.Success600
-                : props.color === "danger"
-                ? Variables.Colors.Danger600
-                : props.color === "warning"
-                ? Variables.Colors.Warning600
-                : props.color === "white"
-                ? Variables.Colors.Gray300
-                : props.colorActive};
-    }
+            &:hover {
+                background-color: ${props =>
+                    props.color === "primary"
+                        ? Variables.Colors.Primary300
+                        : props.color === "secondary"
+                        ? Variables.Colors.Secondary300
+                        : props.color === "success"
+                        ? Variables.Colors.Success300
+                        : props.color === "danger"
+                        ? Variables.Colors.Danger300
+                        : props.color === "warning"
+                        ? Variables.Colors.Warning300
+                        : props.color === "white"
+                        ? Variables.Colors.Gray100
+                        : props.colorHover};
+            }
+
+            &:active {
+                background-color: ${props =>
+                    props.color === "primary"
+                        ? Variables.Colors.Primary600
+                        : props.color === "secondary"
+                        ? Variables.Colors.Secondary600
+                        : props.color === "success"
+                        ? Variables.Colors.Success600
+                        : props.color === "danger"
+                        ? Variables.Colors.Danger600
+                        : props.color === "warning"
+                        ? Variables.Colors.Warning600
+                        : props.color === "white"
+                        ? Variables.Colors.Gray300
+                        : props.colorActive};
+            }
+        `}
 
     ${props =>
         props.justify &&
@@ -98,7 +105,6 @@ const Input = styled.input`
 const IconContainer = styled.label`
     cursor: ${props =>
         props.color === "disabled" ? "not-allowed" : "pointer"};
-
     width: 0;
     margin-left: 0;
     overflow: hidden;
@@ -109,27 +115,34 @@ function Tag(props) {
     return (
         <Container
             justify={props.justify}
-            color={props.color || "primary"}
+            color={props.color || "primary"}
             pill={props.pill}
+            select={props.select}
         >
-            <Input
-                type={props.type || "checkbox"}
-                id={props.id}
-                name={props.name}
-                {...props}
-            />
+            {props.select ? (
+                <>
+                    <Input
+                        type={props.type || "checkbox"}
+                        id={props.id}
+                        name={props.name}
+                        {...props}
+                    />
 
-            <Label htmlFor={props.id} color={props.color}>
-                {props.label}
-            </Label>
+                    <Label htmlFor={props.id} color={props.color}>
+                        {props.label}
+                    </Label>
 
-            <IconContainer
-                htmlFor={props.id}
-                className="icon"
-                color={props.color}
-            >
-                <Icon name="close" size={16} />
-            </IconContainer>
+                    <IconContainer
+                        htmlFor={props.id}
+                        className="icon"
+                        color={props.color}
+                    >
+                        <Icon name="close" size={16} />
+                    </IconContainer>
+                </>
+            ) : (
+                props.label
+            )}
         </Container>
     )
 }
