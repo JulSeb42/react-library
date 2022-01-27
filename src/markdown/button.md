@@ -70,9 +70,25 @@
 
 <Button btnstyle="plain" color="primary" justify="start" iconleft="send">Button</Button>
 
+```
+<Button btnstyle="plain" color="primary" justify="start" iconleft="send">Button</Button>
+```
+
 ## With icon right
 
 <Button btnstyle="plain" color="primary" justify="start" iconright="chevron-down">Button</Button>
+
+```
+<Button btnstyle="plain" color="primary" justify="start" iconright="chevron-down">Button</Button>
+```
+
+## Loading
+
+<Button btnstyle="plain" color="primary" justify="start" disabled loading={true}>Button</Button>
+
+```
+<Button btnstyle="plain" color="primary" justify="start" disabled loading={true}>Button</Button>
+```
 
 ## Props
 

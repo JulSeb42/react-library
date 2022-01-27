@@ -6,6 +6,7 @@ import styled, { css } from "styled-components"
 import * as Variables from "../styles/Variables"
 import Link from "../utils/LinkScroll"
 import Icon from "./Icon"
+import Loader from "./Loader"
 
 // Styles
 const Container = styled.button`
@@ -273,8 +274,20 @@ function Button(props) {
             btnstyle={props.btnstyle || "plain"}
             {...props}
         >
-            {props.iconleft && (
+            {!props.loading && props.iconleft && (
                 <Icon name={props.iconleft} size={16} className="icon-left" />
+            )}
+
+            {props.loading && (
+                <Loader
+                    size={16}
+                    backgroundcolor={
+                        props.btnstyle === "plain"
+                            ? Variables.Colors.Gray100
+                            : Variables.Colors.White
+                    }
+                    color="currentColor"
+                />
             )}
 
             {props.children}

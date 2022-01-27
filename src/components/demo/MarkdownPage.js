@@ -31,6 +31,7 @@ import CheckInput from "../ui/CheckInput"
 import ListSuggestions from "../ui/ListSuggestions"
 import ButtonsContainer from "../ui/ButtonsContainer"
 import Form from "../ui/Form"
+import Loader from "../ui/Loader"
 
 const options = {
     forceBlock: true,
@@ -159,6 +160,7 @@ const options = {
         ListSuggestions,
         ButtonsContainer,
         Form,
+        Loader,
     },
 }
 

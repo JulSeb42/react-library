@@ -14,6 +14,7 @@ const pages = [
     "input",
     "buttons-container",
     "form",
+    "loader",
 ]
 
 export default pages

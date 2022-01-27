@@ -9,6 +9,7 @@ import Input from "../ui/Input"
 import CheckInput from "../ui/CheckInput"
 import Grid from "../layouts/Grid"
 import ListSuggestions from "../ui/ListSuggestions"
+import InputImage from "../ui/InputImage"
 
 // Data
 import allCities from "./cities.json"
@@ -69,6 +70,20 @@ function DemoInputs(props) {
 
     const handleClickSuggestion = e => {
         setLocation(e.target.innerText)
+    }
+
+    // Input image
+    const [image, setImage] = useState("")
+
+    const handleImage = e => {
+        if (e.target.files[0]) {
+            setImage(e.target.files[0])
+            const reader = new FileReader()
+            reader.addEventListener("load", () => {
+                setImage(reader.result)
+            })
+            reader.readAsDataURL(e.target.files[0])
+        }
     }
 
     return (
@@ -257,6 +272,18 @@ function DemoInputs(props) {
                     value={location}
                     items={resultsCities}
                     onMouseDown={handleClickSuggestion}
+                />
+            </Grid>
+
+            <Grid gap={Variables.Margins.S}>
+                <Font.H2>Input image</Font.H2>
+
+                <InputImage
+                    label="Image"
+                    src={image}
+                    alt="Alt"
+                    onChange={e => handleImage(e)}
+                    id="image"
                 />
             </Grid>
         </Container>
