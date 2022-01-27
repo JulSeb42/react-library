@@ -26,6 +26,7 @@ import DemoDropdown from "./DemoDropdown"
 import DemoModal from "./DemoModal"
 import DemoPagination from "./DemoPagination"
 import DemoTabs from "./DemoTabs"
+import DemoSlideshow from "./DemoSlideshow"
 
 // Components to import
 import Grid from "../layouts/Grid"
@@ -182,6 +183,7 @@ const options = {
         DemoModal,
         DemoPagination,
         DemoTabs,
+        DemoSlideshow,
 
         Grid,
         Wrapper,

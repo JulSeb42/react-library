@@ -24,6 +24,7 @@ const pages = [
     "pagination",
     "progress-bar",
     "tabs",
+    "slideshow",
 ]
 
 export default pages
