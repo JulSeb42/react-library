@@ -4,6 +4,7 @@ import Markdown from "markdown-to-jsx"
 import Link from "../utils/LinkScroll"
 
 // Components
+import * as Variables from "../styles/Variables"
 import * as Font from "../styles/Font"
 import PageLayout from "./PageLayout"
 import CodeContainer from "./CodeContainer"
@@ -49,6 +50,7 @@ import {
 } from "../ui/Breadcrumbs"
 import { Accordion, AccordionItem } from "../ui/Accordion"
 import { DropdownContainer, Dropdown } from "../ui/Dropdown"
+import Alert from "../ui/Alert"
 
 const options = {
     forceBlock: true,
@@ -169,6 +171,7 @@ const options = {
         DemoAccordionBasic,
         DemoAccordionRounded,
         DemoDropdown,
+        Variables,
 
         Grid,
         Wrapper,
@@ -195,6 +198,7 @@ const options = {
         AccordionItem,
         Dropdown,
         DropdownContainer,
+        Alert,
     },
 }
 

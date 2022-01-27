@@ -108,7 +108,7 @@ const Content = styled(Font.P)`
 
 function Accordion(props) {
     return (
-        <AccordionContainer accordionstyle={props.accordionstyle || "basic"}>
+        <AccordionContainer accordionstyle={props.accordionstyle || "basic"} {...props}>
             {props.children}
         </AccordionContainer>
     )
@@ -118,7 +118,7 @@ function AccordionItem(props) {
     const [isOpen, setIsOpen] = useState(props.isOpen || false)
 
     return (
-        <Item>
+        <Item {...props}>
             <Button
                 className="open-accordion"
                 onClick={() => setIsOpen(!isOpen)}

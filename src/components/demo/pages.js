@@ -18,6 +18,7 @@ const pages = [
     "breadcrumbs",
     "accordion",
     "dropdown",
+    "alert",
 ]
 
 export default pages
