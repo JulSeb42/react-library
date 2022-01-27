@@ -29,6 +29,7 @@ function Form(props) {
                             iconleft={props.iconleftprimary}
                             iconright={props.iconrightprimary}
                             type="submit"
+                            loading={props.loading}
                         >
                             {props.btnprimary}
                         </Button>

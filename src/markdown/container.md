@@ -57,3 +57,11 @@
         ## Container for form pages
     </Main>
 </Wrapper>
+
+```
+<Wrapper template="form">
+    <Main>
+        
+    </Main>
+</Wrapper>
+```

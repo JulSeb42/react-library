@@ -162,10 +162,10 @@ export const P = styled.p`
         font-weight: ${Variables.FontWeights.Bold};
 
         &:hover {
-            color: ${Variables.Colors.Primary700};
+            color: ${Variables.Colors.Primary300};
         }
 
-        &.active {
+        &:active {
             color: ${Variables.Colors.Primary600};
         }
     }

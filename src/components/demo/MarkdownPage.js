@@ -11,7 +11,15 @@ import CodeContainer from "./CodeContainer"
 // Demo components
 import DemoColors from "../demo/DemoColors"
 import DemoShadows from "./DemoShadows"
-import DemoInputs from "./DemoInputs"
+import DemoInputs, {
+    DemoValidate,
+    DemoPassword,
+    DemoCounter,
+    DemoMarkdown,
+    DemoImage,
+} from "./DemoInputs"
+import DemoSuggestions from "./DemoSuggestions"
+import DemoBreadcrumbs from "./DemoBreadcrumbs"
 
 // Components to import
 import Grid from "../layouts/Grid"
@@ -32,6 +40,11 @@ import ListSuggestions from "../ui/ListSuggestions"
 import ButtonsContainer from "../ui/ButtonsContainer"
 import Form from "../ui/Form"
 import Loader from "../ui/Loader"
+import {
+    Breadcrumbs,
+    BreadcrumbsLink,
+    BreadcrumbsActive,
+} from "../ui/Breadcrumbs"
 
 const options = {
     forceBlock: true,
@@ -142,6 +155,13 @@ const options = {
         DemoColors,
         DemoShadows,
         DemoInputs,
+        DemoSuggestions,
+        DemoValidate,
+        DemoPassword,
+        DemoCounter,
+        DemoMarkdown,
+        DemoImage,
+        DemoBreadcrumbs,
 
         Grid,
         Wrapper,
@@ -161,6 +181,9 @@ const options = {
         ButtonsContainer,
         Form,
         Loader,
+        Breadcrumbs,
+        BreadcrumbsLink,
+        BreadcrumbsActive,
     },
 }
 

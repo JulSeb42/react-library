@@ -212,7 +212,7 @@ function InputFunction(props) {
             )}
         </Container>
     ) : props.type === "textarea" ? (
-        <InputStyled id={props.id} as="textarea" {...props} />
+        <InputStyled id={props.id} as="textarea" maxLength={props.counter} {...props} />
     ) : props.type === "select" ? (
         <SelectContainer disabled={props.disabled}>
             <InputStyled as="select" id={props.id} {...props}>
