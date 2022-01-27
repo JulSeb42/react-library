@@ -51,6 +51,7 @@ import {
 import { Accordion, AccordionItem } from "../ui/Accordion"
 import { DropdownContainer, Dropdown } from "../ui/Dropdown"
 import Alert from "../ui/Alert"
+import { BasicCard, ImageCard } from "../ui/Card"
 
 const options = {
     forceBlock: true,
@@ -199,6 +200,8 @@ const options = {
         Dropdown,
         DropdownContainer,
         Alert,
+        BasicCard,
+        ImageCard,
     },
 }
 

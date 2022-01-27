@@ -19,6 +19,7 @@ const pages = [
     "accordion",
     "dropdown",
     "alert",
+    "card",
 ]
 
 export default pages
