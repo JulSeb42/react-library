@@ -5,6 +5,7 @@ const pages = [
     "shadows",
     "container",
     "icon",
+    "hr",
     "image",
     "video",
     "avatar",
@@ -29,6 +30,7 @@ const pages = [
     "burger",
     "title-flex",
     "page-loading",
+    "messaging",
 ]
 
 export default pages

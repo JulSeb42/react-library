@@ -28,6 +28,7 @@ import DemoPagination from "./DemoPagination"
 import DemoTabs from "./DemoTabs"
 import DemoSlideshow from "./DemoSlideshow"
 import DemoBurger from "./DemoBurger"
+import {DemoMessaging, DemoMessagesEmpty} from "./DemoMessaging"
 
 // Components to import
 import Grid from "../layouts/Grid"
@@ -62,6 +63,7 @@ import { Pagination, PaginationButton } from "../ui/Pagination"
 import ProgressBar from "../ui/ProgressBar"
 import Alert from "../ui/Alert"
 import TitleFlex from "../ui/TitleFlex"
+import Hr from "../ui/Hr"
 
 const options = {
     forceBlock: true,
@@ -188,6 +190,8 @@ const options = {
         DemoTabs,
         DemoSlideshow,
         DemoBurger,
+        DemoMessaging,
+        DemoMessagesEmpty,
 
         Grid,
         Wrapper,
@@ -223,6 +227,7 @@ const options = {
         ProgressBar,
         Alert,
         TitleFlex,
+        Hr,
     },
 }
 
