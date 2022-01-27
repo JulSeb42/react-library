@@ -1,14 +1,18 @@
 // Packages
 import React from "react"
 import styled, { css } from "styled-components"
-import Async from "react-async-image"
+import {
+    LazyLoadImage,
+    trackWindowScroll,
+} from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/opacity.css"
 
 // Components
 import * as Variables from "../styles/Variables"
 import * as Font from "../styles/Font"
 
 // Styles
-const Img = styled(Async)`
+const Img = styled(LazyLoadImage)`
     width: ${props => props.width || "100%"};
     height: ${props => props.height || "auto"};
     position: relative;
@@ -26,6 +30,16 @@ const Container = styled.div`
     position: relative;
     width: ${props => props.width || "100%"};
     height: ${props => props.height || "auto"};
+
+    span {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        background-position: center;
+        object-position: center;
+    }
 `
 
 const Caption = styled(Font.P)`
@@ -39,7 +53,7 @@ const Caption = styled(Font.P)`
     color: ${Variables.Colors.White};
 `
 
-function Image(props) {
+function Image({ scrollPosition, ...props }) {
     return props.caption ? (
         <Container width={props.width} height={props.height} {...props}>
             <Img
@@ -48,19 +62,24 @@ function Image(props) {
                 src={props.src}
                 alt={props.alt}
                 fit={props.fit}
+                effect="opacity"
+                scrollPosition={scrollPosition}
             />
 
             <Caption>{props.caption}</Caption>
         </Container>
     ) : (
         <Img
-            src={props.src}
-            alt={props.alt}
             width={props.width}
             height={props.height}
+            src={props.src}
+            alt={props.alt}
+            fit={props.fit}
+            effect="opacity"
+            scrollPosition={scrollPosition}
             {...props}
         />
     )
 }
 
-export default Image
+export default trackWindowScroll(Image)
