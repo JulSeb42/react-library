@@ -64,6 +64,7 @@ import ProgressBar from "../ui/ProgressBar"
 import Alert from "../ui/Alert"
 import TitleFlex from "../ui/TitleFlex"
 import Hr from "../ui/Hr"
+import MarkdownContainer from "../ui/MarkdownContainer"
 
 const options = {
     forceBlock: true,
@@ -228,6 +229,7 @@ const options = {
         Alert,
         TitleFlex,
         Hr,
+        MarkdownContainer,
     },
 }
 

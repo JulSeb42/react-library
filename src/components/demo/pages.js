@@ -31,6 +31,7 @@ const pages = [
     "title-flex",
     "page-loading",
     "messaging",
+    "markdown-container",
 ]
 
 export default pages
