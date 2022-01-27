@@ -25,6 +25,7 @@ import { DemoAccordionRounded, DemoAccordionBasic } from "./DemoAccordion"
 import DemoDropdown from "./DemoDropdown"
 import DemoModal from "./DemoModal"
 import DemoPagination from "./DemoPagination"
+import DemoTabs from "./DemoTabs"
 
 // Components to import
 import Grid from "../layouts/Grid"
@@ -180,6 +181,7 @@ const options = {
         Variables,
         DemoModal,
         DemoPagination,
+        DemoTabs,
 
         Grid,
         Wrapper,

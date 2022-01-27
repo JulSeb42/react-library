@@ -23,6 +23,7 @@ const pages = [
     "modal",
     "pagination",
     "progress-bar",
+    "tabs",
 ]
 
 export default pages
