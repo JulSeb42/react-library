@@ -27,6 +27,7 @@ const pages = [
     "slideshow",
     "alert",
     "burger",
+    "title-flex",
 ]
 
 export default pages

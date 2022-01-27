@@ -61,6 +61,7 @@ import Modal from "../ui/Modal"
 import { Pagination, PaginationButton } from "../ui/Pagination"
 import ProgressBar from "../ui/ProgressBar"
 import Alert from "../ui/Alert"
+import TitleFlex from "../ui/TitleFlex"
 
 const options = {
     forceBlock: true,
@@ -221,6 +222,7 @@ const options = {
         PaginationButton,
         ProgressBar,
         Alert,
+        TitleFlex,
     },
 }
 
