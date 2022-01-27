@@ -20,6 +20,7 @@ import DemoInputs, {
 } from "./DemoInputs"
 import DemoSuggestions from "./DemoSuggestions"
 import DemoBreadcrumbs from "./DemoBreadcrumbs"
+import { DemoAccordionRounded, DemoAccordionBasic } from "./DemoAccordion"
 
 // Components to import
 import Grid from "../layouts/Grid"
@@ -45,6 +46,7 @@ import {
     BreadcrumbsLink,
     BreadcrumbsActive,
 } from "../ui/Breadcrumbs"
+import { Accordion, AccordionItem } from "../ui/Accordion"
 
 const options = {
     forceBlock: true,
@@ -162,6 +164,8 @@ const options = {
         DemoMarkdown,
         DemoImage,
         DemoBreadcrumbs,
+        DemoAccordionBasic,
+        DemoAccordionRounded,
 
         Grid,
         Wrapper,
@@ -184,6 +188,8 @@ const options = {
         Breadcrumbs,
         BreadcrumbsLink,
         BreadcrumbsActive,
+        Accordion,
+        AccordionItem,
     },
 }
 

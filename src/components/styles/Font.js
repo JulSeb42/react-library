@@ -169,6 +169,12 @@ export const P = styled.p`
             color: ${Variables.Colors.Primary600};
         }
     }
+
+    ${props =>
+        props.pre &&
+        css`
+            white-space: pre-line;
+        `}
 `
 
 export const Small = styled.small`
