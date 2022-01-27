@@ -8,6 +8,8 @@ import MarkdownPage from "./components/demo/MarkdownPage"
 import NotFound from "./pages/NotFound"
 import scrollToTop from "./components/utils/scrollToTop"
 
+import DemoPageLoading from "./components/demo/DemoPageLoading"
+
 // Styles
 import GlobalStyles from "./components/styles/GlobalStyles"
 
@@ -32,6 +34,12 @@ function App() {
                         key={i}
                     />
                 ))}
+
+                <Route
+                    path="/loading-page"
+                    element={<DemoPageLoading />}
+                    preload={scrollToTop()}
+                />
             </Routes>
         </>
     )

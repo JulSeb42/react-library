@@ -28,6 +28,7 @@ const pages = [
     "alert",
     "burger",
     "title-flex",
+    "page-loading",
 ]
 
 export default pages
