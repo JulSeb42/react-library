@@ -21,6 +21,7 @@ const pages = [
     "alert",
     "card",
     "modal",
+    "pagination",
 ]
 
 export default pages

@@ -25,10 +25,6 @@ const Container = styled.button`
     text-align: center;
     text-decoration: none;
 
-    &:disabled {
-        cursor: not-allowed;
-    }
-
     .icon-left {
         margin-right: ${Variables.Margins.XXS};
     }

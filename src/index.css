@@ -130,6 +130,10 @@ button {
     cursor: pointer;
 }
 
+button:disabled {
+    cursor: not-allowed;
+}
+
 /*=============================================== Variables ===============================================*/
 :root {
     --margin-xxl: 48px;

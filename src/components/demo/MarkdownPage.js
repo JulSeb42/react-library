@@ -24,6 +24,7 @@ import DemoBreadcrumbs from "./DemoBreadcrumbs"
 import { DemoAccordionRounded, DemoAccordionBasic } from "./DemoAccordion"
 import DemoDropdown from "./DemoDropdown"
 import DemoModal from "./DemoModal"
+import DemoPagination from "./DemoPagination"
 
 // Components to import
 import Grid from "../layouts/Grid"
@@ -54,6 +55,7 @@ import { DropdownContainer, Dropdown } from "../ui/Dropdown"
 import Alert from "../ui/Alert"
 import { BasicCard, ImageCard } from "../ui/Card"
 import Modal from "../ui/Modal"
+import { Pagination, PaginationButton } from "../ui/Pagination"
 
 const options = {
     forceBlock: true,
@@ -176,6 +178,7 @@ const options = {
         DemoDropdown,
         Variables,
         DemoModal,
+        DemoPagination,
 
         Grid,
         Wrapper,
@@ -206,6 +209,8 @@ const options = {
         BasicCard,
         ImageCard,
         Modal,
+        Pagination,
+        PaginationButton,
     },
 }
 
