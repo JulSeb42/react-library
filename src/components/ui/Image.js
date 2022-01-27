@@ -33,12 +33,9 @@ const Container = styled.div`
 
     span {
         width: 100%;
-    }
-
-    img {
-        width: 100%;
-        background-position: center;
-        object-position: center;
+        display: block !important;
+        width: ${props => props.width || "100%"};
+        height: ${props => props.height || "auto"};
     }
 `
 
