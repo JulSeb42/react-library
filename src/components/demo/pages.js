@@ -16,7 +16,8 @@ const pages = [
     "form",
     "loader",
     "breadcrumbs",
-    "accordion"
+    "accordion",
+    "dropdown",
 ]
 
 export default pages

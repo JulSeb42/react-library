@@ -43,7 +43,7 @@
 ## Props
 
 ```
-Container props:
+Container props
 accordionstyle: string, required, default basic
 
 Item props
