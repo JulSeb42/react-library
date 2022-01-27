@@ -23,6 +23,7 @@ import DemoSuggestions from "./DemoSuggestions"
 import DemoBreadcrumbs from "./DemoBreadcrumbs"
 import { DemoAccordionRounded, DemoAccordionBasic } from "./DemoAccordion"
 import DemoDropdown from "./DemoDropdown"
+import DemoModal from "./DemoModal"
 
 // Components to import
 import Grid from "../layouts/Grid"
@@ -52,6 +53,7 @@ import { Accordion, AccordionItem } from "../ui/Accordion"
 import { DropdownContainer, Dropdown } from "../ui/Dropdown"
 import Alert from "../ui/Alert"
 import { BasicCard, ImageCard } from "../ui/Card"
+import Modal from "../ui/Modal"
 
 const options = {
     forceBlock: true,
@@ -173,6 +175,7 @@ const options = {
         DemoAccordionRounded,
         DemoDropdown,
         Variables,
+        DemoModal,
 
         Grid,
         Wrapper,
@@ -202,6 +205,7 @@ const options = {
         Alert,
         BasicCard,
         ImageCard,
+        Modal,
     },
 }
 

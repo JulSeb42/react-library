@@ -4,7 +4,7 @@ import styled, { css } from "styled-components"
 import { ReactSVG } from "react-svg"
 
 const IconStyled = styled(ReactSVG)`
-    display: flex;
+    display: inline-flex;
     width: ${props => `${props.size}px`};
     height: ${props => `${props.size}px`};
     align-items: center;

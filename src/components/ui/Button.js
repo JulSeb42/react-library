@@ -19,8 +19,9 @@ const Container = styled.button`
     font-weight: ${Variables.FontWeights.Bold};
     border-radius: ${Variables.Radiuses.M};
     transition: ${Variables.Transitions.Short};
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     text-decoration: none;
 
@@ -34,6 +35,10 @@ const Container = styled.button`
 
     .icon-right {
         margin-left: ${Variables.Margins.XXS};
+    }
+
+    & > span {
+        height: 100%;
     }
 
     ${props =>
