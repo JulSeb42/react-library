@@ -12,5 +12,5 @@
 size: number, not required, size of the loader, default 48
 border: number, not required, thickness of the loader, default 2
 color: string / variable, not required, default primary
-bordercolor: string / variable, not required, default white
+backgroundcolor: string / variable, not required, default white
 ```
