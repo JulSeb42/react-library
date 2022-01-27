@@ -125,7 +125,7 @@ const Send = styled.button`
 
 function EmptyContainer(props) {
     return (
-        <Empty>
+        <Empty {...props}>
             <Font.P>{props.children}</Font.P>
         </Empty>
     )
