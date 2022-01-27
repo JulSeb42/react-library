@@ -32,6 +32,7 @@ const pages = [
     "page-loading",
     "messaging",
     "markdown-container",
+    "helmet",
 ]
 
 export default pages

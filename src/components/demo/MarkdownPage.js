@@ -65,6 +65,7 @@ import Alert from "../ui/Alert"
 import TitleFlex from "../ui/TitleFlex"
 import Hr from "../ui/Hr"
 import MarkdownContainer from "../ui/MarkdownContainer"
+import Helmet from "../ui/Helmet"
 
 const options = {
     forceBlock: true,
@@ -230,6 +231,7 @@ const options = {
         TitleFlex,
         Hr,
         MarkdownContainer,
+        Helmet,
     },
 }
 
