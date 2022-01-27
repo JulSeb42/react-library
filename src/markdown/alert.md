@@ -1,43 +1,27 @@
 # Alert
 
-## Title only
+<Alert color="success">
+    <P>Content</P>
+</Alert>
 
-<Alert title="Title" />
-
-```
-<Alert title="Title" />
-```
-
-## Title and body
-
-<Alert title="Title">Message</Alert>
+<Alert color="danger">
+    <P>Content</P>
+</Alert>
 
 ```
-<Alert title="Title">Message</Alert>
-```
+<Alert color="success">
+    <Font.P>Content</Font.P>
+</Alert>
 
-## Title with icon
-
-<Alert title="Title" icon="check-circle" iconcolor="rgb(9,129,74)">Message</Alert>
-
-```
-<Alert title="Title" icon="check-circle" iconcolor={Variables.Colors.Success500}>Message</Alert>
-```
-
-## Title with close
-
-<Alert title="Title" icon="check-circle" iconcolor="rgb(9,129,74)" close>Message</Alert>
-
-```
-<Alert title="Title" icon="check-circle" iconcolor={Variables.Colors.Success500} close={closeFunction}>Message</Alert>
+<Alert color="danger">
+    <Font.P>Content</Font.P>
+</Alert>
 ```
 
 ## Props
 
 ```
-title: string, required
-children: string, not required
-icon: string, not required
-iconcolor: string / variable, required if icon
-close: function, not required
+color: string / variable, required, can be primary, secondary, success, danger, warning, white, or a custom color, default success
+bordercolor: string / variable, not required, in case the background color is not one of the set colors
+children: required
 ```

@@ -54,11 +54,12 @@ import {
 } from "../ui/Breadcrumbs"
 import { Accordion, AccordionItem } from "../ui/Accordion"
 import { DropdownContainer, Dropdown } from "../ui/Dropdown"
-import Alert from "../ui/Alert"
+import Toast from "../ui/Toast"
 import { BasicCard, ImageCard } from "../ui/Card"
 import Modal from "../ui/Modal"
 import { Pagination, PaginationButton } from "../ui/Pagination"
 import ProgressBar from "../ui/ProgressBar"
+import Alert from "../ui/Alert"
 
 const options = {
     forceBlock: true,
@@ -210,13 +211,14 @@ const options = {
         AccordionItem,
         Dropdown,
         DropdownContainer,
-        Alert,
+        Toast,
         BasicCard,
         ImageCard,
         Modal,
         Pagination,
         PaginationButton,
         ProgressBar,
+        Alert,
     },
 }
 

@@ -18,13 +18,14 @@ const pages = [
     "breadcrumbs",
     "accordion",
     "dropdown",
-    "alert",
+    "toast",
     "card",
     "modal",
     "pagination",
     "progress-bar",
     "tabs",
     "slideshow",
+    "alert",
 ]
 
 export default pages
