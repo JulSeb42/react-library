@@ -33,6 +33,7 @@ const pages = [
     "messaging",
     "markdown-container",
     "helmet",
+    "utils",
 ]
 
 export default pages

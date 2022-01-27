@@ -28,7 +28,8 @@ import DemoPagination from "./DemoPagination"
 import DemoTabs from "./DemoTabs"
 import DemoSlideshow from "./DemoSlideshow"
 import DemoBurger from "./DemoBurger"
-import {DemoMessaging, DemoMessagesEmpty} from "./DemoMessaging"
+import { DemoMessaging, DemoMessagesEmpty } from "./DemoMessaging"
+import DemoUtils from "./DemoUtils"
 
 // Components to import
 import Grid from "../layouts/Grid"
@@ -194,6 +195,7 @@ const options = {
         DemoBurger,
         DemoMessaging,
         DemoMessagesEmpty,
+        DemoUtils,
 
         Grid,
         Wrapper,
