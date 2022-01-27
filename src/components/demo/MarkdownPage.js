@@ -56,6 +56,7 @@ import Alert from "../ui/Alert"
 import { BasicCard, ImageCard } from "../ui/Card"
 import Modal from "../ui/Modal"
 import { Pagination, PaginationButton } from "../ui/Pagination"
+import ProgressBar from "../ui/ProgressBar"
 
 const options = {
     forceBlock: true,
@@ -211,6 +212,7 @@ const options = {
         Modal,
         Pagination,
         PaginationButton,
+        ProgressBar,
     },
 }
 

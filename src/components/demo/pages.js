@@ -22,6 +22,7 @@ const pages = [
     "card",
     "modal",
     "pagination",
+    "progress-bar",
 ]
 
 export default pages
