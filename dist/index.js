@@ -342,7 +342,12 @@ Object.defineProperty(exports, "Toast", {
     return _Toast.default;
   }
 });
-exports.Variables = void 0;
+Object.defineProperty(exports, "Variables", {
+  enumerable: true,
+  get: function get() {
+    return _Variables.default;
+  }
+});
 Object.defineProperty(exports, "Video", {
   enumerable: true,
   get: function get() {
@@ -524,9 +529,7 @@ var _TitleFlex = _interopRequireDefault(require("./components/TitleFlex"));
 
 var _Toast = _interopRequireDefault(require("./components/Toast"));
 
-var Variables = _interopRequireWildcard(require("./components/Variables"));
-
-exports.Variables = Variables;
+var _Variables = _interopRequireDefault(require("./components/Variables"));
 
 var _Video = _interopRequireDefault(require("./components/Video"));
 

@@ -70,7 +70,7 @@ import {
 import Tag from "./components/Tag"
 import TitleFlex from "./components/TitleFlex"
 import Toast from "./components/Toast"
-import * as Variables from "./components/Variables"
+import Variables from "./components/Variables"
 import Video from "./components/Video"
 import Wrapper from "./components/Wrapper"
 
