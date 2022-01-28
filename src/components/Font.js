@@ -265,7 +265,7 @@ const List = styled.ul`
         }
 
         &::marker {
-            content: url("./icons/list-marker.svg");
+            content: url(./icons/list-marker.svg);
         }
     }
 `
