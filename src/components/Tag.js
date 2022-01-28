@@ -3,7 +3,7 @@ import React from "react"
 import styled, { css } from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import Icon from "./Icon"
 
 // Styles
@@ -137,7 +137,7 @@ function Tag(props) {
                         className="icon"
                         color={props.color}
                     >
-                        <Icon name="close" size={16} />
+                        <Icon name="close" size={16} component />
                     </IconContainer>
                 </>
             ) : (

@@ -4,7 +4,7 @@ import Markdown from "markdown-to-jsx"
 import Link from "../LinkScroll"
 
 // Components
-import * as Variables from "../Variables"
+import Variables from "../Variables"
 import * as Font from "../Font"
 import PageLayout from "./PageLayout"
 import CodeContainer from "./CodeContainer"

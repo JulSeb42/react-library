@@ -3,7 +3,7 @@ import React from "react"
 import styled, { css } from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import * as Font from "./Font"
 import Button from "./Button"
 import Icon from "./Icon"

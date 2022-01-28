@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import Grid from "./Grid"
 import * as Font from "./Font"
 import Icon from "./Icon"
@@ -74,7 +74,7 @@ function Toast(props) {
                     />
 
                     <Close onClick={props.close}>
-                        <Icon name="close" size={24} />
+                        <Icon name="close" size={24} component />
                     </Close>
                 </TitleContainer>
             ) : (

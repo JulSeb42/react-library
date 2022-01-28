@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 // Components
 import * as Font from "../components/Font"
-import * as Variables from "../components/Variables"
+import Variables from "../components/Variables"
 
 // Styles
 const Container = styled.main`

@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 
 // Components
-import * as Variables from "../Variables"
+import Variables from "../Variables"
 import Input from "../Input"
 import Grid from "../Grid"
 import InputImage from "../InputImage"

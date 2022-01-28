@@ -1,7 +1,7 @@
 // Packages
 import React, { useEffect, useState } from "react"
 
-import * as Variables from "../Variables"
+import Variables from "../Variables"
 import * as Font from "../Font"
 import Grid from "../Grid"
 import ListSuggestions from "../ListSuggestions"

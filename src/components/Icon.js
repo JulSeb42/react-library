@@ -32,7 +32,11 @@ const IconStyled = styled(ReactSVG)`
 export default function Icon(props) {
     return (
         <IconStyled
-            src={`/icons/${props.name}.svg`}
+            src={
+                props.component
+                    ? `./icons/${props.name}.svg`
+                    : `/icons/${props.name}.svg`
+            }
             color={props.color || "currentColor"}
             size={props.size}
             wrapper="span"
@@ -49,7 +53,7 @@ export default function Icon(props) {
 
 export const IconMixin = ({ icon, size, color }) => css`
     content: "";
-    mask: url("/icons/${icon}.svg") no-repeat 50% 50%;
+    mask: url("./icons/${icon}.svg") no-repeat 50% 50%;
     mask-size: cover;
     background-color: ${color || "currentColor"};
     display: inline-block;

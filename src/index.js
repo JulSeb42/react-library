@@ -83,7 +83,7 @@ import Video from "./components/Video"
 import Wrapper from "./components/Wrapper"
 
 // Styles
-import "./index.css"
+import "./components/index.css"
 
 ReactDOM.render(
     <Router>

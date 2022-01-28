@@ -13,7 +13,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var Variables = _interopRequireWildcard(require("./Variables"));
+var _Variables = _interopRequireDefault(require("./Variables"));
 
 var _Input = _interopRequireDefault(require("./Input"));
 
@@ -32,7 +32,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 // Styles
 const Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: relative;\n    z-index: 10;\n\n    & > div {\n        position: relative;\n        z-index: 1;\n    }\n"])));
 
-const List = _styledComponents.default.ul(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    padding: 0;\n    margin: 0;\n    list-style: none;\n    position: absolute;\n    z-index: 0;\n    background-color: ", ";\n    width: 100%;\n    top: 28px;\n    border-radius: ", ";\n    border: 1px solid ", ";\n    max-height: 0;\n    transition: ", ";\n    overflow: hidden;\n    padding-top: 0;\n    opacity: 0;\n    overflow-y: scroll;\n\n    &.open {\n        padding-top: 28px;\n        max-height: 200px;\n        opacity: 1;\n    }\n\n    li {\n        padding: ", ";\n        transition: ", ";\n\n        &:hover {\n            background-color: ", ";\n            color: ", ";\n            cursor: pointer;\n        }\n    }\n"])), Variables.Colors.White, Variables.Radiuses.S, Variables.Colors.Primary500, Variables.Transitions.Long, Variables.Margins.XS, Variables.Transitions.Short, Variables.Colors.Primary500, Variables.Colors.White);
+const List = _styledComponents.default.ul(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    padding: 0;\n    margin: 0;\n    list-style: none;\n    position: absolute;\n    z-index: 0;\n    background-color: ", ";\n    width: 100%;\n    top: 28px;\n    border-radius: ", ";\n    border: 1px solid ", ";\n    max-height: 0;\n    transition: ", ";\n    overflow: hidden;\n    padding-top: 0;\n    opacity: 0;\n    overflow-y: scroll;\n\n    &.open {\n        padding-top: 28px;\n        max-height: 200px;\n        opacity: 1;\n    }\n\n    li {\n        padding: ", ";\n        transition: ", ";\n\n        &:hover {\n            background-color: ", ";\n            color: ", ";\n            cursor: pointer;\n        }\n    }\n"])), _Variables.default.Colors.White, _Variables.default.Radiuses.S, _Variables.default.Colors.Primary500, _Variables.default.Transitions.Long, _Variables.default.Margins.XS, _Variables.default.Transitions.Short, _Variables.default.Colors.Primary500, _Variables.default.Colors.White);
 
 function ListSuggestions(props) {
   const [isOpen, setIsOpen] = (0, _react.useState)(false);

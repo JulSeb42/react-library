@@ -13,7 +13,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var Variables = _interopRequireWildcard(require("./Variables"));
+var _Variables = _interopRequireDefault(require("./Variables"));
 
 var _Grid = _interopRequireDefault(require("./Grid"));
 
@@ -34,13 +34,13 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const Container = (0, _styledComponents.default)(_Grid.default)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    background-color: ", ";\n    padding: ", ";\n    box-shadow: ", ";\n    border-radius: ", ";\n    max-width: 300px;\n"])), Variables.Colors.White, Variables.Margins.M, Variables.Shadows.S, Variables.Radiuses.M);
+const Container = (0, _styledComponents.default)(_Grid.default)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    background-color: ", ";\n    padding: ", ";\n    box-shadow: ", ";\n    border-radius: ", ";\n    max-width: 300px;\n"])), _Variables.default.Colors.White, _Variables.default.Margins.M, _Variables.default.Shadows.S, _Variables.default.Radiuses.M);
 
-const Close = _styledComponents.default.button(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    --size: 32px;\n    width: var(--size);\n    height: var(--size);\n    border-radius: 50%;\n    border: none;\n    background-color: transparent;\n    color: ", ";\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    transition: ", ";\n\n    &:hover {\n        background-color: ", ";\n    }\n"])), Variables.Colors.Primary500, Variables.Transitions.Short, Variables.Colors.Gray50);
+const Close = _styledComponents.default.button(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    --size: 32px;\n    width: var(--size);\n    height: var(--size);\n    border-radius: 50%;\n    border: none;\n    background-color: transparent;\n    color: ", ";\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    transition: ", ";\n\n    &:hover {\n        background-color: ", ";\n    }\n"])), _Variables.default.Colors.Primary500, _Variables.default.Transitions.Short, _Variables.default.Colors.Gray50);
 
 const TitleContainer = _styledComponents.default.span(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n"])));
 
-const Title = _styledComponents.default.span(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n\n    & > span {\n        margin-right: ", ";\n    }\n"])), Variables.Margins.XXS);
+const Title = _styledComponents.default.span(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n\n    & > span {\n        margin-right: ", ";\n    }\n"])), _Variables.default.Margins.XXS);
 
 function TitleFunction(props) {
   return props.icon ? /*#__PURE__*/_react.default.createElement(Title, null, /*#__PURE__*/_react.default.createElement(_Icon.default, {
@@ -52,7 +52,7 @@ function TitleFunction(props) {
 
 function Toast(props) {
   return /*#__PURE__*/_react.default.createElement(Container, _extends({
-    gap: Variables.Margins.XS
+    gap: _Variables.default.Margins.XS
   }, props), props.close ? /*#__PURE__*/_react.default.createElement(TitleContainer, null, /*#__PURE__*/_react.default.createElement(TitleFunction, {
     title: props.title,
     icon: props.icon,
@@ -61,7 +61,8 @@ function Toast(props) {
     onClick: props.close
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     name: "close",
-    size: 24
+    size: 24,
+    component: true
   }))) : /*#__PURE__*/_react.default.createElement(TitleFunction, {
     title: props.title,
     icon: props.icon,

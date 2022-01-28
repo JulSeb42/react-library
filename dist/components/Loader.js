@@ -11,7 +11,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
-var Variables = _interopRequireWildcard(require("./Variables"));
+var _Variables = _interopRequireDefault(require("./Variables"));
 
 var _templateObject, _templateObject2;
 
@@ -26,7 +26,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 // Styles
 const Rotation = (0, _styledComponents.keyframes)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    0% {\n        transform: rotate(0deg);\n    }\n    100% {\n        transform: rotate(360deg);\n    }\n"])));
 
-const Container = _styledComponents.default.span(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    width: ", ";\n    height: ", ";\n    border: ", " solid\n        ", ";\n    border-bottom-color: ", ";\n    border-radius: 50%;\n    display: inline-block;\n    box-sizing: border-box;\n    animation: ", " 1s linear infinite;\n    margin-right: ", ";\n"])), props => "".concat(props.size, "px"), props => "".concat(props.size, "px"), props => "".concat(props.border, "px"), props => props.backgroundcolor === "primary" ? Variables.Colors.Primary500 : props.backgroundcolor === "secondary" ? Variables.Colors.Secondary500 : props.backgroundcolor === "success" ? Variables.Colors.Success500 : props.backgroundcolor === "danger" ? Variables.Colors.Danger500 : props.backgroundcolor === "warning" ? Variables.Colors.Warning500 : props.backgroundcolor === "white" ? Variables.Colors.White : props.backgroundcolor, props => props.color === "primary" ? Variables.Colors.Primary500 : props.color === "secondary" ? Variables.Colors.Secondary500 : props.color === "success" ? Variables.Colors.Success500 : props.color === "danger" ? Variables.Colors.Danger500 : props.color === "warning" ? Variables.Colors.Warning500 : props.color === "white" ? Variables.Colors.White : props.color, Rotation, Variables.Margins.XS);
+const Container = _styledComponents.default.span(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    width: ", ";\n    height: ", ";\n    border: ", " solid\n        ", ";\n    border-bottom-color: ", ";\n    border-radius: 50%;\n    display: inline-block;\n    box-sizing: border-box;\n    animation: ", " 1s linear infinite;\n    margin-right: ", ";\n"])), props => "".concat(props.size, "px"), props => "".concat(props.size, "px"), props => "".concat(props.border, "px"), props => props.backgroundcolor === "primary" ? _Variables.default.Colors.Primary500 : props.backgroundcolor === "secondary" ? _Variables.default.Colors.Secondary500 : props.backgroundcolor === "success" ? _Variables.default.Colors.Success500 : props.backgroundcolor === "danger" ? _Variables.default.Colors.Danger500 : props.backgroundcolor === "warning" ? _Variables.default.Colors.Warning500 : props.backgroundcolor === "white" ? _Variables.default.Colors.White : props.backgroundcolor, props => props.color === "primary" ? _Variables.default.Colors.Primary500 : props.color === "secondary" ? _Variables.default.Colors.Secondary500 : props.color === "success" ? _Variables.default.Colors.Success500 : props.color === "danger" ? _Variables.default.Colors.Danger500 : props.color === "warning" ? _Variables.default.Colors.Warning500 : props.color === "white" ? _Variables.default.Colors.White : props.color, Rotation, _Variables.default.Margins.XS);
 
 function Loader(props) {
   return /*#__PURE__*/_react.default.createElement(Container, {

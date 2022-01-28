@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import Icon from "./Icon"
 
 // Styles
@@ -63,12 +63,14 @@ function PaginationButton(props) {
     return (
         <Button {...props}>
             {props.icon === "previous" && (
-                <Icon name="chevron-left" size={16} />
+                <Icon name="chevron-left" size={16} component />
             )}
 
             {props.number && props.number}
 
-            {props.icon === "next" && <Icon name="chevron-right" size={16} />}
+            {props.icon === "next" && (
+                <Icon name="chevron-right" size={16} component />
+            )}
         </Button>
     )
 }

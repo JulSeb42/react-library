@@ -2,7 +2,7 @@
 import styled from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 
 // Styles
 const TabsContainer = styled.div`

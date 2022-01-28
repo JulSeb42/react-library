@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import InputContainer from "./InputContainer"
 import Image from "./Image"
 import Icon from "./Icon"
@@ -66,7 +66,7 @@ const HoverContainer = styled.span`
 function Empty() {
     return (
         <EmptyContainer>
-            <Icon name="user" size={64} />
+            <Icon name="user" size={64} component />
         </EmptyContainer>
     )
 }
@@ -74,7 +74,7 @@ function Empty() {
 function Hover() {
     return (
         <HoverContainer className="hover">
-            <Icon name="edit" size={32} />
+            <Icon name="edit" size={32} component />
         </HoverContainer>
     )
 }

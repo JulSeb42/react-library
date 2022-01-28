@@ -5,7 +5,7 @@ import Linkify from "react-linkify"
 import ScrollToBottom from "react-scroll-to-bottom"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import * as Font from "./Font"
 import Icon from "./Icon"
 
@@ -150,7 +150,7 @@ function MessageInput(props) {
                 {props.textbutton ? (
                     props.textbutton
                 ) : (
-                    <Icon name="send" size={16} />
+                    <Icon name="send" component size={16} />
                 )}
             </Send>
         </ContainerSend>

@@ -17,7 +17,7 @@ var _reactLazyLoadImageComponent = require("react-lazy-load-image-component");
 
 require("react-lazy-load-image-component/src/effects/opacity.css");
 
-var Variables = _interopRequireWildcard(require("./Variables"));
+var _Variables = _interopRequireDefault(require("./Variables"));
 
 var Font = _interopRequireWildcard(require("./Font"));
 
@@ -44,7 +44,7 @@ const Img = (0, _styledComponents.default)(_reactLazyLoadImageComponent.LazyLoad
 
 const Container = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    position: relative;\n    width: ", ";\n    height: ", ";\n\n    span {\n        width: 100%;\n        display: block !important;\n        width: ", ";\n        height: ", ";\n    }\n"])), props => props.width || "100%", props => props.height || "auto", props => props.width || "100%", props => props.height || "auto");
 
-const Caption = (0, _styledComponents.default)(Font.P)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    z-index: 2;\n    padding: ", " ", ";\n    background-color: ", ";\n    color: ", ";\n"])), Variables.Margins.XS, Variables.Margins.S, Variables.Overlays.Plain.Black50, Variables.Colors.White);
+const Caption = (0, _styledComponents.default)(Font.P)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    z-index: 2;\n    padding: ", " ", ";\n    background-color: ", ";\n    color: ", ";\n"])), _Variables.default.Margins.XS, _Variables.default.Margins.S, _Variables.default.Overlays.Plain.Black50, _Variables.default.Colors.White);
 
 function Image(_ref) {
   let {

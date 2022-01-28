@@ -32,7 +32,7 @@ const IconStyled = (0, _styledComponents.default)(_reactSvg.ReactSVG)(_templateO
 
 function Icon(props) {
   return /*#__PURE__*/_react.default.createElement(IconStyled, _extends({
-    src: "/icons/".concat(props.name, ".svg"),
+    src: props.component ? "./icons/".concat(props.name, ".svg") : "/icons/".concat(props.name, ".svg"),
     color: props.color || "currentColor",
     size: props.size,
     wrapper: "span"
@@ -50,7 +50,7 @@ const IconMixin = _ref => {
     size,
     color
   } = _ref;
-  return (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    content: \"\";\n    mask: url(\"/icons/", ".svg\") no-repeat 50% 50%;\n    mask-size: cover;\n    background-color: ", ";\n    display: inline-block;\n    width: ", "px;\n    height: ", "px;\n"])), icon, color || "currentColor", size, size);
+  return (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    content: \"\";\n    mask: url(\"./icons/", ".svg\") no-repeat 50% 50%;\n    mask-size: cover;\n    background-color: ", ";\n    display: inline-block;\n    width: ", "px;\n    height: ", "px;\n"])), icon, color || "currentColor", size, size);
 }; // How to use the mixin
 // Import in the file you want to use this component
 // import { IconMixin } from "/path/to/Icon.js"

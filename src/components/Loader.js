@@ -3,7 +3,7 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 
 // Styles
 const Rotation = keyframes`

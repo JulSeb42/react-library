@@ -2,11 +2,10 @@
 import styled, { css } from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 
 // Styles
-// Styles
-export const H1 = styled.h1`
+const H1 = styled.h1`
     font-size: ${Variables.FontSizes.Titles.ExtraLarge};
     font-weight: ${Variables.FontWeights.Black};
 
@@ -31,7 +30,7 @@ export const H1 = styled.h1`
         `}
 `
 
-export const H2 = styled.h2`
+const H2 = styled.h2`
     font-size: ${Variables.FontSizes.Titles.Large};
     font-weight: ${Variables.FontWeights.Black};
 
@@ -56,7 +55,7 @@ export const H2 = styled.h2`
         `}
 `
 
-export const H3 = styled.h3`
+const H3 = styled.h3`
     font-size: ${Variables.FontSizes.Titles.Large};
     font-weight: ${Variables.FontWeights.Bold};
 
@@ -82,7 +81,7 @@ export const H3 = styled.h3`
         `}
 `
 
-export const H4 = styled.h4`
+const H4 = styled.h4`
     font-size: ${Variables.FontSizes.Titles.Medium};
     font-weight: ${Variables.FontWeights.Black};
 
@@ -107,7 +106,7 @@ export const H4 = styled.h4`
         `}
 `
 
-export const H5 = styled.h5`
+const H5 = styled.h5`
     font-size: ${Variables.FontSizes.Titles.Medium};
     font-weight: ${Variables.FontWeights.Bold};
 
@@ -133,7 +132,7 @@ export const H5 = styled.h5`
         `}
 `
 
-export const H6 = styled.h6`
+const H6 = styled.h6`
     font-size: ${Variables.FontSizes.Titles.Small};
     font-weight: ${Variables.FontWeights.Black};
 
@@ -152,7 +151,7 @@ export const H6 = styled.h6`
     }
 `
 
-export const P = styled.p`
+const P = styled.p`
     font-size: ${Variables.FontSizes.Body};
 
     a {
@@ -177,7 +176,7 @@ export const P = styled.p`
         `}
 `
 
-export const Small = styled.small`
+const Small = styled.small`
     font-size: ${Variables.FontSizes.Small};
     font-style: italic;
     color: ${Variables.Colors.Gray500};
@@ -198,7 +197,7 @@ export const Small = styled.small`
     }
 `
 
-export const Strong = styled.strong`
+const Strong = styled.strong`
     font-weight: ${Variables.FontWeights.Bold};
 
     a {
@@ -216,7 +215,7 @@ export const Strong = styled.strong`
     }
 `
 
-export const Em = styled.em`
+const Em = styled.em`
     font-style: italic;
 
     a {
@@ -234,7 +233,7 @@ export const Em = styled.em`
     }
 `
 
-export const List = styled.ul`
+const List = styled.ul`
     padding: 0;
     margin: 0;
     font-size: ${Variables.FontSizes.Body};
@@ -266,7 +265,9 @@ export const List = styled.ul`
         }
 
         &::marker {
-            content: url(/icons/list-marker.svg);
+            content: url("./icons/list-marker.svg");
         }
     }
 `
+
+export { H1, H2, H3, H4, H5, H6, P, Small, Strong, Em, List }

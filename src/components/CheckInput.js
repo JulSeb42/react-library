@@ -3,7 +3,7 @@ import React from "react"
 import styled, { css } from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import Icon from "./Icon"
 
 // Styles
@@ -171,7 +171,7 @@ function CheckInput(props) {
                     htmlFor={props.id}
                     disabled={props.disabled}
                 >
-                    <Icon name="check" size={14} className="icon" />
+                    <Icon name="check" size={14} className="icon" component />
                 </Checkbox>
             )}
 

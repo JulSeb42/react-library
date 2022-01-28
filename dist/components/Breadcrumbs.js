@@ -9,7 +9,7 @@ exports.BreadcrumbsLink = exports.BreadcrumbsActive = exports.Breadcrumbs = void
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var Variables = _interopRequireWildcard(require("./Variables"));
+var _Variables = _interopRequireDefault(require("./Variables"));
 
 var Font = _interopRequireWildcard(require("./Font"));
 
@@ -26,7 +26,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const Breadcrumbs = (0, _styledComponents.default)(Font.P)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    a:after {\n        content: \"/\";\n        margin: 0 ", ";\n        color: ", ";\n    }\n"])), Variables.Margins.XXS, Variables.Colors.Black);
+const Breadcrumbs = (0, _styledComponents.default)(Font.P)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    a:after {\n        content: \"/\";\n        margin: 0 ", ";\n        color: ", ";\n    }\n"])), _Variables.default.Margins.XXS, _Variables.default.Colors.Black);
 exports.Breadcrumbs = Breadcrumbs;
 const BreadcrumbsLink = (0, _styledComponents.default)(_LinkScroll.default)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([""])));
 exports.BreadcrumbsLink = BreadcrumbsLink;

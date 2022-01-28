@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import Icon from "./Icon"
 
 // Styles
@@ -67,7 +67,7 @@ function Modal(props) {
         <Container {...props}>
             {props.close && (
                 <Close onClick={props.close}>
-                    <Icon name="close" size={32} />
+                    <Icon name="close" size={32} component />
                 </Close>
             )}
 

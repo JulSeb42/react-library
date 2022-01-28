@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import Grid from "./Grid"
 import ButtonsContainer from "./ButtonsContainer"
 import Button from "./Button"

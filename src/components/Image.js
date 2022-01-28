@@ -8,7 +8,7 @@ import {
 import "react-lazy-load-image-component/src/effects/opacity.css"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import * as Font from "./Font"
 
 // Styles

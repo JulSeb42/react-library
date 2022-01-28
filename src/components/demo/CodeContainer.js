@@ -4,7 +4,7 @@ import { CopyBlock, nord } from "react-code-blocks"
 import styled from "styled-components"
 
 // Components
-import * as Variables from "../Variables"
+import Variables from "../Variables"
 
 // Styles
 const Container = styled(CopyBlock)`

@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import styled, { css } from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import * as Font from "./Font"
 import Grid from "./Grid"
 import Icon from "./Icon"
@@ -130,6 +130,7 @@ function AccordionItem(props) {
                     name={props.icon === "plus" ? "plus" : "chevron-down"}
                     size={16}
                     className={`icon ${isOpen ? "open" : ""}`}
+                    component
                 />
             </Button>
 

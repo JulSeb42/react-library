@@ -4,7 +4,7 @@ import styled, { css } from "styled-components"
 import MDEditor from "@uiw/react-md-editor"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import InputContainer from "./InputContainer"
 import Icon, { IconMixin } from "./Icon"
 
@@ -197,6 +197,7 @@ function InputFunction(props) {
                                     : Variables.Colors.Danger500
                             }
                             size={16}
+                            component
                         />
                     )}
 

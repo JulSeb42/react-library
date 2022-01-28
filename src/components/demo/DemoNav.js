@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { NavLink } from "react-router-dom"
 
 // Components
-import * as Variables from "../Variables"
+import Variables from "../Variables"
 
 // Utils
 import scrollToTop from "../scrollToTop"

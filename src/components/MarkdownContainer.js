@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Markdown from "markdown-to-jsx"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 
 // Styles
 const Container = styled(Markdown)`

@@ -2,7 +2,7 @@
 import { createGlobalStyle } from "styled-components"
 
 // Variables
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 
 // Styles
 const GlobalStyles = createGlobalStyle`

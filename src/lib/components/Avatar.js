@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import * as Variables from "./Variables"
+import Variables from "./Variables"
 import Image from "./Image"
 import Icon from "./Icon"
 
@@ -39,7 +39,9 @@ function Avatar(props) {
 
             {props.children && props.children}
 
-            {props.icon && <Icon name={props.icon} size={props.size * 0.7 || 48 * 0.7} />}
+            {props.icon && (
+                <Icon name={props.icon} size={props.size * 0.7 || 48 * 0.7} />
+            )}
         </Container>
     )
 }
