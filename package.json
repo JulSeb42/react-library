@@ -1,7 +1,7 @@
 {
     "name": "components-react-julseb",
     "description": "Basic React components library",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "private": false,
     "main": "./dist/index.js",
     "module": "./dist/index.js",
