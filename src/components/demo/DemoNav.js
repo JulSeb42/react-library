@@ -4,10 +4,10 @@ import styled from "styled-components"
 import { NavLink } from "react-router-dom"
 
 // Components
-import * as Variables from "../styles/Variables"
+import * as Variables from "../Variables"
 
 // Utils
-import scrollToTop from "../utils/scrollToTop"
+import scrollToTop from "../scrollToTop"
 
 // Data
 import pages from "./pages"

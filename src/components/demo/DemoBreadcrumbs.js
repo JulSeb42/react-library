@@ -5,7 +5,7 @@ import {
     Breadcrumbs,
     BreadcrumbsLink,
     BreadcrumbsActive,
-} from "../ui/Breadcrumbs"
+} from "../Breadcrumbs"
 
 function DemoBreadcrumbs() {
     return (

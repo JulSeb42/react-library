@@ -3,9 +3,9 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import * as Variables from "../styles/Variables"
-import * as Font from "../styles/Font"
-import Grid from "../layouts/Grid"
+import * as Variables from "../Variables"
+import * as Font from "../Font"
+import Grid from "../Grid"
 
 // Styles
 const Container = styled.div`

@@ -6,12 +6,12 @@ import { Routes, Route } from "react-router-dom"
 import DemoNav from "./components/demo/DemoNav"
 import MarkdownPage from "./components/demo/MarkdownPage"
 import NotFound from "./pages/NotFound"
-import scrollToTop from "./components/utils/scrollToTop"
+import scrollToTop from "./components/scrollToTop"
 
 import DemoPageLoading from "./components/demo/DemoPageLoading"
 
 // Styles
-import GlobalStyles from "./components/styles/GlobalStyles"
+import GlobalStyles from "./components/GlobalStyles"
 
 // Data
 import pages from "./components/demo/pages"

@@ -1,7 +1,7 @@
 // Packages
 import React from "react"
 
-import { Pagination, PaginationButton } from "../ui/Pagination"
+import { Pagination, PaginationButton } from "../Pagination"
 
 function DemoPagination(props) {
     return (

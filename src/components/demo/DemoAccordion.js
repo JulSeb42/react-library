@@ -1,7 +1,7 @@
 // Packages
 import React from "react"
 
-import { Accordion, AccordionItem } from "../ui/Accordion"
+import { Accordion, AccordionItem } from "../Accordion"
 
 function DemoAccordionBasic() {
     return (

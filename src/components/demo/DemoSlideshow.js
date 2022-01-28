@@ -8,10 +8,10 @@ import {
     SlideshowItem,
     SlideshowPaginationContainer,
     SlideshowPaginationButton,
-} from "../ui/Slideshow"
+} from "../Slideshow"
 
-import Image from "../ui/Image"
-import Icon from "../ui/Icon"
+import Image from "../Image"
+import Icon from "../Icon"
 
 function DemoSlideshow() {
     const [active, setActive] = useState(1)

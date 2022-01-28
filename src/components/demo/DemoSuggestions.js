@@ -1,10 +1,10 @@
 // Packages
 import React, { useEffect, useState } from "react"
 
-import * as Variables from "../styles/Variables"
-import * as Font from "../styles/Font"
-import Grid from "../layouts/Grid"
-import ListSuggestions from "../ui/ListSuggestions"
+import * as Variables from "../Variables"
+import * as Font from "../Font"
+import Grid from "../Grid"
+import ListSuggestions from "../ListSuggestions"
 
 // Data
 import allCities from "./cities.json"

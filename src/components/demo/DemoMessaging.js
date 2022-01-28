@@ -7,8 +7,8 @@ import {
     ListMessages,
     Message,
     MessageInput,
-} from "../ui/Messaging"
-import Hr from "../ui/Hr"
+} from "../Messaging"
+import Hr from "../Hr"
 
 function DemoMessaging() {
     return (

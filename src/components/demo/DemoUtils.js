@@ -2,18 +2,18 @@
 import React from "react"
 import styled from "styled-components"
 
-import * as Font from "../styles/Font"
+import * as Font from "../Font"
 import CodeContainer from "./CodeContainer"
 
-import getToday from "../utils/getToday"
-import getFirstName from "../utils/getFirstName"
-import convertDate from "../utils/convertDate"
-import convertDateShort from "../utils/convertDateShort"
-import getTimeNow from "../utils/getTimeNow"
-import slugify from "../utils/slugify"
-import getRandom from "../utils/getRandom"
-import getRandomNumber from "../utils/getRandomNumber"
-import getRandomString from "../utils/getRandomString"
+import getToday from "../getToday"
+import getFirstName from "../getFirstName"
+import convertDate from "../convertDate"
+import convertDateShort from "../convertDateShort"
+import getTimeNow from "../getTimeNow"
+import slugify from "../slugify"
+import getRandom from "../getRandom"
+import getRandomNumber from "../getRandomNumber"
+import getRandomString from "../getRandomString"
 
 const ItemContainer = styled.div`
     display: grid;

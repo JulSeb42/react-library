@@ -2,7 +2,7 @@
 import styled from "styled-components"
 
 // Components
-import * as Variables from "../styles/Variables"
+import * as Variables from "../Variables"
 
 // Styles
 const PageLayout = styled.main`

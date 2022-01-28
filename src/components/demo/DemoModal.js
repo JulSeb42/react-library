@@ -1,9 +1,9 @@
 // Packages
 import React, { useState } from "react"
 
-import Button from "../ui/Button"
-import Modal from "../ui/Modal"
-import Image from "../ui/Image"
+import Button from "../Button"
+import Modal from "../Modal"
+import Image from "../Image"
 
 function DemoModal() {
     const [isOpen, setIsOpen] = useState(false)

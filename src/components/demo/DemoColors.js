@@ -2,7 +2,7 @@
 import React from "react"
 
 // Components
-import Grid from "../layouts/Grid"
+import Grid from "../Grid"
 import ColorCard from "./ColorCard"
 
 // Data

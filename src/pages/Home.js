@@ -1,9 +1,9 @@
 // Packages
 import React from "react"
-import Link from "../components/utils/LinkScroll"
+import Link from "../components/LinkScroll"
 
 // Components
-import * as Font from "../components/styles/Font"
+import * as Font from "../components/Font"
 
 // Pages
 const pages = ["colors", "fonts"]

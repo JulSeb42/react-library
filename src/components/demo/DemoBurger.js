@@ -1,7 +1,7 @@
 // Packages
 import React, { useState } from "react"
 
-import Burger from "../ui/Burger"
+import Burger from "../Burger"
 
 function DemoBurger(props) {
     const [isOpen, setIsOpen] = useState(false)

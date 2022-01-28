@@ -3,10 +3,10 @@ import React, { useState } from "react"
 import styled from "styled-components"
 
 // Components
-import * as Variables from "../styles/Variables"
-import Input from "../ui/Input"
-import Grid from "../layouts/Grid"
-import InputImage from "../ui/InputImage"
+import * as Variables from "../Variables"
+import Input from "../Input"
+import Grid from "../Grid"
+import InputImage from "../InputImage"
 
 // Styles
 const Container = styled(Grid)`

@@ -1,9 +1,9 @@
 // Packages
 import React, { useState } from "react"
 
-import Button from "../ui/Button"
-import Link from "../utils/LinkScroll"
-import { DropdownContainer, Dropdown } from "../ui/Dropdown"
+import Button from "../Button"
+import Link from "../LinkScroll"
+import { DropdownContainer, Dropdown } from "../Dropdown"
 
 function DemoDropdown() {
     const [isOpen, setIsOpen] = useState(false)

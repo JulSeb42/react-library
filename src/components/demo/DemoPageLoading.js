@@ -1,7 +1,7 @@
 // Packages
 import React from "react"
 
-import PageLoading from "../ui/PageLoading"
+import PageLoading from "../PageLoading"
 
 function DemoPageLoading() {
     return <PageLoading backgroundcolor="secondary" />

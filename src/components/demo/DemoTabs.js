@@ -6,7 +6,7 @@ import {
     TabsButtonsContainer,
     TabsButton,
     TabsContent,
-} from "../ui/Tabs"
+} from "../Tabs"
 
 function DemoTabs() {
     const [active, setActive] = useState(1)
