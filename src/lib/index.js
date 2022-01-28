@@ -73,6 +73,7 @@ import Toast from "./components/Toast"
 import Variables from "./components/Variables"
 import Video from "./components/Video"
 import Wrapper from "./components/Wrapper"
+import capitalize from "./components/capitalize"
 
 export {
     Accordion,
@@ -146,4 +147,5 @@ export {
     Variables,
     Video,
     Wrapper,
+    capitalize,
 }
