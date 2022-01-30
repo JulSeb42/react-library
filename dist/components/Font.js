@@ -50,7 +50,7 @@ const P = _styledComponents.default.p(_templateObject12 || (_templateObject12 = 
 
 exports.P = P;
 
-const Small = _styledComponents.default.small(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    font-size: ", ";\n    font-style: italic;\n    color: ", ";\n\n    a {\n        color: ", ";\n        text-decoration: none;\n        transition: ", ";\n        font-weight: ", ";\n\n        &:hover {\n            color: ", ";\n        }\n\n        &.active {\n            color: ", ";\n        }\n    }\n"])), _Variables.default.FontSizes.Small, _Variables.default.Colors.Gray500, _Variables.default.Colors.Primary500, _Variables.default.Transitions.Short, _Variables.default.FontWeights.Bold, _Variables.default.Colors.Primary700, _Variables.default.Colors.Primary600);
+const Small = _styledComponents.default.small(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    font-size: ", ";\n\n    a {\n        color: ", ";\n        text-decoration: none;\n        transition: ", ";\n        font-weight: ", ";\n\n        &:hover {\n            color: ", ";\n        }\n\n        &.active {\n            color: ", ";\n        }\n    }\n"])), _Variables.default.FontSizes.Small, _Variables.default.Colors.Primary500, _Variables.default.Transitions.Short, _Variables.default.FontWeights.Bold, _Variables.default.Colors.Primary700, _Variables.default.Colors.Primary600);
 
 exports.Small = Small;
 

@@ -133,7 +133,7 @@ const Variables = {
 
         Body: "1rem",
 
-        Small: "0.75rem",
+        Small: "14px",
     },
 
     // Line height

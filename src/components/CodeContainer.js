@@ -4,7 +4,7 @@ import Highlight from "react-highlight"
 import styled from "styled-components"
 
 // Components
-import Variables from "../Variables"
+import Variables from "./Variables"
 
 // Styles
 const Container = styled(Highlight)`

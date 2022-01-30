@@ -11,7 +11,7 @@ var _reactHighlight = _interopRequireDefault(require("react-highlight"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _Variables = _interopRequireDefault(require("../Variables"));
+var _Variables = _interopRequireDefault(require("./Variables"));
 
 var _templateObject;
 

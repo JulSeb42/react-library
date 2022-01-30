@@ -178,8 +178,6 @@ const P = styled.p`
 
 const Small = styled.small`
     font-size: ${Variables.FontSizes.Small};
-    font-style: italic;
-    color: ${Variables.Colors.Gray500};
 
     a {
         color: ${Variables.Colors.Primary500};
