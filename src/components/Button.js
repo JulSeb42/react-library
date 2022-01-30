@@ -27,13 +27,11 @@ const Container = styled.button`
 
     .icon-left {
         margin-right: ${Variables.Margins.XXS};
+        height: 100%;
     }
 
     .icon-right {
         margin-left: ${Variables.Margins.XXS};
-    }
-
-    & > span {
         height: 100%;
     }
 
