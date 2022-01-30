@@ -13,9 +13,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
-var _reactLazyLoadImageComponent = require("react-lazy-load-image-component");
-
-require("react-lazy-load-image-component/src/effects/opacity.css");
+var _reactLazyload = _interopRequireDefault(require("react-lazyload"));
 
 var _Variables = _interopRequireDefault(require("./Variables"));
 
@@ -40,9 +38,9 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const Img = (0, _styledComponents.default)(_reactLazyLoadImageComponent.LazyLoadImage)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    width: ", ";\n    height: ", ";\n    position: relative;\n    z-index: 1;\n    display: block;\n\n    ", "\n"])), props => props.width || "100%", props => props.height || "auto", props => props.fit && (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            object-fit: ", ";\n        "])), props => props.fit));
+const Container = (0, _styledComponents.default)(_reactLazyload.default)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: relative;\n    width: ", ";\n    height: ", ";\n"])), props => props.width || "100%", props => props.height || "auto");
 
-const Container = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    position: relative;\n    width: ", ";\n    height: ", ";\n\n    span {\n        width: 100%;\n        display: block !important;\n        width: ", ";\n        height: ", ";\n    }\n"])), props => props.width || "100%", props => props.height || "auto", props => props.width || "100%", props => props.height || "auto");
+const Img = _styledComponents.default.img(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    width: ", ";\n    height: ", ";\n    position: relative;\n    z-index: 1;\n    display: block;\n\n    ", "\n"])), props => props.width || "100%", props => props.height || "auto", props => props.fit && (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n            object-fit: ", ";\n        "])), props => props.fit));
 
 const Caption = (0, _styledComponents.default)(Font.P)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    z-index: 2;\n    padding: ", " ", ";\n    background-color: ", ";\n    color: ", ";\n"])), _Variables.default.Margins.XS, _Variables.default.Margins.S, _Variables.default.Overlays.Plain.Black50, _Variables.default.Colors.White);
 
@@ -52,28 +50,19 @@ function Image(_ref) {
   } = _ref,
       props = _objectWithoutProperties(_ref, _excluded);
 
-  return props.caption ? /*#__PURE__*/_react.default.createElement(Container, _extends({
+  return /*#__PURE__*/_react.default.createElement(Container, {
     width: props.width,
     height: props.height
-  }, props), /*#__PURE__*/_react.default.createElement(Img, {
+  }, /*#__PURE__*/_react.default.createElement(Img, _extends({
     width: props.width,
     height: props.height,
     src: props.src,
     alt: props.alt,
-    fit: props.fit,
-    effect: "opacity",
-    scrollPosition: scrollPosition
-  }), /*#__PURE__*/_react.default.createElement(Caption, null, props.caption)) : /*#__PURE__*/_react.default.createElement(Img, _extends({
-    width: props.width,
-    height: props.height,
-    src: props.src,
-    alt: props.alt,
-    fit: props.fit,
-    effect: "opacity",
-    scrollPosition: scrollPosition
-  }, props));
+    fit: props.fit
+  }, props, {
+    once: true
+  })), props.caption && /*#__PURE__*/_react.default.createElement(Caption, null, props.caption));
 }
 
-var _default = (0, _reactLazyLoadImageComponent.trackWindowScroll)(Image);
-
+var _default = Image;
 exports.default = _default;

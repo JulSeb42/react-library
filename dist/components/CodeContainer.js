@@ -20,7 +20,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const Container = (0, _styledComponents.default)(_reactHighlight.default)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: ", ";\n"])), _Variables.default.Margins.M);
+const Container = (0, _styledComponents.default)(_reactHighlight.default)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: ", " !important;\n    overflow-x: scroll !important;\n    max-width: 100% !important;\n"])), _Variables.default.Margins.M);
 
 function CodeContainer(props) {
   return /*#__PURE__*/_react.default.createElement(Container, props, props.children);
