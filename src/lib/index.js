@@ -74,6 +74,7 @@ import Variables from "./components/Variables"
 import Video from "./components/Video"
 import Wrapper from "./components/Wrapper"
 import capitalize from "./components/capitalize"
+import CodeContainer from "./components/CodeContainer"
 
 export {
     Accordion,
@@ -148,4 +149,5 @@ export {
     Video,
     Wrapper,
     capitalize,
+    CodeContainer,
 }

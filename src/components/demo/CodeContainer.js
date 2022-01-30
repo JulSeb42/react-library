@@ -1,24 +1,14 @@
 // Packages
 import React from "react"
-import { CopyBlock, nord } from "react-code-blocks"
-import styled from "styled-components"
 
 // Components
-import Variables from "../Variables"
-
-// Styles
-const Container = styled(CopyBlock)`
-    padding: ${Variables.Margins.M};
-`
+import Container from "../CodeContainer"
 
 function CodeContainer(props) {
     return (
-        <Container
-            text={props.children}
-            language="jsx"
-            theme={nord}
-            wrapLines
-        />
+        <Container className={props.className || "javascript"}>
+            {props.children}
+        </Container>
     )
 }
 
