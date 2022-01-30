@@ -11,6 +11,12 @@ const Container = styled.video`
     height: ${props => props.height || "auto"};
 
     ${props =>
+        props.fit &&
+        css`
+            object-fit: ${props => props.fit};
+        `}
+
+    ${props =>
         props.aspectRatio &&
         css`
             height: inherit;

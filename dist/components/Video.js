@@ -15,7 +15,7 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _convertYoutube = _interopRequireDefault(require("./convertYoutube"));
 
-var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -28,7 +28,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const Container = _styledComponents.default.video(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    width: ", ";\n    height: ", ";\n\n    ", "\n\n    ", "\n"])), props => props.width || "100%", props => props.height || "auto", props => props.aspectRatio && (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            height: inherit;\n            aspect-ratio: ", ";\n        "])), props => props.aspectRatio), props => props.youtube && (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n            height: ", ";\n\n            ", "\n        "])), props => props.height || "30vw", props => props.aspectRatio && (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n                    height: inherit;\n                    aspect-ratio: ", ";\n                "])), props => props.aspectRatio)));
+const Container = _styledComponents.default.video(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    width: ", ";\n    height: ", ";\n\n    ", "\n\n    ", "\n\n    ", "\n"])), props => props.width || "100%", props => props.height || "auto", props => props.fit && (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            object-fit: ", ";\n        "])), props => props.fit), props => props.aspectRatio && (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n            height: inherit;\n            aspect-ratio: ", ";\n        "])), props => props.aspectRatio), props => props.youtube && (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n            height: ", ";\n\n            ", "\n        "])), props => props.height || "30vw", props => props.aspectRatio && (0, _styledComponents.css)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n                    height: inherit;\n                    aspect-ratio: ", ";\n                "])), props => props.aspectRatio)));
 
 function Video(props) {
   return props.youtube ? /*#__PURE__*/_react.default.createElement(Container, _extends({
