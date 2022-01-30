@@ -4,7 +4,6 @@ import styled, { css } from "styled-components"
 
 // Components
 import Variables from "./Variables"
-import Icon from "./Icon"
 
 // Styles
 const Container = styled.span`
@@ -109,6 +108,8 @@ const IconContainer = styled.label`
     margin-left: 0;
     overflow: hidden;
     transition: ${Variables.Transitions.Long};
+    display: inline-flex;
+    align-items: center;
 `
 
 function Tag(props) {
@@ -137,7 +138,19 @@ function Tag(props) {
                         className="icon"
                         color={props.color}
                     >
-                        <Icon name="close" size={16} component />
+                        {/* <Icon name="close" size={16} component /> */}
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M10.7947 4.22933L7.96601 7.05733L5.13801 4.22933L4.19534 5.172L7.02334 8L4.19534 10.828L5.13801 11.7707L7.96601 8.94267L10.7947 11.7707L11.7373 10.828L8.90934 8L11.7373 5.172L10.7947 4.22933Z"
+                                fill="currentColor"
+                            />
+                        </svg>
                     </IconContainer>
                 </>
             ) : (

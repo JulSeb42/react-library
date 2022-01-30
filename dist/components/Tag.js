@@ -15,8 +15,6 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _Variables = _interopRequireDefault(require("./Variables"));
 
-var _Icon = _interopRequireDefault(require("./Icon"));
-
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -36,7 +34,7 @@ const Label = _styledComponents.default.label(_templateObject4 || (_templateObje
 
 const Input = _styledComponents.default.input(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    display: none;\n\n    &:checked ~ .icon {\n        margin-left: ", ";\n        width: inherit;\n    }\n"])), _Variables.default.Margins.XXS);
 
-const IconContainer = _styledComponents.default.label(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    cursor: ", ";\n    width: 0;\n    margin-left: 0;\n    overflow: hidden;\n    transition: ", ";\n"])), props => props.color === "disabled" ? "not-allowed" : "pointer", _Variables.default.Transitions.Long);
+const IconContainer = _styledComponents.default.label(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    cursor: ", ";\n    width: 0;\n    margin-left: 0;\n    overflow: hidden;\n    transition: ", ";\n    display: inline-flex;\n    align-items: center;\n"])), props => props.color === "disabled" ? "not-allowed" : "pointer", _Variables.default.Transitions.Long);
 
 function Tag(props) {
   return /*#__PURE__*/_react.default.createElement(Container, {
@@ -55,11 +53,16 @@ function Tag(props) {
     htmlFor: props.id,
     className: "icon",
     color: props.color
-  }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
-    name: "close",
-    size: 16,
-    component: true
-  }))) : props.label);
+  }, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "16",
+    height: "16",
+    viewBox: "0 0 16 16",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M10.7947 4.22933L7.96601 7.05733L5.13801 4.22933L4.19534 5.172L7.02334 8L4.19534 10.828L5.13801 11.7707L7.96601 8.94267L10.7947 11.7707L11.7373 10.828L8.90934 8L11.7373 5.172L10.7947 4.22933Z",
+    fill: "currentColor"
+  })))) : props.label);
 }
 
 var _default = Tag;
