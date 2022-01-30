@@ -15,12 +15,12 @@
 
 ```
 <Image
-    src="https://images.unsplash.com/photo-1643028468604-858ea2a9c111?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+    src="link-to-img"
     alt="alt"
 />
 
 <Image
-    src="https://images.unsplash.com/photo-1643028468604-858ea2a9c111?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+    src="link-to-img"
     alt="alt"
     caption="Caption"
 />
@@ -45,14 +45,14 @@
 
 ```
 <Image
-    src="https://images.unsplash.com/photo-1643028468604-858ea2a9c111?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+    src="link-to-img"
     alt="alt"
     height="400px"
     fit="cover"
 />
 
 <Image
-    src="https://images.unsplash.com/photo-1643028468604-858ea2a9c111?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+    src="link-to-img"
     alt="alt"
     caption="Caption"
     height="400px"
@@ -79,14 +79,14 @@
 
 ```
 <Image
-    src="https://images.unsplash.com/photo-1643028468604-858ea2a9c111?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+    src="link-to-img"
     alt="alt"
     height="400px"
     fit="contain"
 />
 
 <Image
-    src="https://images.unsplash.com/photo-1643028468604-858ea2a9c111?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+    src="link-to-img"
     alt="alt"
     caption="Caption"
     height="400px"

@@ -8,7 +8,9 @@ import Variables from "./Variables"
 
 // Styles
 const Container = styled(Highlight)`
-    padding: ${Variables.Margins.M};
+    padding: ${Variables.Margins.M} !important;
+    overflow-x: scroll !important;
+    max-width: 100% !important;
 `
 
 function CodeContainer(props) {
