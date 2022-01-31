@@ -29,6 +29,12 @@ Object.defineProperty(exports, "Aside", {
     return _Aside.default;
   }
 });
+Object.defineProperty(exports, "Autocomplete", {
+  enumerable: true,
+  get: function get() {
+    return _Autocomplete.default;
+  }
+});
 Object.defineProperty(exports, "Avatar", {
   enumerable: true,
   get: function get() {
@@ -196,12 +202,6 @@ Object.defineProperty(exports, "ListMessages", {
   enumerable: true,
   get: function get() {
     return _Messaging.ListMessages;
-  }
-});
-Object.defineProperty(exports, "ListSuggestions", {
-  enumerable: true,
-  get: function get() {
-    return _ListSuggestions.default;
   }
 });
 Object.defineProperty(exports, "Loader", {
@@ -509,7 +509,7 @@ var _InputImage = _interopRequireDefault(require("./components/InputImage"));
 
 var _LinkScroll = _interopRequireDefault(require("./components/LinkScroll"));
 
-var _ListSuggestions = _interopRequireDefault(require("./components/ListSuggestions"));
+var _Autocomplete = _interopRequireDefault(require("./components/Autocomplete"));
 
 var _Loader = _interopRequireDefault(require("./components/Loader"));
 

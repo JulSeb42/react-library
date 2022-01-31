@@ -447,7 +447,7 @@
         }
 
         return (
-            <ListSuggestions
+            <Autocomplete
                 label="Location"
                 id="location"
                 onChange={handleFilterLocation}

@@ -34,7 +34,7 @@ const Container = _styledComponents.default.div(_templateObject || (_templateObj
 
 const List = _styledComponents.default.ul(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    padding: 0;\n    margin: 0;\n    list-style: none;\n    position: absolute;\n    z-index: 0;\n    background-color: ", ";\n    width: 100%;\n    top: 28px;\n    border-radius: ", ";\n    border: 1px solid ", ";\n    max-height: 0;\n    transition: ", ";\n    overflow: hidden;\n    padding-top: 0;\n    opacity: 0;\n    overflow-y: scroll;\n\n    &.open {\n        padding-top: 28px;\n        max-height: 200px;\n        opacity: 1;\n    }\n\n    li {\n        padding: ", ";\n        transition: ", ";\n\n        &:hover {\n            background-color: ", ";\n            color: ", ";\n            cursor: pointer;\n        }\n    }\n"])), _Variables.default.Colors.White, _Variables.default.Radiuses.S, _Variables.default.Colors.Primary500, _Variables.default.Transitions.Long, _Variables.default.Margins.XS, _Variables.default.Transitions.Short, _Variables.default.Colors.Primary500, _Variables.default.Colors.White);
 
-function ListSuggestions(props) {
+function Autocomplete(props) {
   const [isOpen, setIsOpen] = (0, _react.useState)(false);
   const open = isOpen ? "open" : "";
 
@@ -58,5 +58,5 @@ function ListSuggestions(props) {
   }, item))));
 }
 
-var _default = ListSuggestions;
+var _default = Autocomplete;
 exports.default = _default;

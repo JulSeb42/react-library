@@ -46,7 +46,7 @@ import Tag from "../Tag"
 import Badge from "../Badge"
 import Input from "../Input"
 import CheckInput from "../CheckInput"
-import ListSuggestions from "../ListSuggestions"
+import Autocomplete from "../Autocomplete"
 import ButtonsContainer from "../ButtonsContainer"
 import Form from "../Form"
 import Loader from "../Loader"
@@ -211,7 +211,7 @@ const options = {
         Badge,
         Input,
         CheckInput,
-        ListSuggestions,
+        Autocomplete,
         ButtonsContainer,
         Form,
         Loader,

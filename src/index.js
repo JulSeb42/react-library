@@ -44,7 +44,7 @@ import Input from "./components/Input"
 import InputContainer from "./components/InputContainer"
 import InputImage from "./components/InputImage"
 import LinkScroll from "./components/LinkScroll"
-import ListSuggestions from "./components/ListSuggestions"
+import Autocomplete from "./components/Autocomplete"
 import Loader from "./components/Loader"
 import Main from "./components/Main"
 import MarkdownContainer from "./components/MarkdownContainer"
@@ -132,7 +132,7 @@ export {
     InputContainer,
     InputImage,
     LinkScroll,
-    ListSuggestions,
+    Autocomplete,
     Loader,
     Main,
     MarkdownContainer,

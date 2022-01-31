@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react"
 import Variables from "../Variables"
 import * as Font from "../Font"
 import Grid from "../Grid"
-import ListSuggestions from "../ListSuggestions"
+import Autocomplete from "../Autocomplete"
 
 // Data
 import allCities from "./cities.json"
@@ -37,7 +37,7 @@ function DemoSuggestions(props) {
         <Grid gap={Variables.Margins.S}>
             <Font.H2>List suggestions</Font.H2>
 
-            <ListSuggestions
+            <Autocomplete
                 label="Location"
                 id="location"
                 onChange={handleFilterLocation}

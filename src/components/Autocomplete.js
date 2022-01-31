@@ -53,7 +53,7 @@ const List = styled.ul`
     }
 `
 
-function ListSuggestions(props) {
+function Autocomplete(props) {
     const [isOpen, setIsOpen] = useState(false)
     const open = isOpen ? "open" : ""
 
@@ -82,4 +82,4 @@ function ListSuggestions(props) {
     )
 }
 
-export default ListSuggestions
+export default Autocomplete

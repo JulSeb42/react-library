@@ -19,7 +19,7 @@ var _Variables = _interopRequireDefault(require("./Variables"));
 
 var _InputContainer = _interopRequireDefault(require("./InputContainer"));
 
-var _Icon = _interopRequireWildcard(require("./Icon"));
+var _Icon = _interopRequireDefault(require("./Icon"));
 
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11;
 
@@ -44,15 +44,7 @@ const RightContainer = _styledComponents.default.span(_templateObject8 || (_temp
 
 const ButtonPassword = _styledComponents.default.button(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    border: none;\n    padding: 0;\n    background: none;\n    color: ", ";\n    font-size: ", ";\n    font-weight: ", ";\n    transition: ", ";\n\n    &:hover {\n        color: ", ";\n    }\n\n    &:active {\n        color: ", ";\n    }\n"])), _Variables.default.Colors.Primary500, _Variables.default.FontSizes.Body, _Variables.default.FontWeights.Bold, _Variables.default.Transitions.Short, _Variables.default.Colors.Primary300, _Variables.default.Colors.Primary600);
 
-const SelectContainer = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    position: relative;\n\n    &:after {\n        ", "\n        position: absolute;\n        z-index: 2;\n        top: calc(50% - 16px / 2);\n        right: ", ";\n\n        ", "\n    }\n"])), (0, _Icon.IconMixin)({
-  icon: "chevron-down",
-  size: 16,
-  color: _Variables.default.Colors.Primary500
-}), _Variables.default.Margins.XS, props => props.disabled && (0, _styledComponents.css)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n                ", "\n            "])), (0, _Icon.IconMixin)({
-  icon: "chevron-down",
-  size: 16,
-  color: _Variables.default.Colors.Gray800
-}))); // Components
+const SelectContainer = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    position: relative;\n\n    &:after {\n        content: url(\"data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.862 6.19533L8.00001 9.05733L5.13801 6.19533L4.19534 7.13799L8.00001 10.9427L11.8047 7.13799L10.862 6.19533Z' fill='%231B4568'/%3E%3C/svg%3E\");\n        color: ", ";\n        position: absolute;\n        z-index: 2;\n        top: calc(50% - 18px / 2);\n        right: ", ";\n\n        ", "\n    }\n"])), _Variables.default.Colors.Primary500, _Variables.default.Margins.XS, props => props.disabled && (0, _styledComponents.css)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n                content: url(\"data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.862 6.19533L8.00001 9.05733L5.13801 6.19533L4.19534 7.13799L8.00001 10.9427L11.8047 7.13799L10.862 6.19533Z' fill='%232F2F2F'/%3E%3C/svg%3E\");\n            "])))); // Components
 
 
 function InputFunction(props) {
