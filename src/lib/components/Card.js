@@ -79,7 +79,7 @@ const ImageContainer = styled.div`
         z-index: 2;
     }
 
-    & > span {
+    & > .lazyload-wrapper {
         position: absolute;
         top: 0;
         left: 0;
@@ -209,4 +209,4 @@ function ImageCard(props) {
     )
 }
 
-export { BasicCard, ImageCard, }
+export { BasicCard, ImageCard }
