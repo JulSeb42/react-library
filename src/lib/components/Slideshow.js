@@ -15,8 +15,8 @@ const SlideshowContainer = styled.div`
 `
 
 const Slideshow = styled.div`
-    width: ${props => props.width || "100%"};
-    height: ${props => props.height || "70vh"};
+    width: ${props => props.width || "100%"};
+    height: ${props => props.height || "70vh"};
     overflow: hidden;
     position: relative;
 `
@@ -41,6 +41,7 @@ const SlideshowItem = styled.div`
         left: 100%;
     }
 
+    .lazyload-wrapper,
     img {
         width: 100%;
         height: 100%;
