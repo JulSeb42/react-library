@@ -47,7 +47,7 @@ function CheckInput(props) {
     justify: props.justify,
     disabled: props.disabled
   }, /*#__PURE__*/_react.default.createElement(Input, _extends({
-    type: props.type,
+    type: props.type || "checkbox",
     id: props.id
   }, props)), !props.toggle && props.type === "checkbox" && /*#__PURE__*/_react.default.createElement(Checkbox, {
     className: "checkbox",

@@ -163,7 +163,7 @@ const Toggle = styled.label`
 function CheckInput(props) {
     return (
         <Container justify={props.justify} disabled={props.disabled}>
-            <Input type={props.type} id={props.id} {...props} />
+            <Input type={props.type || "checkbox"} id={props.id} {...props} />
 
             {!props.toggle && props.type === "checkbox" && (
                 <Checkbox
