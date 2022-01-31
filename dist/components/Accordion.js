@@ -20,8 +20,6 @@ var Font = _interopRequireWildcard(require("./Font"));
 
 var _Grid = _interopRequireDefault(require("./Grid"));
 
-var _Icon = _interopRequireDefault(require("./Icon"));
-
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -55,12 +53,27 @@ function AccordionItem(props) {
     className: "open-accordion",
     onClick: () => setIsOpen(!isOpen),
     icon: props.icon
-  }, /*#__PURE__*/_react.default.createElement("span", null, props.title), /*#__PURE__*/_react.default.createElement(_Icon.default, {
-    name: props.icon === "plus" ? "plus" : "chevron-down",
-    size: 16,
-    className: "icon ".concat(isOpen ? "open" : ""),
-    component: true
-  })), /*#__PURE__*/_react.default.createElement(Content, {
+  }, /*#__PURE__*/_react.default.createElement("span", null, props.title), props.icon === "plus" ? /*#__PURE__*/_react.default.createElement("svg", {
+    width: "16",
+    height: "16",
+    viewBox: "0 0 16 16",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    className: "icon ".concat(isOpen ? "open" : "")
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M12.6667 7.33333H8.66668V3.33333H7.33334V7.33333H3.33334V8.66666H7.33334V12.6667H8.66668V8.66666H12.6667V7.33333Z",
+    fill: "currentColor"
+  })) : /*#__PURE__*/_react.default.createElement("svg", {
+    width: "16",
+    height: "16",
+    viewBox: "0 0 16 16",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    className: "icon ".concat(isOpen ? "open" : "")
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M10.862 6.19533L8.00001 9.05733L5.13801 6.19533L4.19534 7.13799L8.00001 10.9427L11.8047 7.13799L10.862 6.19533Z",
+    fill: "currentColor"
+  }))), /*#__PURE__*/_react.default.createElement(Content, {
     className: "content-accordion ".concat(isOpen ? "open" : "")
   }, props.children));
 }

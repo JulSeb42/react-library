@@ -129,7 +129,7 @@ function InputImage(props) {
                 {props.src === "" ? (
                     <Empty icon={props.iconempty} />
                 ) : (
-                    <Img src={props.src} alt={props.alt} />
+                    <Img src={props.src} alt={props.alt} fit="cover" />
                 )}
 
                 <Hover icon={props.iconhover} />

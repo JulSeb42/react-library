@@ -90,7 +90,8 @@ function InputImage(props) {
     icon: props.iconempty
   }) : /*#__PURE__*/_react.default.createElement(Img, {
     src: props.src,
-    alt: props.alt
+    alt: props.alt,
+    fit: "cover"
   }), /*#__PURE__*/_react.default.createElement(Hover, {
     icon: props.iconhover
   }))) : /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(Input, _extends({

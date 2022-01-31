@@ -257,7 +257,7 @@ const List = styled.ul`
                 color: ${Variables.Colors.Primary700};
             }
 
-            &.active {
+            &:active {
                 color: ${Variables.Colors.Primary600};
             }
         }
