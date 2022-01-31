@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 // Components
 import Variables from "./Variables"
+import Icon from "./Icon"
 
 // Styles
 const SlideshowContainer = styled.div`
@@ -13,8 +14,8 @@ const SlideshowContainer = styled.div`
 `
 
 const Slideshow = styled.div`
-    width: 100%;
-    height: 70vh;
+    width: ${props => props.width || "100%"};
+    height: ${props => props.height || "70vh"};
     overflow: hidden;
     position: relative;
 `
@@ -39,19 +40,14 @@ const SlideshowItem = styled.div`
         left: 100%;
     }
 
-    & > span {
+    img {
         width: 100%;
         height: 100%;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        object-fit: cover;
     }
 `
 
-const SlideshowButton = styled.button`
+const SlideshowButtonContainer = styled.button`
     --size: 48px;
     width: var(--size);
     height: var(--size);
@@ -80,6 +76,48 @@ const SlideshowButton = styled.button`
         border-radius: ${Variables.Margins.S} 0 0 ${Variables.Margins.S};
     }
 `
+
+function SlideshowButton(props) {
+    return (
+        <SlideshowButtonContainer type="button" {...props}>
+            {props.type === "prev" &&
+                (props.customiconprev ? (
+                    <Icon name={props.customiconprev} size={32} />
+                ) : (
+                    <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M17.724 8.39066L10.1147 16L17.724 23.6093L19.6093 21.724L13.8853 16L19.6093 10.276L17.724 8.39066Z"
+                            fill="currentColor"
+                        />
+                    </svg>
+                ))}
+
+            {props.type === "next" &&
+                (props.customiconnext ? (
+                    <Icon name={props.customiconnext} size={32} />
+                ) : (
+                    <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M14.276 23.6093L21.8853 16L14.276 8.39066L12.3907 10.276L18.1147 16L12.3907 21.724L14.276 23.6093Z"
+                            fill="currentColor"
+                        />
+                    </svg>
+                ))}
+        </SlideshowButtonContainer>
+    )
+}
 
 const SlideshowPaginationContainer = styled.div`
     display: flex;

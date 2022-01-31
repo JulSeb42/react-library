@@ -53,12 +53,20 @@ function CheckInput(props) {
     className: "checkbox",
     htmlFor: props.id,
     disabled: props.disabled
-  }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
-    name: "check",
-    size: 14,
-    className: "icon",
-    component: true
-  })), !props.toggle && props.type === "radio" && /*#__PURE__*/_react.default.createElement(Radio, {
+  }, props.icon ? /*#__PURE__*/_react.default.createElement(_Icon.default, {
+    name: props.icon,
+    size: 14
+  }) : /*#__PURE__*/_react.default.createElement("svg", {
+    width: "14",
+    height: "14",
+    viewBox: "0 0 14 14",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    className: "icon"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M5.83334 9.09183L3.91242 7.17092L3.08759 7.99575L5.83334 10.7415L11.4958 5.07908L10.6709 4.25425L5.83334 9.09183Z",
+    fill: "currentColor"
+  }))), !props.toggle && props.type === "radio" && /*#__PURE__*/_react.default.createElement(Radio, {
     className: "radio",
     htmlFor: props.id,
     disabled: props.disabled

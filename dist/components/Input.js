@@ -71,7 +71,11 @@ function InputFunction(props) {
     type: props.password ? visible : props.type,
     onChange: props.onChange,
     icon: props.icon
-  }, props)), (props.validation || props.password) && /*#__PURE__*/_react.default.createElement(RightContainer, null, props.validation && props.value.length > 0 && (props.validation === "passed" ? /*#__PURE__*/_react.default.createElement("svg", {
+  }, props)), (props.validation || props.password) && /*#__PURE__*/_react.default.createElement(RightContainer, null, props.validation && props.value.length > 0 && (props.validation === "passed" ? props.customiconpassed ? /*#__PURE__*/_react.default.createElement(_Icon.default, {
+    name: props.customiconpassed,
+    color: _Variables.default.Colors.Success500,
+    size: 16
+  }) : /*#__PURE__*/_react.default.createElement("svg", {
     width: "16",
     height: "16",
     viewBox: "0 0 16 16",
@@ -85,7 +89,11 @@ function InputFunction(props) {
     "clip-rule": "evenodd",
     d: "M1.33334 8C1.33334 4.324 4.324 1.33334 8 1.33334C11.676 1.33334 14.6667 4.324 14.6667 8C14.6667 11.676 11.676 14.6667 8 14.6667C4.324 14.6667 1.33334 11.676 1.33334 8ZM2.66667 8C2.66667 10.9407 5.05934 13.3333 8 13.3333C10.9407 13.3333 13.3333 10.9407 13.3333 8C13.3333 5.05934 10.9407 2.66667 8 2.66667C5.05934 2.66667 2.66667 5.05934 2.66667 8Z",
     fill: _Variables.default.Colors.Success500
-  })) : /*#__PURE__*/_react.default.createElement("svg", {
+  })) : props.customiconnotpassed ? /*#__PURE__*/_react.default.createElement(_Icon.default, {
+    name: props.customiconnotpassed,
+    color: _Variables.default.Colors.Danger500,
+    size: 16
+  }) : /*#__PURE__*/_react.default.createElement("svg", {
     width: "16",
     height: "16",
     viewBox: "0 0 16 16",
@@ -132,7 +140,9 @@ function Input(props) {
   }, /*#__PURE__*/_react.default.createElement(InputFunction, _extends({
     validation: props.validation,
     id: props.id,
-    max: props.counter && props.counter
+    max: props.counter && props.counter,
+    customiconpassed: props.customiconpassed,
+    customiconnotpassed: props.customiconnotpassed
   }, props))) : /*#__PURE__*/_react.default.createElement(InputFunction, _extends({
     id: props.id
   }, props));

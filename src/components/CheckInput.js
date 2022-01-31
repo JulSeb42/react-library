@@ -171,7 +171,23 @@ function CheckInput(props) {
                     htmlFor={props.id}
                     disabled={props.disabled}
                 >
-                    <Icon name="check" size={14} className="icon" component />
+                    {props.icon ? (
+                        <Icon name={props.icon} size={14} />
+                    ) : (
+                        <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="icon"
+                        >
+                            <path
+                                d="M5.83334 9.09183L3.91242 7.17092L3.08759 7.99575L5.83334 10.7415L11.4958 5.07908L10.6709 4.25425L5.83334 9.09183Z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                    )}
                 </Checkbox>
             )}
 

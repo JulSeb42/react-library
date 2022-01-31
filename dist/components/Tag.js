@@ -15,6 +15,8 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _Variables = _interopRequireDefault(require("./Variables"));
 
+var _Icon = _interopRequireDefault(require("./Icon"));
+
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -53,7 +55,10 @@ function Tag(props) {
     htmlFor: props.id,
     className: "icon",
     color: props.color
-  }, /*#__PURE__*/_react.default.createElement("svg", {
+  }, props.icon ? /*#__PURE__*/_react.default.createElement(_Icon.default, {
+    name: props.icon,
+    size: 16
+  }) : /*#__PURE__*/_react.default.createElement("svg", {
     width: "16",
     height: "16",
     viewBox: "0 0 16 16",

@@ -11,7 +11,6 @@ import {
 } from "../Slideshow"
 
 import Image from "../Image"
-import Icon from "../Icon"
 
 function DemoSlideshow() {
     const [active, setActive] = useState(1)
@@ -23,9 +22,7 @@ function DemoSlideshow() {
     return (
         <SlideshowContainer>
             <Slideshow>
-                <SlideshowButton onClick={handlePrev}>
-                    <Icon name="chevron-left" size={32} />
-                </SlideshowButton>
+                <SlideshowButton type="prev" onClick={handlePrev} />
 
                 <SlideshowItem
                     className={
@@ -72,9 +69,7 @@ function DemoSlideshow() {
                     />
                 </SlideshowItem>
 
-                <SlideshowButton onClick={handleNext}>
-                    <Icon name="chevron-right" size={32} />
-                </SlideshowButton>
+                <SlideshowButton type="next" onClick={handleNext} />
             </Slideshow>
 
             <SlideshowPaginationContainer>

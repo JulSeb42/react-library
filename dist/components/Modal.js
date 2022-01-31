@@ -27,11 +27,19 @@ const Close = _styledComponents.default.button(_templateObject2 || (_templateObj
 function Modal(props) {
   return /*#__PURE__*/_react.default.createElement(Container, props, props.close && /*#__PURE__*/_react.default.createElement(Close, {
     onClick: props.close
-  }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
-    name: "close",
-    size: 32,
-    component: true
-  })), props.children);
+  }, props.icon ? /*#__PURE__*/_react.default.createElement(_Icon.default, {
+    name: props.icon,
+    size: 32
+  }) : /*#__PURE__*/_react.default.createElement("svg", {
+    width: "32",
+    height: "32",
+    viewBox: "0 0 32 32",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M21.5893 8.45866L15.932 14.1147L10.276 8.45866L8.39066 10.344L14.0467 16L8.39066 21.656L10.276 23.5413L15.932 17.8853L21.5893 23.5413L23.4747 21.656L17.8187 16L23.4747 10.344L21.5893 8.45866Z",
+    fill: "currentColor"
+  }))), props.children);
 }
 
 var _default = Modal;

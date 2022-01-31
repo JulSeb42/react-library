@@ -187,24 +187,38 @@ function InputFunction(props) {
                     {props.validation &&
                         props.value.length > 0 &&
                         (props.validation === "passed" ? (
-                            <svg
-                                width="16"
-                                height="16"
-                                viewBox="0 0 16 16"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M5.13333 7.528L6.666 9.058L10.1953 5.52867L11.138 6.47133L6.66733 10.942L4.192 8.472L5.13333 7.528Z"
-                                    fill={Variables.Colors.Success500}
+                            props.customiconpassed ? (
+                                <Icon
+                                    name={props.customiconpassed}
+                                    color={Variables.Colors.Success500}
+                                    size={16}
                                 />
-                                <path
-                                    fill-rule="evenodd"
-                                    clip-rule="evenodd"
-                                    d="M1.33334 8C1.33334 4.324 4.324 1.33334 8 1.33334C11.676 1.33334 14.6667 4.324 14.6667 8C14.6667 11.676 11.676 14.6667 8 14.6667C4.324 14.6667 1.33334 11.676 1.33334 8ZM2.66667 8C2.66667 10.9407 5.05934 13.3333 8 13.3333C10.9407 13.3333 13.3333 10.9407 13.3333 8C13.3333 5.05934 10.9407 2.66667 8 2.66667C5.05934 2.66667 2.66667 5.05934 2.66667 8Z"
-                                    fill={Variables.Colors.Success500}
-                                />
-                            </svg>
+                            ) : (
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M5.13333 7.528L6.666 9.058L10.1953 5.52867L11.138 6.47133L6.66733 10.942L4.192 8.472L5.13333 7.528Z"
+                                        fill={Variables.Colors.Success500}
+                                    />
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M1.33334 8C1.33334 4.324 4.324 1.33334 8 1.33334C11.676 1.33334 14.6667 4.324 14.6667 8C14.6667 11.676 11.676 14.6667 8 14.6667C4.324 14.6667 1.33334 11.676 1.33334 8ZM2.66667 8C2.66667 10.9407 5.05934 13.3333 8 13.3333C10.9407 13.3333 13.3333 10.9407 13.3333 8C13.3333 5.05934 10.9407 2.66667 8 2.66667C5.05934 2.66667 2.66667 5.05934 2.66667 8Z"
+                                        fill={Variables.Colors.Success500}
+                                    />
+                                </svg>
+                            )
+                        ) : props.customiconnotpassed ? (
+                            <Icon
+                                name={props.customiconnotpassed}
+                                color={Variables.Colors.Danger500}
+                                size={16}
+                            />
                         ) : (
                             <svg
                                 width="16"
@@ -277,6 +291,8 @@ function Input(props) {
                 validation={props.validation}
                 id={props.id}
                 max={props.counter && props.counter}
+                customiconpassed={props.customiconpassed}
+                customiconnotpassed={props.customiconnotpassed}
                 {...props}
             />
         </InputContainer>

@@ -11,6 +11,7 @@ const Container = styled(Highlight)`
     padding: ${Variables.Margins.M} !important;
     overflow-x: scroll !important;
     max-width: 100% !important;
+    white-space: pre-wrap;
 `
 
 function CodeContainer(props) {

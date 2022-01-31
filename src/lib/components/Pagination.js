@@ -62,15 +62,43 @@ const Button = styled.button`
 function PaginationButton(props) {
     return (
         <Button {...props}>
-            {props.icon === "previous" && (
-                <Icon name="chevron-left" size={16} component />
-            )}
+            {props.icon === "previous" &&
+                (props.customiconprev ? (
+                    <Icon name={props.customiconprev} size={16} />
+                ) : (
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M8.862 4.19533L5.05733 7.99999L8.862 11.8047L9.80466 10.862L6.94266 7.99999L9.80466 5.13799L8.862 4.19533Z"
+                            fill="currentColor"
+                        />
+                    </svg>
+                ))}
 
             {props.number && props.number}
 
-            {props.icon === "next" && (
-                <Icon name="chevron-right" size={16} component />
-            )}
+            {props.icon === "next" &&
+                (props.customiconnext ? (
+                    <Icon name={props.customiconnext} size={16} />
+                ) : (
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M7.138 11.8047L10.9427 7.99999L7.138 4.19533L6.19534 5.13799L9.05734 7.99999L6.19534 10.862L7.138 11.8047Z"
+                            fill="currentColor"
+                        />
+                    </svg>
+                ))}
         </Button>
     )
 }
