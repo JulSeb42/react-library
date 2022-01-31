@@ -67,6 +67,7 @@ const ImageContainer = styled.div`
     text-decoration: none;
     color: ${Variables.Colors.White};
     position: relative;
+    display: block;
 
     &:after {
         content: "";
@@ -79,7 +80,7 @@ const ImageContainer = styled.div`
         z-index: 2;
     }
 
-    & > .lazyload-wrapper {
+    .img {
         position: absolute;
         top: 0;
         left: 0;
@@ -196,7 +197,13 @@ function BasicCard(props) {
 function ImageCard(props) {
     return (
         <ImageContainer to={props.to} as={props.to && Link} {...props}>
-            <Image src={props.src} alt={props.alt} fit="cover" />
+            <Image
+                src={props.src}
+                alt={props.alt}
+                fit="cover"
+                className="img"
+                once
+            />
 
             {(props.title || props.subtitle) && (
                 <ContentImage>

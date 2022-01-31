@@ -52,7 +52,8 @@ function Image(_ref) {
 
   return /*#__PURE__*/_react.default.createElement(Container, {
     width: props.width,
-    height: props.height
+    height: props.height,
+    className: props.className
   }, /*#__PURE__*/_react.default.createElement(Img, _extends({
     width: props.width,
     height: props.height,

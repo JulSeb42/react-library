@@ -41,7 +41,7 @@ const Caption = styled(Font.P)`
 
 function Image({ scrollPosition, ...props }) {
     return (
-        <Container width={props.width} height={props.height}>
+        <Container width={props.width} height={props.height} className={props.className}>
             <Img
                 width={props.width}
                 height={props.height}
