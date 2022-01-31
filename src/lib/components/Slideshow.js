@@ -9,9 +9,10 @@ import Icon from "./Icon"
 // Styles
 const SlideshowContainer = styled.div`
     position: relative;
-    display: grid;
+    display: inline-grid;
     grid-template-columns: 1fr;
     gap: ${Variables.Margins.XS};
+    width: auto;
 `
 
 const Slideshow = styled.div`
@@ -19,6 +20,7 @@ const Slideshow = styled.div`
     height: ${props => props.height || "70vh"};
     overflow: hidden;
     position: relative;
+    display: block;
 `
 
 const SlideshowItem = styled.div`

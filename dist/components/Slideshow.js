@@ -26,15 +26,15 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const SlideshowContainer = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: relative;\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: ", ";\n"])), _Variables.default.Margins.XS);
+const SlideshowContainer = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: relative;\n    display: inline-grid;\n    grid-template-columns: 1fr;\n    gap: ", ";\n    width: auto;\n"])), _Variables.default.Margins.XS);
 
 exports.SlideshowContainer = SlideshowContainer;
 
-const Slideshow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    width: ", ";\n    height: ", ";\n    overflow: hidden;\n    position: relative;\n"])), props => props.width || "100%", props => props.height || "70vh");
+const Slideshow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    width: ", ";\n    height: ", ";\n    overflow: hidden;\n    position: relative;\n    display: block;\n"])), props => props.width || "100%", props => props.height || "70vh");
 
 exports.Slideshow = Slideshow;
 
-const SlideshowItem = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    z-index: 1;\n    transition: ", ";\n\n    &.previous {\n        left: -100%;\n    }\n\n    &.active {\n        left: 0;\n    }\n\n    &.next {\n        left: 100%;\n    }\n\n    img {\n        width: 100%;\n        height: 100%;\n        object-fit: cover;\n    }\n"])), _Variables.default.Transitions.Long);
+const SlideshowItem = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    z-index: 1;\n    transition: ", ";\n\n    &.previous {\n        left: -100%;\n    }\n\n    &.active {\n        left: 0;\n    }\n\n    &.next {\n        left: 100%;\n    }\n\n    .lazyload-wrapper,\n    img {\n        width: 100%;\n        height: 100%;\n        object-fit: cover;\n    }\n"])), _Variables.default.Transitions.Long);
 
 exports.SlideshowItem = SlideshowItem;
 
