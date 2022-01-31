@@ -1,4 +1,5 @@
 // Packages
+import React from "react"
 import styled from "styled-components"
 
 // Components
@@ -43,7 +44,7 @@ const Container = styled.span`
 function ProgressBar(props) {
     return (
         <Container
-            value={props.value || 50}
+            value={props.value || 50}
             height={props.height || 16}
             color={props.color || "primary"}
             {...props}
