@@ -1,7 +1,7 @@
 // Packages
-import React from "react"
+import React, { useEffect } from "react"
 import styled, { css } from "styled-components"
-import LazyLoad from "react-lazyload"
+import LazyLoad, { forceCheck } from "react-lazyload"
 
 // Components
 import Variables from "./Variables"
@@ -40,8 +40,16 @@ const Caption = styled(Font.P)`
 `
 
 function Image({ scrollPosition, ...props }) {
+    useEffect(() => {
+        forceCheck()
+    })
+    
     return (
-        <Container width={props.width} height={props.height} className={props.className}>
+        <Container
+            width={props.width}
+            height={props.height}
+            className={props.className}
+        >
             <Img
                 width={props.width}
                 height={props.height}

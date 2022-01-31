@@ -29,9 +29,10 @@ const Container = styled.div`
         object-fit: contain;
     }
 
-    .lazy-load-image-background {
+    .lazyload-wrapper {
         width: 90%;
         height: 90%;
+        display: block;
 
         img {
             width: 100%;
