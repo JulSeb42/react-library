@@ -176,7 +176,7 @@ function InputFunction(props) {
             <InputStyled
                 id={props.id}
                 value={props.value}
-                type={props.password ? visible : props.type}
+                type={props.password ? visible : props.type || "text"}
                 onChange={props.onChange}
                 icon={props.icon}
                 maxLength={props.counter}
@@ -273,7 +273,12 @@ function InputFunction(props) {
             {...props}
         />
     ) : (
-        <InputStyled id={props.id} maxLength={props.counter} {...props} />
+        <InputStyled
+            id={props.id}
+            maxLength={props.counter}
+            type={props.password ? visible : props.type || "text"}
+            {...props}
+        />
     )
 }
 
