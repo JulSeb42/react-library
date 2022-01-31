@@ -6,7 +6,7 @@ import MDEditor from "@uiw/react-md-editor"
 // Components
 import Variables from "./Variables"
 import InputContainer from "./InputContainer"
-import Icon, { IconMixin } from "./Icon"
+import Icon from "./Icon"
 
 // Styles
 const Container = styled.div`
@@ -138,24 +138,17 @@ const SelectContainer = styled.div`
     position: relative;
 
     &:after {
-        ${IconMixin({
-            icon: "chevron-down",
-            size: 16,
-            color: Variables.Colors.Primary500,
-        })}
+        content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.862 6.19533L8.00001 9.05733L5.13801 6.19533L4.19534 7.13799L8.00001 10.9427L11.8047 7.13799L10.862 6.19533Z' fill='%231B4568'/%3E%3C/svg%3E");
+        color: ${Variables.Colors.Primary500};
         position: absolute;
         z-index: 2;
-        top: calc(50% - 16px / 2);
+        top: calc(50% - 18px / 2);
         right: ${Variables.Margins.XS};
 
         ${props =>
             props.disabled &&
             css`
-                ${IconMixin({
-                    icon: "chevron-down",
-                    size: 16,
-                    color: Variables.Colors.Gray800,
-                })}
+                content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.862 6.19533L8.00001 9.05733L5.13801 6.19533L4.19534 7.13799L8.00001 10.9427L11.8047 7.13799L10.862 6.19533Z' fill='%232F2F2F'/%3E%3C/svg%3E");
             `}
     }
 `
