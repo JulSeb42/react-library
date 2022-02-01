@@ -155,9 +155,9 @@ const Variables = {
   },
   // Transitions
   Transitions: {
-    Short: "var(--transiton-short)",
-    Long: "var(--transiton-long)",
-    Bezier: "var(--transiton-bezier)"
+    Short: "var(--transition-short)",
+    Long: "var(--transition-long)",
+    Bezier: "var(--transition-bezier)"
   },
   // Breakpoints
   Breakpoints: {

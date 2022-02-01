@@ -147,9 +147,9 @@
     --container-template-tablet: 5vw 1fr 5vw;
 
     /* Transitions */
-    --transiton-short: all 0.2s ease;
-    --transiton-long: all 0.5s ease;
-    --transiton-bezier: all 0.5s cubic-bezier(0.25, 0.75, 0, 0.66);
+    --transition-short: all 0.2s ease;
+    --transition-long: all 0.5s ease;
+    --transition-bezier: all 0.5s cubic-bezier(0.25, 0.75, 0, 0.66);
 }
 
 /*=============================================== Import ===============================================*/

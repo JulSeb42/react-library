@@ -5,7 +5,6 @@ import { BrowserRouter as Router } from "react-router-dom"
 // Components
 import App from "./App"
 
-
 import { Accordion, AccordionItem } from "./components/Accordion"
 import Alert from "./components/Alert"
 import Aside from "./components/Aside"
