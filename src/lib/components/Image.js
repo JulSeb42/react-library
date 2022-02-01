@@ -43,7 +43,7 @@ function Image({ scrollPosition, ...props }) {
     useEffect(() => {
         forceCheck()
     })
-
+    
     return (
         <Container
             width={props.width}

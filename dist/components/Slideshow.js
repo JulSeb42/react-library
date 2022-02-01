@@ -26,7 +26,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const SlideshowContainer = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: relative;\n    display: inline-grid;\n    grid-template-columns: 1fr;\n    gap: ", ";\n    width: auto;\n"])), _Variables.default.Margins.XS);
+const SlideshowContainer = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: relative;\n    display: inline-grid;\n    grid-template-columns: 1fr;\n    gap: ", ";\n    width: ", ";\n"])), _Variables.default.Margins.XS, props => props.width || "100%");
 
 exports.SlideshowContainer = SlideshowContainer;
 

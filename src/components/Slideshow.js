@@ -12,7 +12,7 @@ const SlideshowContainer = styled.div`
     display: inline-grid;
     grid-template-columns: 1fr;
     gap: ${Variables.Margins.XS};
-    width: auto;
+    width: ${props => props.width || "100%"};
 `
 
 const Slideshow = styled.div`

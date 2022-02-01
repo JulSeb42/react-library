@@ -86,7 +86,7 @@ const Bubble = styled(Font.P)`
         `}
 `
 
-const ContainerSend = styled.div`
+const ContainerSend = styled.form`
     height: 10%;
     display: flex;
     align-items: center;
@@ -105,22 +105,46 @@ const Input = styled.textarea`
 `
 
 const Send = styled.button`
-    --size: 32px;
-    width: var(--size);
-    height: var(--size);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
-    color: ${Variables.Colors.Primary500};
-    background: none;
-    transition: ${Variables.Transitions.Short};
+    ${props =>
+        props.textbutton &&
+        css`
+            color: ${Variables.Colors.Primary500};
+            font-weight: ${Variables.FontWeights.Bold};
+            border: none;
+            padding: 0;
+            background: none;
+            transition: ${Variables.Transitions.Short};
+            font-size: ${Variables.FontSizes.Body};
 
-    &:hover {
-        background-color: ${Variables.Colors.Gray50};
-    }
+            &:hover {
+                color: ${Variables.Colors.Primary300};
+            }
+
+            &:active {
+                color: ${Variables.Colors.Primary600};
+            }
+        `}
+
+    ${props =>
+        !props.textbutton &&
+        css`
+            --size: 32px;
+            width: var(--size);
+            height: var(--size);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            border: none;
+            border-radius: 50%;
+            color: ${Variables.Colors.Primary500};
+            background: none;
+            transition: ${Variables.Transitions.Short};
+
+            &:hover {
+                background-color: ${Variables.Colors.Gray50};
+            }
+        `}
 `
 
 function EmptyContainer(props) {
@@ -143,10 +167,10 @@ function Message(props) {
 
 function MessageInput(props) {
     return (
-        <ContainerSend>
+        <ContainerSend onSubmit={props.onSubmit}>
             <Input {...props} />
 
-            <Send onClick={props.onClick}>
+            <Send onClick={props.onClick} textbutton={props.textbutton} type="submit">
                 {props.textbutton ? (
                     props.textbutton
                 ) : props.icon ? (

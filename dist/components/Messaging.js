@@ -27,7 +27,7 @@ var Font = _interopRequireWildcard(require("./Font"));
 
 var _Icon = _interopRequireDefault(require("./Icon"));
 
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -53,11 +53,11 @@ const ContainerMessage = _styledComponents.default.div(_templateObject4 || (_tem
 
 const Bubble = (0, _styledComponents.default)(Font.P)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    width: auto;\n    display: inline;\n    max-width: 70%;\n    padding: ", " ", ";\n    border-radius: ", ";\n\n    a {\n        text-decoration: underline;\n        font-weight: ", ";\n    }\n\n    ", "\n\n    ", "\n"])), _Variables.default.Margins.XS, _Variables.default.Margins.S, _Variables.default.Radiuses.S, _Variables.default.FontWeights.Regular, props => props.type === "sent" && (0, _styledComponents.css)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n            background-color: ", ";\n            color: ", ";\n\n            a {\n                color: ", ";\n\n                &:hover {\n                    color: ", ";\n                }\n            }\n        "])), _Variables.default.Colors.Primary500, _Variables.default.Colors.White, _Variables.default.Colors.White, _Variables.default.Colors.Gray100), props => props.type === "received" && (0, _styledComponents.css)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n            background-color: ", ";\n            color: ", ";\n        "])), _Variables.default.Colors.Gray100, _Variables.default.Colors.Black));
 
-const ContainerSend = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    height: 10%;\n    display: flex;\n    align-items: center;\n    min-height: 50px;\n"])));
+const ContainerSend = _styledComponents.default.form(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    height: 10%;\n    display: flex;\n    align-items: center;\n    min-height: 50px;\n"])));
 
 const Input = _styledComponents.default.textarea(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    padding: 0;\n    border: none;\n    resize: none;\n    flex-grow: 1;\n    height: 100%;\n    font-family: ", ";\n    font-size: ", ";\n    margin-right: ", ";\n"])), _Variables.default.FontFamilies.Body, _Variables.default.FontSizes.Body, _Variables.default.Margins.XS);
 
-const Send = _styledComponents.default.button(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    --size: 32px;\n    width: var(--size);\n    height: var(--size);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    padding: 0;\n    border: none;\n    border-radius: 50%;\n    color: ", ";\n    background: none;\n    transition: ", ";\n\n    &:hover {\n        background-color: ", ";\n    }\n"])), _Variables.default.Colors.Primary500, _Variables.default.Transitions.Short, _Variables.default.Colors.Gray50);
+const Send = _styledComponents.default.button(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    ", "\n\n    ", "\n"])), props => props.textbutton && (0, _styledComponents.css)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n            color: ", ";\n            font-weight: ", ";\n            border: none;\n            padding: 0;\n            background: none;\n            transition: ", ";\n            font-size: ", ";\n\n            &:hover {\n                color: ", ";\n            }\n\n            &:active {\n                color: ", ";\n            }\n        "])), _Variables.default.Colors.Primary500, _Variables.default.FontWeights.Bold, _Variables.default.Transitions.Short, _Variables.default.FontSizes.Body, _Variables.default.Colors.Primary300, _Variables.default.Colors.Primary600), props => !props.textbutton && (0, _styledComponents.css)(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n            --size: 32px;\n            width: var(--size);\n            height: var(--size);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            padding: 0;\n            border: none;\n            border-radius: 50%;\n            color: ", ";\n            background: none;\n            transition: ", ";\n\n            &:hover {\n                background-color: ", ";\n            }\n        "])), _Variables.default.Colors.Primary500, _Variables.default.Transitions.Short, _Variables.default.Colors.Gray50));
 
 function EmptyContainer(props) {
   return /*#__PURE__*/_react.default.createElement(Empty, props, /*#__PURE__*/_react.default.createElement(Font.P, null, props.children));
@@ -72,8 +72,12 @@ function Message(props) {
 }
 
 function MessageInput(props) {
-  return /*#__PURE__*/_react.default.createElement(ContainerSend, null, /*#__PURE__*/_react.default.createElement(Input, props), /*#__PURE__*/_react.default.createElement(Send, {
-    onClick: props.onClick
+  return /*#__PURE__*/_react.default.createElement(ContainerSend, {
+    onSubmit: props.onSubmit
+  }, /*#__PURE__*/_react.default.createElement(Input, props), /*#__PURE__*/_react.default.createElement(Send, {
+    onClick: props.onClick,
+    textbutton: props.textbutton,
+    type: "submit"
   }, props.textbutton ? props.textbutton : props.icon ? /*#__PURE__*/_react.default.createElement(_Icon.default, {
     name: props.icon,
     size: 16

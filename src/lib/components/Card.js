@@ -197,13 +197,7 @@ function BasicCard(props) {
 function ImageCard(props) {
     return (
         <ImageContainer to={props.to} as={props.to && Link} {...props}>
-            <Image
-                src={props.src}
-                alt={props.alt}
-                fit="cover"
-                className="img"
-                once
-            />
+            <Image src={props.src} alt={props.alt} fit="cover" className="img" once />
 
             {(props.title || props.subtitle) && (
                 <ContentImage>
@@ -216,4 +210,4 @@ function ImageCard(props) {
     )
 }
 
-export { BasicCard, ImageCard }
+export { BasicCard, ImageCard, }

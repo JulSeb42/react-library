@@ -57,9 +57,9 @@ const Close = styled.button`
     color: ${Variables.Colors.White};
     border-radius: 50%;
     transition: ${Variables.Transitions.Short};
-
+    
     &:hover {
-        background-color: ${Variables.Colors.Gray500};
+        background-color: ${Variables.Colors.Gray500}
     }
 `
 

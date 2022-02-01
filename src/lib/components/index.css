@@ -1,6 +1,157 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/*=============================================== Variables ===============================================*/
+:root {
+    /* Colors */
+    --color-black: rgb(0, 0, 0);
+    --color-white: rgb(255, 255, 255);
+    --color-gray-50: rgb(248, 248, 248);
+    --color-gray-100: rgb(228, 228, 228);
+    --color-gray-200: rgb(200, 200, 200);
+    --color-gray-300: rgb(173, 173, 173);
+    --color-gray-400: rgb(145, 145, 145);
+    --color-gray-500: rgb(118, 118, 118);
+    --color-gray-600: rgb(94, 94, 94);
+    --color-gray-700: rgb(71, 71, 71);
+    --color-gray-800: rgb(47, 47, 47);
+    --color-gray-900: rgb(24, 24, 24);
+    --color-primary-50: rgb(244, 246, 247);
+    --color-primary-100: rgb(209, 218, 225);
+    --color-primary-200: rgb(164, 181, 195);
+    --color-primary-300: rgb(118, 143, 164);
+    --color-primary-400: rgb(73, 106, 134);
+    --color-primary-500: rgb(27, 69, 104);
+    --color-primary-600: rgb(22, 55, 83);
+    --color-primary-700: rgb(16, 41, 62);
+    --color-primary-800: rgb(11, 28, 42);
+    --color-primary-900: rgb(5, 14, 21);
+    --color-secondary-50: rgb(244, 248, 253);
+    --color-secondary-100: rgb(212, 226, 246);
+    --color-secondary-200: rgb(168, 197, 237);
+    --color-secondary-300: rgb(125, 167, 229);
+    --color-secondary-400: rgb(81, 138, 220);
+    --color-secondary-500: rgb(38, 109, 211);
+    --color-secondary-600: rgb(30, 87, 169);
+    --color-secondary-700: rgb(23, 65, 127);
+    --color-secondary-800: rgb(15, 44, 84);
+    --color-secondary-900: rgb(8, 22, 42);
+    --color-success-50: rgb(243, 249, 246);
+    --color-success-100: rgb(206, 230, 219);
+    --color-success-200: rgb(157, 205, 183);
+    --color-success-300: rgb(107, 179, 146);
+    --color-success-400: rgb(58, 154, 110);
+    --color-success-500: rgb(9, 129, 74);
+    --color-success-600: rgb(7, 103, 59);
+    --color-success-700: rgb(5, 77, 44);
+    --color-success-800: rgb(4, 52, 30);
+    --color-success-900: rgb(2, 26, 15);
+    --color-danger-50: rgb(251, 242, 244);
+    --color-danger-100: rgb(240, 204, 209);
+    --color-danger-200: rgb(225, 153, 164);
+    --color-danger-300: rgb(209, 102, 118);
+    --color-danger-400: rgb(194, 51, 73);
+    --color-danger-500: rgb(179, 0, 27);
+    --color-danger-600: rgb(143, 0, 22);
+    --color-danger-700: rgb(107, 0, 16);
+    --color-danger-800: rgb(72, 0, 11);
+    --color-danger-900: rgb(36, 0, 5);
+    --color-warning-50: rgb(252, 246, 242);
+    --color-warning-100: rgb(243, 219, 204);
+    --color-warning-200: rgb(231, 182, 153);
+    --color-warning-300: rgb(220, 146, 102);
+    --color-warning-400: rgb(208, 109, 51);
+    --color-warning-500: rgb(196, 73, 0);
+    --color-warning-600: rgb(157, 58, 0);
+    --color-warning-700: rgb(118, 44, 0);
+    --color-warning-800: rgb(78, 29, 0);
+    --color-warning-900: rgb(39, 15, 0);
+
+    /* Overlays */
+    --overlay-plain-black-50: rgba(0, 0, 0, 0.5);
+    --overlay-plain-black-80: rgba(0, 0, 0, 0.8);
+    --overlay-plain-white-50: rgba(255, 255, 255, 0.5);
+    --overlay-plain-white-80: rgba(255, 255, 255, 0.8);
+    --overlay-gradient-black: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    --overlay-gradient-white: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.7) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+
+    /* Shadows */
+    --shadow-xxl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-l: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-m: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-s: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+    /* Margins */
+    --margin-xxl: 48px;
+    --margin-xl: 32px;
+    --margin-l: 24px;
+    --margin-m: 16px;
+    --margin-s: 12px;
+    --margin-xs: 8px;
+    --margin-xxs: 4px;
+
+    /* Font families */
+    --font-family-body: "Lato", sans-serif;
+    --font-family-code: Consolas, Monaco, Lucida Console, Liberation Mono,
+        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+
+    /* Font weights */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    /* Font sizes */
+    --font-size-display-h1: 5rem;
+    --font-size-display-h2: 4rem;
+    --font-size-display-h3: 3.5rem;
+    --font-size-display-h4: 3rem;
+    --font-size-display-h5: 2.5rem;
+    --font-size-title-extra-large: 2rem;
+    --font-size-title-large: 1.5rem;
+    --font-size-title-medium: 1.125rem;
+    --font-size-title-small: 1rem;
+    --font-size-body: 1rem;
+    --font-size-small: 14px;
+
+    /* Line height */
+    --line-height: 1.5;
+
+    /* Radiuses */
+    --radius-xxl: 24px;
+    --radius-xl: 16px;
+    --radius-l: 12px;
+    --radius-m: 8px;
+    --radius-s: 4px;
+    --radius-xs: 8px;
+    --radius-round: 99em;
+
+    /* Container */
+    --container-template-1-col: 1fr 600px 1fr;
+    --container-template-aside-left: 1fr 250px 600px 1fr;
+    --container-template-aside-right: 1fr 600px 250px 1fr;
+    --container-template-form: 1fr 400px 1fr;
+    --container-template-column: 2;
+    --container-template-padding: 48px 0;
+    --container-template-tablet: 5vw 1fr 5vw;
+
+    /* Transitions */
+    --transiton-short: all 0.2s ease;
+    --transiton-long: all 0.5s ease;
+    --transiton-bezier: all 0.5s cubic-bezier(0.25, 0.75, 0, 0.66);
+}
+
 /*=============================================== Import ===============================================*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 
