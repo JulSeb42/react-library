@@ -1,13 +1,13 @@
 // Packages
 import React from "react"
 import styled, { css } from "styled-components"
+import { Link } from "react-router-dom"
 
 // Components
 import Variables from "./Variables"
 import * as Font from "./Font"
 import Button from "./Button"
 import Icon from "./Icon"
-import Link from "./LinkScroll"
 import Image from "./Image"
 
 // Styles

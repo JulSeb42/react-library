@@ -30,6 +30,7 @@ function Form(props) {
                             iconright={props.iconrightprimary}
                             type="submit"
                             loading={props.loading}
+                            disabled={props.loading}
                         >
                             {props.btnprimary}
                         </Button>

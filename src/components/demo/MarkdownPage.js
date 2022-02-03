@@ -1,7 +1,7 @@
 // Packages
 import React, { useState, useEffect } from "react"
 import Markdown from "markdown-to-jsx"
-import Link from "../LinkScroll"
+import { Link } from "react-router-dom"
 
 // Components
 import Variables from "../Variables"
@@ -18,6 +18,7 @@ import DemoInputs, {
     DemoCounter,
     DemoMarkdown,
     DemoImage,
+    DemoInputText
 } from "./DemoInputs"
 import DemoSuggestions from "./DemoSuggestions"
 import DemoBreadcrumbs from "./DemoBreadcrumbs"
@@ -196,6 +197,8 @@ const options = {
         DemoMessaging,
         DemoMessagesEmpty,
         DemoUtils,
+
+        DemoInputText,
 
         Grid,
         Wrapper,

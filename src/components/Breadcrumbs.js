@@ -1,10 +1,10 @@
 // Packages
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 // Components
 import Variables from "./Variables"
 import * as Font from "./Font"
-import Link from "./LinkScroll"
 
 // Styles
 export const Breadcrumbs = styled(Font.P)`

@@ -126,3 +126,11 @@ export function DemoImage() {
         />
     )
 }
+
+export function DemoInputText() {
+    const [text, setText] = useState("")
+    const handleText = e => setText(e.target.value)
+    return (
+        <Input label="Test text" onChange={handleText} value={text} />
+    )
+}

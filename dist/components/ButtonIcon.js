@@ -11,9 +11,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _Variables = _interopRequireDefault(require("./Variables"));
+var _reactRouterDom = require("react-router-dom");
 
-var _LinkScroll = _interopRequireDefault(require("./LinkScroll"));
+var _Variables = _interopRequireDefault(require("./Variables"));
 
 var _Icon = _interopRequireDefault(require("./Icon"));
 
@@ -30,7 +30,7 @@ const Container = _styledComponents.default.button(_templateObject || (_template
 
 function ButtonIcon(props) {
   return /*#__PURE__*/_react.default.createElement(Container, _extends({
-    as: props.to && _LinkScroll.default,
+    as: props.to && _reactRouterDom.Link,
     size: props.size || 48
   }, props), /*#__PURE__*/_react.default.createElement(_Icon.default, {
     name: props.icon,

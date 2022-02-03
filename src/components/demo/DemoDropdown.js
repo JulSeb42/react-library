@@ -1,8 +1,9 @@
 // Packages
 import React, { useState } from "react"
+import { Link } from "react-router-dom"
 
+// Components
 import Button from "../Button"
-import Link from "../LinkScroll"
 import { DropdownContainer, Dropdown } from "../Dropdown"
 
 function DemoDropdown() {

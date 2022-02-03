@@ -9,11 +9,11 @@ exports.BreadcrumbsLink = exports.BreadcrumbsActive = exports.Breadcrumbs = void
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _reactRouterDom = require("react-router-dom");
+
 var _Variables = _interopRequireDefault(require("./Variables"));
 
 var Font = _interopRequireWildcard(require("./Font"));
-
-var _LinkScroll = _interopRequireDefault(require("./LinkScroll"));
 
 var _templateObject, _templateObject2, _templateObject3;
 
@@ -28,7 +28,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 // Styles
 const Breadcrumbs = (0, _styledComponents.default)(Font.P)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    a:after {\n        content: \"/\";\n        margin: 0 ", ";\n        color: ", ";\n    }\n"])), _Variables.default.Margins.XXS, _Variables.default.Colors.Black);
 exports.Breadcrumbs = Breadcrumbs;
-const BreadcrumbsLink = (0, _styledComponents.default)(_LinkScroll.default)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([""])));
+const BreadcrumbsLink = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([""])));
 exports.BreadcrumbsLink = BreadcrumbsLink;
 
 const BreadcrumbsActive = _styledComponents.default.span(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral([""])));

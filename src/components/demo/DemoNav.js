@@ -6,9 +6,6 @@ import { NavLink } from "react-router-dom"
 // Components
 import Variables from "../Variables"
 
-// Utils
-import scrollToTop from "../scrollToTop"
-
 // Data
 import pages from "./pages"
 
@@ -42,7 +39,7 @@ function DemoNav() {
     return (
         <Container>
             {pages.map((page, i) => (
-                <Link to={`/${page === "index" ? "" : page}`} onClick={scrollToTop} key={i}>
+                <Link to={`/${page === "index" ? "" : page}`} key={i}>
                     {page.charAt(0).toUpperCase() +
                         page.slice(1).replace("-", " ")}
                 </Link>

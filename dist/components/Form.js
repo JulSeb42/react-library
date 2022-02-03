@@ -40,7 +40,8 @@ function Form(props) {
     iconleft: props.iconleftprimary,
     iconright: props.iconrightprimary,
     type: "submit",
-    loading: props.loading
+    loading: props.loading,
+    disabled: props.loading
   }, props.btnprimary), props.btncancel && /*#__PURE__*/_react.default.createElement(_Button.default, {
     btnstyle: "text",
     color: props.colorcancel || "primary",

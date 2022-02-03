@@ -14,6 +14,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
+var _reactRouterDom = require("react-router-dom");
+
 var _Variables = _interopRequireDefault(require("./Variables"));
 
 var Font = _interopRequireWildcard(require("./Font"));
@@ -21,8 +23,6 @@ var Font = _interopRequireWildcard(require("./Font"));
 var _Button = _interopRequireDefault(require("./Button"));
 
 var _Icon = _interopRequireDefault(require("./Icon"));
-
-var _LinkScroll = _interopRequireDefault(require("./LinkScroll"));
 
 var _Image = _interopRequireDefault(require("./Image"));
 
@@ -63,7 +63,7 @@ function FunctionBasicContent(props) {
 function BasicCard(props) {
   return /*#__PURE__*/_react.default.createElement(BasicContainer, _extends({
     direction: props.direction,
-    as: props.to && _LinkScroll.default,
+    as: props.to && _reactRouterDom.Link,
     to: props.to
   }, props), props.icon && /*#__PURE__*/_react.default.createElement(_Icon.default, {
     name: props.icon,
@@ -98,7 +98,7 @@ function BasicCard(props) {
 function ImageCard(props) {
   return /*#__PURE__*/_react.default.createElement(ImageContainer, _extends({
     to: props.to,
-    as: props.to && _LinkScroll.default
+    as: props.to && _reactRouterDom.Link
   }, props), /*#__PURE__*/_react.default.createElement(_Image.default, {
     src: props.src,
     alt: props.alt,
