@@ -15,7 +15,7 @@ const H1 = styled.h1`
         transition: ${Variables.Transitions.Short};
 
         &:hover {
-            color: ${Variables.Colors.Primary700};
+            color: ${Variables.Colors.Primary300};
         }
 
         &.active {
@@ -40,7 +40,7 @@ const H2 = styled.h2`
         transition: ${Variables.Transitions.Short};
 
         &:hover {
-            color: ${Variables.Colors.Primary700};
+            color: ${Variables.Colors.Primary300};
         }
 
         &.active {
@@ -65,7 +65,7 @@ const H3 = styled.h3`
         transition: ${Variables.Transitions.Short};
 
         &:hover {
-            color: ${Variables.Colors.Primary700};
+            color: ${Variables.Colors.Primary300};
         }
 
         &.active {
@@ -91,7 +91,7 @@ const H4 = styled.h4`
         transition: ${Variables.Transitions.Short};
 
         &:hover {
-            color: ${Variables.Colors.Primary700};
+            color: ${Variables.Colors.Primary300};
         }
 
         &.active {
@@ -116,7 +116,7 @@ const H5 = styled.h5`
         transition: ${Variables.Transitions.Short};
 
         &:hover {
-            color: ${Variables.Colors.Primary700};
+            color: ${Variables.Colors.Primary300};
         }
 
         &.active {
@@ -142,7 +142,7 @@ const H6 = styled.h6`
         transition: ${Variables.Transitions.Short};
 
         &:hover {
-            color: ${Variables.Colors.Primary700};
+            color: ${Variables.Colors.Primary300};
         }
 
         &.active {
@@ -186,7 +186,7 @@ const Small = styled.small`
         font-weight: ${Variables.FontWeights.Bold};
 
         &:hover {
-            color: ${Variables.Colors.Primary700};
+            color: ${Variables.Colors.Primary300};
         }
 
         &.active {
@@ -204,7 +204,7 @@ const Strong = styled.strong`
         transition: ${Variables.Transitions.Short};
 
         &:hover {
-            color: ${Variables.Colors.Primary700};
+            color: ${Variables.Colors.Primary300};
         }
 
         &.active {
@@ -222,7 +222,7 @@ const Em = styled.em`
         transition: ${Variables.Transitions.Short};
 
         &:hover {
-            color: ${Variables.Colors.Primary700};
+            color: ${Variables.Colors.Primary300};
         }
 
         &.active {
@@ -254,7 +254,7 @@ const List = styled.ul`
             font-weight: ${Variables.FontWeights.Bold};
 
             &:hover {
-                color: ${Variables.Colors.Primary700};
+                color: ${Variables.Colors.Primary300};
             }
 
             &:active {
