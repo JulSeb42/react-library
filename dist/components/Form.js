@@ -48,7 +48,7 @@ function Form(props) {
     iconleft: props.iconleftcancel,
     iconright: props.iconrightcancel,
     to: props.btncancel
-  }, props.textbtncancel || "Cancel"), props.btnreset && /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }, props.textbtncancel || "Cancel"), props.textbtnreset && /*#__PURE__*/_react.default.createElement(_Button.default, {
     btnstyle: "text",
     color: props.colorreset || "primary",
     iconleft: props.iconleftreset,

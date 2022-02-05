@@ -48,7 +48,7 @@ function Form(props) {
                         </Button>
                     )}
 
-                    {props.btnreset && (
+                    {props.textbtnreset && (
                         <Button
                             btnstyle="text"
                             color={props.colorreset || "primary"}
