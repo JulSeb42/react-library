@@ -14,6 +14,11 @@ const GlobalStyles = createGlobalStyle`
         font-weight: ${Variables.FontWeights.Regular};
         line-height: ${Variables.LineHeight};
     }
+
+    .stop-scrolling {
+        height: 100vh;
+        overflow: hidden;
+    }
 `
 
 export default GlobalStyles

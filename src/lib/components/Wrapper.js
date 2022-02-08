@@ -1,5 +1,5 @@
 // Packages
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 // Components
 import Variables from "./Variables"
@@ -21,6 +21,10 @@ const Wrapper = styled.div`
     @media ${Variables.Breakpoints.Tablet} {
         grid-template-columns: ${Variables.Container.TemplateTablet};
     }
+
+    ${props => (props.template === "aside-left" || props.template === "aside-right") && css`
+        gap: ${Variables.Margins.L};
+    `}
 `
 
 export default Wrapper

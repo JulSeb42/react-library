@@ -10,6 +10,7 @@ const Aside = styled.aside`
     display: grid;
     grid-template-columns: 1fr;
     gap: ${props => props.gap || Variables.Margins.L};
+    align-content: start;
 `
 
 export default Aside
