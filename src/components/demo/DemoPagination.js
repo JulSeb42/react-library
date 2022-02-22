@@ -12,6 +12,8 @@ function DemoPagination(props) {
             <PaginationButton number={3} />
             <PaginationButton number={4} />
             <PaginationButton number={5} />
+            <PaginationButton icon="more" />
+            <PaginationButton number={20} />
             <PaginationButton icon="next" />
         </Pagination>
     )

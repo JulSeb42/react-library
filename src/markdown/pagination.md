@@ -10,6 +10,8 @@
     <PaginationButton number={3} />
     <PaginationButton number={4} />
     <PaginationButton number={5} />
+    <PaginationButton icon="more" />
+    <PaginationButton number={20} />
     <PaginationButton icon="next" />
 </Pagination>
 ```
@@ -17,7 +19,7 @@
 ## Props
 
 ```
-icon: string, not required, previous or next
+icon: string, not required, previous, next or more
 number: number, not required
 className: string, not required
 disabled: not required
