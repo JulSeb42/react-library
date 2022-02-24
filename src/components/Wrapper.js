@@ -15,6 +15,8 @@ const Wrapper = styled.div`
             ? Variables.Container.TemplateAsideRight
             : props.template === "form"
             ? Variables.Container.TemplateForm
+            : props.template === "both-sides"
+            ? Variables.Container.TemplateBothSides
             : "" || Variables.Container.Template1Col};
     padding: ${Variables.Container.Padding};
 
@@ -22,9 +24,11 @@ const Wrapper = styled.div`
         grid-template-columns: ${Variables.Container.TemplateTablet};
     }
 
-    ${props => (props.template === "aside-left" || props.template === "aside-right") && css`
-        gap: ${Variables.Margins.L};
-    `}
+    ${props =>
+        (props.template === "aside-left" || props.template === "aside-right") &&
+        css`
+            gap: ${Variables.Margins.L};
+        `}
 `
 
 export default Wrapper

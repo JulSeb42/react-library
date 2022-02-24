@@ -142,6 +142,7 @@
     --container-template-aside-left: 1fr 250px 600px 1fr;
     --container-template-aside-right: 1fr 600px 250px 1fr;
     --container-template-form: 1fr 400px 1fr;
+    --container-template-both-sides: 1fr 250px 600px 250px 1fr;
     --container-template-column: 2;
     --container-template-padding: 48px 0;
     --container-template-tablet: 5vw 1fr 5vw;

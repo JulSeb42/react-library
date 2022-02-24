@@ -155,6 +155,7 @@ const Variables = {
         Template1Col: "var(--container-template-1-col)",
         TemplateAsideLeft: "var(--container-template-aside-left)",
         TemplateAsideRight: "var(--container-template-aside-right)",
+        TemplateBothSides: "var(--container-template-both-sides)",
         TemplateForm: "var(--container-template-form)",
         Column: "var(--container-template-column)",
         Padding: "var(--container-template-padding)",

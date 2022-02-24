@@ -52,6 +52,24 @@
 </Wrapper>
 ```
 
+<Wrapper template="both-sides">
+    <Aside col={2} template="both-sides">Aside left</Aside>
+    <Main col={3} template="both-sides">
+        ## Main with aside on the right
+    </Main>
+    <Aside col={4} template="both-sides">Aside right</Aside>
+</Wrapper>
+
+```
+<Wrapper template="both-sides">
+    <Aside col={2} template="both-sides"></Aside>
+
+    <Main col={3} template="both-sides"></Main>
+
+    <Aside col={4} template="both-sides"></Aside>
+</Wrapper>
+```
+
 <Wrapper template="form">
     <Main>
         ## Container for form pages
