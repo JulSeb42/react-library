@@ -58,16 +58,14 @@ const Button = styled.button`
         background-color: transparent;
     }
 
-    ${props =>
-        props.icon === "more" &&
-        css`
-            cursor: default;
+    ${props => props.icon === "more" && css`
+        cursor: default;
 
-            &:hover {
-                background-color: transparent;
-                color: ${Variables.Colors.Primary500};
-            }
-        `}
+        &:hover {
+            background-color: transparent;
+            color: ${Variables.Colors.Primary500};
+        }
+    `}
 `
 
 function PaginationButton(props) {

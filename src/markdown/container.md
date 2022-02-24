@@ -15,38 +15,38 @@
 ```
 
 <Wrapper template="aside-left">
-    <Aside col={2}>Aside left</Aside>
-    <Main col={3}>
+    <Aside col={2} template="aside-left">Aside left</Aside>
+    <Main col={3} template="aside-left">
         ## Main with aside on the left
     </Main>
 </Wrapper>
 
 ```
 <Wrapper template="aside-left">
-    <Aside col={2}>
+    <Aside col={2} template="aside-left">
     
     </Aside>
     
-    <Main col={3}>
+    <Main col={3} template="aside-left">
         
     </Main>
 </Wrapper>
 ```
 
 <Wrapper template="aside-right">
-    <Main col={2}>
-        ## Main with aside on the left
+    <Main col={2} template="aside-right">
+        ## Main with aside on the right
     </Main>
-    <Aside col={3}>Aside right</Aside>
+    <Aside col={3} template="aside-right">Aside right</Aside>
 </Wrapper>
 
 ```
 <Wrapper template="aside-right">
-    <Main col={2}>
+    <Main col={2} template="aside-right">
        
     </Main>
 
-    <Aside col={3}>
+    <Aside col={3} template="aside-right">
 
     </Aside>
 </Wrapper>
