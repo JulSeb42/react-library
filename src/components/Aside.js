@@ -12,9 +12,17 @@ const Aside = styled.aside`
     gap: ${props => props.gap || Variables.Margins.L};
     align-content: start;
 
-    ${props => props.template === "aside-right" && css`
-        grid-column: 2;
-    `}
+    ${props =>
+        props.template === "aside-right" &&
+        css`
+            grid-column: 2;
+        `}
+
+    ${props =>
+        props.justify &&
+        css`
+            justify-items: ${props => props.justify};
+        `}
 `
 
 export default Aside

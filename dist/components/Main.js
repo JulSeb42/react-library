@@ -11,7 +11,7 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _Variables = _interopRequireDefault(require("./Variables"));
 
-var _templateObject, _templateObject2;
+var _templateObject, _templateObject2, _templateObject3;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22,7 +22,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const Main = _styledComponents.default.main(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    grid-column: ", ";\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: ", ";\n    align-content: start;\n\n    ", "\n"])), props => props.col || 2, props => props.gap || _Variables.default.Margins.L, props => props.template === "aside-left" && (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n        @media ", " {\n            grid-column: 2;\n        }\n    "])), _Variables.default.Breakpoints.Tablet));
+const Main = _styledComponents.default.main(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    grid-column: ", ";\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: ", ";\n    align-content: start;\n\n    ", "\n\n    ", "\n"])), props => props.col || 2, props => props.gap || _Variables.default.Margins.L, props => props.template === "aside-left" && (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            @media ", " {\n                grid-column: 2;\n            }\n        "])), _Variables.default.Breakpoints.Tablet), props => props.justify && (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n            justify-items: ", ";\n        "])), props => props.justify));
 
 var _default = Main;
 exports.default = _default;

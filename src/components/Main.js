@@ -12,11 +12,19 @@ const Main = styled.main`
     gap: ${props => props.gap || Variables.Margins.L};
     align-content: start;
 
-    ${props => props.template === "aside-left" && css`
-        @media ${Variables.Breakpoints.Tablet} {
-            grid-column: 2;
-        }
-    `}
+    ${props =>
+        props.template === "aside-left" &&
+        css`
+            @media ${Variables.Breakpoints.Tablet} {
+                grid-column: 2;
+            }
+        `}
+
+    ${props =>
+        props.justify &&
+        css`
+            justify-items: ${props => props.justify};
+        `}
 `
 
 export default Main
