@@ -12,7 +12,7 @@
         <Input id="input" />
         ```
 
-        <Input id="input-password" password />
+        <Input id="input-password" password iconpassword />
 
         ```
         <Input id="input-password" password />
