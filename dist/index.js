@@ -132,12 +132,6 @@ Object.defineProperty(exports, "Form", {
     return _Form.default;
   }
 });
-Object.defineProperty(exports, "GlobalStyles", {
-  enumerable: true,
-  get: function get() {
-    return _GlobalStyles.default;
-  }
-});
 Object.defineProperty(exports, "Grid", {
   enumerable: true,
   get: function get() {
@@ -488,8 +482,6 @@ var _getRandomString = _interopRequireDefault(require("./components/getRandomStr
 var _getTimeNow = _interopRequireDefault(require("./components/getTimeNow"));
 
 var _getToday = _interopRequireDefault(require("./components/getToday"));
-
-var _GlobalStyles = _interopRequireDefault(require("./components/GlobalStyles"));
 
 var _Grid = _interopRequireDefault(require("./components/Grid"));
 

@@ -142,8 +142,7 @@
     --container-template-aside-left: 1fr 250px 600px 1fr;
     --container-template-aside-right: 1fr 600px 250px 1fr;
     --container-template-form: 1fr 400px 1fr;
-    --container-template-both-sides: 1fr 250px 600px 250px 1fr;
-    --container-template-both-sides-tablet: 5vw 1fr 5vw;
+    --container-template-both-sides: 1fr 200px 600px 200px 1fr;
     --container-template-column: 2;
     --container-template-padding: 48px 0;
     --container-template-tablet: 5vw 1fr 5vw;
@@ -287,35 +286,20 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/*=============================================== Variables ===============================================*/
-:root {
-    --margin-xxl: 48px;
-    --margin-xl: 32px;
-    --margin-l: 24px;
-    --margin-m: 16px;
-    --margin-s: 12px;
-    --margin-xs: 8px;
-    --margin-xxs: 4px;
-    --font-family: -apple-system, Arial, Helvetica, sans-serif;
-    --line-height: 1.4;
-    --radius-xl: 16px;
-    --radius-l: 12px;
-    --radius-m: 8px;
-    --radius-s: 4px;
-    --radius-round: 99em;
-    --grid-template: 1fr 600px 1fr;
-    --grid-column: 2;
-    --grid-padding: var(--margin-xxl) 0;
-    --transition-short: all 0.2s ease;
-    --transition-long: all 0.5s ease;
+/*============================================================= Global styles =============================================================*/
+
+html,
+body {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height);
 }
 
-@media (max-width: 1024px) {
-    :root {
-        --grid-template: 1fr;
-        --grid-column: 1;
-        --grid-padding: var(--margin-xxl) 5vw;
-    }
+.stop-scrolling {
+    height: 100vh;
+    overflow: hidden;
 }
 
 /*============================================================= Helpers =============================================================*/

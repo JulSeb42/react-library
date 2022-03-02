@@ -10,17 +10,12 @@ import scrollToTop from "./components/scrollToTop"
 
 import DemoPageLoading from "./components/demo/DemoPageLoading"
 
-// Styles
-import GlobalStyles from "./components/GlobalStyles"
-
 // Data
 import pages from "./components/demo/pages"
 
 function App() {
     return (
         <>
-            <GlobalStyles />
-
             <DemoNav />
 
             <Routes>

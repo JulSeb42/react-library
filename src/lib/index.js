@@ -26,7 +26,6 @@ import getRandomNumber from "./components/getRandomNumber"
 import getRandomString from "./components/getRandomString"
 import getTimeNow from "./components/getTimeNow"
 import getToday from "./components/getToday"
-import GlobalStyles from "./components/GlobalStyles"
 import Grid from "./components/Grid"
 import Helmet from "./components/Helmet"
 import Hr from "./components/Hr"
@@ -106,7 +105,6 @@ export {
     getRandomString,
     getTimeNow,
     getToday,
-    GlobalStyles,
     Grid,
     Helmet,
     Hr,

@@ -28,7 +28,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const Container = (0, _styledComponents.default)(_Grid.default)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    width: 100%;\n    max-width: 400px;\n    margin: 0 auto;\n"])));
+const Container = (0, _styledComponents.default)(_Grid.default)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    width: 100%;\n    margin: 0 auto;\n"])));
 
 function Form(props) {
   return /*#__PURE__*/_react.default.createElement(Container, _extends({

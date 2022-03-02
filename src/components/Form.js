@@ -11,7 +11,6 @@ import Button from "./Button"
 // Styles
 const Container = styled(Grid)`
     width: 100%;
-    max-width: 400px;
     margin: 0 auto;
 `
 

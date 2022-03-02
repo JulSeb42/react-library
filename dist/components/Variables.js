@@ -149,7 +149,6 @@ const Variables = {
     TemplateAsideLeft: "var(--container-template-aside-left)",
     TemplateAsideRight: "var(--container-template-aside-right)",
     TemplateBothSides: "var(--container-template-both-sides)",
-    TemplateBothSidesTablet: "var(--container-template-both-Tablet)",
     TemplateForm: "var(--container-template-form)",
     Column: "var(--container-template-column)",
     Padding: "var(--container-template-padding)",
