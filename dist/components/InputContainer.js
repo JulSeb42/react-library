@@ -35,7 +35,7 @@ const Counter = (0, _styledComponents.default)(Font.Small)(_templateObject2 || (
 function InputContainer(props) {
   return /*#__PURE__*/_react.default.createElement(_Grid.default, {
     gap: _Variables.default.Margins.XXS
-  }, props.label && /*#__PURE__*/_react.default.createElement(Label, null, props.label), props.helper && /*#__PURE__*/_react.default.createElement(Font.P, null, props.helper), props.children, props.validationText && props.validation && props.value.length > 0 && /*#__PURE__*/_react.default.createElement(Font.Small, null, props.validationText), props.counter && /*#__PURE__*/_react.default.createElement(Counter, null, props.value.length, " / ", props.counter));
+  }, props.label && /*#__PURE__*/_react.default.createElement(Label, null, props.label), props.helper && /*#__PURE__*/_react.default.createElement(Font.P, null, props.helper), props.children, props.helperBottom && /*#__PURE__*/_react.default.createElement(Font.Small, null, props.helperBottom), props.validationText && props.validation && props.value.length > 0 && /*#__PURE__*/_react.default.createElement(Font.Small, null, props.validationText), props.counter && /*#__PURE__*/_react.default.createElement(Counter, null, props.value.length, " / ", props.counter));
 }
 
 var _default = InputContainer;

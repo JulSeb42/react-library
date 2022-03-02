@@ -11,6 +11,7 @@ import Icon from "./Icon"
 // Styles
 const Container = styled.div`
     position: relative;
+    width: 100%;
 `
 
 const InputStyled = styled.input`
@@ -326,6 +327,7 @@ function Input(props) {
             id={props.id}
             value={props.value}
             counter={props.counter}
+            helperBottom={props.helperBottom}
         >
             <InputFunction
                 validation={props.validation}

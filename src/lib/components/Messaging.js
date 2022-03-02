@@ -47,8 +47,14 @@ const ListMessages = styled(ScrollToBottom)`
 
 const ContainerMessage = styled.div`
     display: flex;
-    justify-content: ${props =>
+    flex-direction: column;
+    align-items: ${props =>
         props.type === "sent" ? "flex-end" : "flex-start"};
+`
+
+const DateTime = styled(Font.Small)`
+    color: ${Variables.Colors.Gray500};
+    margin-top: ${Variables.Margins.XXS};
 `
 
 const Bubble = styled(Font.P)`
@@ -161,6 +167,14 @@ function Message(props) {
             <Bubble type={props.type}>
                 <Linkify>{props.children}</Linkify>
             </Bubble>
+
+            {(props.date || props.time) && (
+                <DateTime>
+                    {props.date}
+                    {props.date && props.time && " at "}
+                    {props.time}
+                </DateTime>
+            )}
         </ContainerMessage>
     )
 }
@@ -170,7 +184,11 @@ function MessageInput(props) {
         <ContainerSend onSubmit={props.onSubmit}>
             <Input {...props} />
 
-            <Send onClick={props.onClick} textbutton={props.textbutton} type="submit">
+            <Send
+                onClick={props.onClick}
+                textbutton={props.textbutton}
+                type="submit"
+            >
                 {props.textbutton ? (
                     props.textbutton
                 ) : props.icon ? (

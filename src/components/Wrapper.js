@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     }
 
     ${props =>
-        (props.template === "aside-left" || props.template === "aside-right") &&
+        (props.template === "aside-left" || props.template === "aside-right" || props.template === "both-sides") &&
         css`
             gap: ${Variables.Margins.L};
         `}

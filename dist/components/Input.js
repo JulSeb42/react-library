@@ -34,7 +34,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: relative;\n"])));
+const Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: relative;\n    width: 100%;\n"])));
 
 const InputStyled = _styledComponents.default.input(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    position: relative;\n    z-index: 1;\n    border: 1px solid ", ";\n    border-radius: ", ";\n    outline: none;\n    padding: ", " ", ";\n    font-family: ", ";\n    font-size: ", ";\n    height: 35px;\n    width: 100%;\n\n    &:focus {\n        border-color: ", ";\n    }\n\n    &:disabled {\n        cursor: not-allowed;\n        color: ", ";\n        border-color: ", ";\n        background-color: ", ";\n    }\n\n    ", "\n\n    ", "\n\n    ", "\n    \n    ", "\n"])), _Variables.default.Colors.Gray200, _Variables.default.Radiuses.S, _Variables.default.Margins.XS, _Variables.default.Margins.XS, _Variables.default.FontFamilies.Body, _Variables.default.FontSizes.Body, _Variables.default.Colors.Primary500, _Variables.default.Colors.Gray800, _Variables.default.Colors.Gray200, _Variables.default.Colors.Gray50, props => props.type === "textarea" && (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n            min-height: calc(\n                ", " * ", " * 3 +\n                    ", " * 2\n            );\n            resize: vertical;\n        "])), _Variables.default.FontSizes.Body, _Variables.default.LineHeight, _Variables.default.Margins.XXS), props => props.type === "select" && (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n            appearance: none;\n            cursor: pointer;\n\n            &::-ms-expand {\n                display: none;\n            }\n        "]))), props => props.icon && (0, _styledComponents.css)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n            padding-left: calc(", " + 32px);\n        "])), _Variables.default.Margins.XS), props => props.validation && props.validation !== "passed" && props.value.length > 0 && (0, _styledComponents.css)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n            background-color: ", ";\n\n            &:focus {\n                border-color: ", ";\n            }\n        "])), _Variables.default.Colors.Danger50, _Variables.default.Colors.Danger500));
 
@@ -42,7 +42,7 @@ const IconContainer = _styledComponents.default.span(_templateObject7 || (_templ
 
 const RightContainer = _styledComponents.default.span(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    position: absolute;\n    top: 0;\n    right: ", ";\n    height: 100%;\n    z-index: 1;\n    display: inline-flex;\n    align-items: center;\n\n    & > *:not(:last-child) {\n        margin-right: ", ";\n    }\n"])), _Variables.default.Margins.XS, _Variables.default.Margins.XXS);
 
-const ButtonPassword = _styledComponents.default.button(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    border: none;\n    padding: 0;\n    background: none;\n    color: ", ";\n    font-size: ", ";\n    font-weight: ", ";\n    transition: ", ";\n\n    &:hover {\n        color: ", ";\n    }\n\n    &:active {\n        color: ", ";\n    }\n"])), _Variables.default.Colors.Primary500, _Variables.default.FontSizes.Body, _Variables.default.FontWeights.Bold, _Variables.default.Transitions.Short, _Variables.default.Colors.Primary300, _Variables.default.Colors.Primary600);
+const ButtonPassword = _styledComponents.default.button(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    border: none;\n    padding: 0;\n    background: none;\n    color: ", ";\n    font-size: ", ";\n    font-weight: ", ";\n    transition: ", ";\n    display: flex;\n    align-items: center;\n    justify-content: center;\n\n    &:hover {\n        color: ", ";\n    }\n\n    &:active {\n        color: ", ";\n    }\n"])), _Variables.default.Colors.Primary500, _Variables.default.FontSizes.Body, _Variables.default.FontWeights.Bold, _Variables.default.Transitions.Short, _Variables.default.Colors.Primary300, _Variables.default.Colors.Primary600);
 
 const SelectContainer = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    position: relative;\n\n    &:after {\n        content: url(\"data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.862 6.19533L8.00001 9.05733L5.13801 6.19533L4.19534 7.13799L8.00001 10.9427L11.8047 7.13799L10.862 6.19533Z' fill='%231B4568'/%3E%3C/svg%3E\");\n        color: ", ";\n        position: absolute;\n        z-index: 2;\n        top: calc(50% - 18px / 2);\n        right: ", ";\n\n        ", "\n    }\n"])), _Variables.default.Colors.Primary500, _Variables.default.Margins.XS, props => props.disabled && (0, _styledComponents.css)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n                content: url(\"data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.862 6.19533L8.00001 9.05733L5.13801 6.19533L4.19534 7.13799L8.00001 10.9427L11.8047 7.13799L10.862 6.19533Z' fill='%232F2F2F'/%3E%3C/svg%3E\");\n            "])))); // Components
 
@@ -104,28 +104,28 @@ function InputFunction(props) {
     onClick: () => setIsVisible(!isVisible),
     type: "button"
   }, props.iconpassword ? isVisible ? /*#__PURE__*/_react.default.createElement("svg", {
-    width: "16",
-    height: "16",
-    viewBox: "0 0 16 16",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
   }, /*#__PURE__*/_react.default.createElement("path", {
-    d: "M8 6.66659C8 7.39659 8.60333 7.99992 9.33333 7.99992C9.56933 7.99992 9.78867 7.93125 9.982 7.82125C9.98384 7.8449 9.98703 7.86814 9.99021 7.89137C9.99511 7.92707 10 7.96276 10 7.99992C10 9.09459 9.094 9.99992 8 9.99992C6.90533 9.99992 6 9.09459 6 7.99992C6.00349 7.47056 6.21533 6.96388 6.58965 6.58957C6.96397 6.21525 7.47065 6.00341 8 5.99992C8.03716 5.99992 8.07285 6.00481 8.10855 6.00971C8.13178 6.01289 8.15502 6.01608 8.17867 6.01792C8.06867 6.21125 8 6.43059 8 6.66659Z",
-    fill: _Variables.default.Colors.Primary500
+    d: "M12 10C12 11.095 12.905 12 14 12C14.354 12 14.683 11.897 14.973 11.732C14.9758 11.7675 14.9805 11.8023 14.9853 11.8372C14.9927 11.8907 15 11.9443 15 12C15 13.642 13.641 15 12 15C10.358 15 9 13.642 9 12C9.00524 11.206 9.323 10.4459 9.88447 9.88447C10.4459 9.323 11.206 9.00524 12 9C12.0557 9 12.1093 9.00734 12.1628 9.01468C12.1977 9.01946 12.2325 9.02424 12.268 9.027C12.103 9.317 12 9.646 12 10Z",
+    fill: "currentColor"
   }), /*#__PURE__*/_react.default.createElement("path", {
     fillRule: "evenodd",
     clipRule: "evenodd",
-    d: "M1.36803 7.78925C1.38203 7.74458 2.91136 3.33325 8.00003 3.33325C13.0887 3.33325 14.618 7.74458 14.6327 7.78925L14.7027 7.99992L14.632 8.21058C14.618 8.25525 13.0887 12.6666 8.00003 12.6666C2.91136 12.6666 1.38203 8.25525 1.36736 8.21058L1.29736 7.99992L1.36803 7.78925ZM2.71603 7.99992C3.0507 8.76925 4.4327 11.3333 8.00003 11.3333C11.5654 11.3333 12.948 8.77192 13.284 7.99992C12.9494 7.23058 11.5674 4.66659 8.00003 4.66659C4.4347 4.66659 3.05203 7.22792 2.71603 7.99992Z",
-    fill: _Variables.default.Colors.Primary500
+    d: "M2.05204 11.684C2.07305 11.617 4.36704 5 12 5C19.633 5 21.927 11.617 21.949 11.684L22.054 12L21.948 12.316C21.927 12.383 19.633 19 12 19C4.36704 19 2.07305 12.383 2.05104 12.316L1.94604 12L2.05204 11.684ZM4.07404 12C4.57604 13.154 6.64904 17 12 17C17.348 17 19.422 13.158 19.926 12C19.424 10.846 17.351 7 12 7C6.65204 7 4.57804 10.842 4.07404 12Z",
+    fill: "currentColor"
   })) : /*#__PURE__*/_react.default.createElement("svg", {
-    width: "16",
-    height: "16",
-    viewBox: "0 0 16 16",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
   }, /*#__PURE__*/_react.default.createElement("path", {
-    d: "M7.99999 12.6666C8.63065 12.6666 9.20665 12.5979 9.73199 12.4792L8.56065 11.3079C8.37865 11.3219 8.19399 11.3332 7.99999 11.3332C4.43265 11.3332 3.05065 8.76923 2.71599 7.9999C2.96728 7.4391 3.30668 6.92213 3.72132 6.46856L2.78932 5.53656C1.76399 6.6479 1.37532 7.76723 1.36799 7.78923C1.322 7.92614 1.322 8.07432 1.36799 8.21123C1.38199 8.25523 2.91132 12.6666 7.99999 12.6666ZM7.99999 3.33323C6.77532 3.33323 5.76932 3.59723 4.93065 3.98723L2.47132 1.52856L1.52865 2.47123L13.5287 14.4712L14.4713 13.5286L12.2587 11.3159C14.0013 10.0152 14.6233 8.23923 14.6327 8.21123C14.6786 8.07432 14.6786 7.92614 14.6327 7.78923C14.618 7.74456 13.0887 3.33323 7.99999 3.33323ZM11.3147 10.3719L9.79465 8.8519C9.92132 8.5919 9.99999 8.3059 9.99999 7.9999C9.99999 6.9059 9.09399 5.9999 7.99999 5.9999C7.69399 5.9999 7.40799 6.07856 7.14865 6.2059L5.94332 5.00056C6.605 4.77351 7.30046 4.66056 7.99999 4.66656C11.5673 4.66656 12.9493 7.23056 13.284 7.9999C13.0827 8.46123 12.5067 9.56123 11.3147 10.3719Z",
-    fill: _Variables.default.Colors.Primary500
+    d: "M12 19C12.946 19 13.81 18.897 14.598 18.719L12.841 16.962C12.568 16.983 12.291 17 12 17C6.64898 17 4.57598 13.154 4.07398 12C4.45093 11.1588 4.96003 10.3833 5.58198 9.70297L4.18398 8.30497C2.64598 9.97197 2.06298 11.651 2.05198 11.684C1.983 11.8893 1.983 12.1116 2.05198 12.317C2.07298 12.383 4.36698 19 12 19ZM12 4.99997C10.163 4.99997 8.65398 5.39597 7.39598 5.98097L3.70698 2.29297L2.29298 3.70697L20.293 21.707L21.707 20.293L18.388 16.974C21.002 15.023 21.935 12.359 21.949 12.317C22.018 12.1116 22.018 11.8893 21.949 11.684C21.927 11.617 19.633 4.99997 12 4.99997ZM16.972 15.558L14.692 13.278C14.882 12.888 15 12.459 15 12C15 10.359 13.641 8.99997 12 8.99997C11.541 8.99997 11.112 9.11797 10.723 9.30897L8.91498 7.50097C9.9075 7.16038 10.9507 6.99097 12 6.99997C17.351 6.99997 19.424 10.846 19.926 12C19.624 12.692 18.76 14.342 16.972 15.558Z",
+    fill: "currentColor"
   })) : isVisible ? "Hide" : "Show"))) : props.type === "textarea" ? /*#__PURE__*/_react.default.createElement(InputStyled, _extends({
     id: props.id,
     as: "textarea",
@@ -154,7 +154,8 @@ function Input(props) {
     validationText: props.validationText,
     id: props.id,
     value: props.value,
-    counter: props.counter
+    counter: props.counter,
+    helperBottom: props.helperBottom
   }, /*#__PURE__*/_react.default.createElement(InputFunction, _extends({
     validation: props.validation,
     id: props.id,

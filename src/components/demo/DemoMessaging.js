@@ -1,6 +1,7 @@
 // Packages
 import React from "react"
-
+import getToday from "../getToday"
+import getTimeNow from "../getTimeNow"
 import {
     MessagesContainer,
     EmptyContainer,
@@ -52,7 +53,7 @@ function DemoMessaging() {
                     Message received https://julien-sebag.design/
                 </Message>
 
-                <Message type="sent">
+                <Message type="sent" date={getToday()} time={getTimeNow()}>
                     Message sent https://julien-sebag.design/
                 </Message>
             </ListMessages>

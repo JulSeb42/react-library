@@ -13,7 +13,7 @@ const Aside = styled.aside`
     align-content: start;
 
     ${props =>
-        props.template === "aside-right" &&
+        (props.template === "aside-right" || props.template === "both-sides") &&
         css`
             grid-column: 2;
         `}

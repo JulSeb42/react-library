@@ -13,7 +13,7 @@ const Main = styled.main`
     align-content: start;
 
     ${props =>
-        props.template === "aside-left" &&
+        (props.template === "aside-left" || props.template === "both-sides") &&
         css`
             @media ${Variables.Breakpoints.Tablet} {
                 grid-column: 2;

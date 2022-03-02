@@ -28,6 +28,14 @@ const H1 = styled.h1`
         css`
             font-size: ${Variables.FontSizes.Display.H1};
         `}
+
+    ${props =>
+        props.hidden &&
+        css`
+            position: fixed;
+            top: -999em;
+            left: -999em;
+        `}
 `
 
 const H2 = styled.h2`

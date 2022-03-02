@@ -24,6 +24,8 @@ function InputContainer(props) {
 
             {props.children}
 
+            {props.helperBottom && <Font.Small>{props.helperBottom}</Font.Small>}
+
             {props.validationText &&
                 props.validation &&
                 props.value.length > 0 && (
