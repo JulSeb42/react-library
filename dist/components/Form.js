@@ -34,28 +34,28 @@ const Form = props => {
   return /*#__PURE__*/_react.default.createElement(Container, _extends({
     as: "form",
     gap: _Variables.default.Spacers.S
-  }, props), props.children, (props.btnprimary || props.btncancel || props.btnreset) && /*#__PURE__*/_react.default.createElement(_ButtonsContainer.default, null, props.btnprimary && /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }, props), props.children, (props.btnPrimary || props.btnCancel || props.btnReset) && /*#__PURE__*/_react.default.createElement(_ButtonsContainer.default, null, props.btnPrimary && /*#__PURE__*/_react.default.createElement(_Button.default, {
     btnstyle: "plain",
-    color: props.colorprimary || "primary",
-    iconleft: props.iconleftprimary,
-    iconright: props.iconrightprimary,
+    color: props.colorPrimary || "primary",
+    iconleft: props.iconLeftPrimary,
+    iconright: props.iconRightPrimary,
     type: "submit",
     loading: props.loading,
     disabled: props.loading
-  }, props.btnprimary), props.btncancel && /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }, props.btnPrimary), props.btnCancel && /*#__PURE__*/_react.default.createElement(_Button.default, {
     btnstyle: "text",
-    color: props.colorcancel || "primary",
-    iconleft: props.iconleftcancel,
-    iconright: props.iconrightcancel,
-    to: props.btncancel
-  }, props.textbtncancel || "Cancel"), props.textbtnreset && /*#__PURE__*/_react.default.createElement(_Button.default, {
+    color: props.colorCancel || "primary",
+    iconleft: props.iconLeftCancel,
+    iconright: props.iconRightCancel,
+    to: props.btnCancel
+  }, props.textBtnCancel || "Cancel"), props.textBtnReset && /*#__PURE__*/_react.default.createElement(_Button.default, {
     btnstyle: "text",
-    color: props.colorreset || "primary",
-    iconleft: props.iconleftreset,
-    iconright: props.iconrightreset,
+    color: props.colorReset || "primary",
+    iconleft: props.iconLeftReset,
+    iconright: props.iconRightReset,
     type: "reset",
     onClick: props.onClickReset
-  }, props.textbtnreset || "Reset")));
+  }, props.textBtnReset || "Reset")));
 };
 
 var _default = Form;
