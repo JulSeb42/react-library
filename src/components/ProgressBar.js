@@ -1,14 +1,14 @@
 // Packages
-import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
 
 // Styles
-const Container = styled.span`
+const ProgressBar = styled.span`
     width: 100%;
-    height: ${props => `${props.height}px`};
+    height: ${props => `${props.height || 16}px`};
     background-color: ${Variables.Colors.Gray100};
     display: block;
     border-radius: ${Variables.Radiuses.Round};
@@ -35,21 +35,14 @@ const Container = styled.span`
                 ? Variables.Colors.Warning500
                 : props.color === "white"
                 ? Variables.Colors.White
-                : props.color};
+                : props.color || Variables.Colors.Primary500};
         border-radius: ${Variables.Radiuses.Round};
         transition: ${Variables.Transitions.Short};
     }
 `
 
-function ProgressBar(props) {
-    return (
-        <Container
-            value={props.value || 50}
-            height={props.height || 16}
-            color={props.color || "primary"}
-            {...props}
-        />
-    )
+ProgressBar.propTypes = {
+    value: PropTypes.number.isRequired,
 }
 
 export default ProgressBar

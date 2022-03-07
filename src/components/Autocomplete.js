@@ -1,6 +1,7 @@
 // Packages
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
@@ -35,14 +36,16 @@ const List = styled.ul`
     opacity: 0;
     overflow-y: scroll;
 
-    &.open {
-        padding-top: 28px;
-        max-height: 200px;
-        opacity: 1;
-    }
+    ${props =>
+        props.open &&
+        css`
+            padding-top: 28px;
+            max-height: 200px;
+            opacity: 1;
+        `}
 
     li {
-        padding: ${Variables.Margins.XS};
+        padding: ${Variables.Spacers.XS};
         transition: ${Variables.Transitions.Short};
 
         &:hover {
@@ -53,9 +56,8 @@ const List = styled.ul`
     }
 `
 
-function Autocomplete(props) {
+const Autocomplete = props => {
     const [isOpen, setIsOpen] = useState(false)
-    const open = isOpen ? "open" : ""
 
     const handleOpen = () => setIsOpen(true)
     const handleClose = () => setTimeout(setIsOpen(false), 500)
@@ -71,7 +73,7 @@ function Autocomplete(props) {
                 {...props}
             />
 
-            <List className={open}>
+            <List open={isOpen}>
                 {props.items.slice(0, 20).map((item, i) => (
                     <li onMouseDown={props.onMouseDown} key={i}>
                         {item}
@@ -80,6 +82,13 @@ function Autocomplete(props) {
             </List>
         </Container>
     )
+}
+
+Autocomplete.propTypes = {
+    items: PropTypes.array.isRequired,
+    onMouseDown: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired,
+    value: PropTypes.string.isRequired,
 }
 
 export default Autocomplete

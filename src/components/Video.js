@@ -1,9 +1,7 @@
 // Packages
 import React from "react"
 import styled, { css } from "styled-components"
-
-// Components
-import convertYoutube from "./convertYoutube"
+import { convertYoutube } from "js-utils-julseb"
 
 // Styles
 const Container = styled.video`
@@ -37,12 +35,11 @@ const Container = styled.video`
         `}
 `
 
-function Video(props) {
+const Video = props => {
     return props.youtube ? (
         <Container
             as="iframe"
             src={convertYoutube(props.youtube)}
-            title="Youtube"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

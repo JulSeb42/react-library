@@ -13,4 +13,3 @@ const Hr = styled.hr`
 `
 
 export default Hr
-

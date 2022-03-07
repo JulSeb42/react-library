@@ -17,31 +17,34 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     background-color: ${props =>
-        props.backgroundcolor === "primary"
+        props.backgroundColor === "primary"
             ? Variables.Colors.Primary500
-            : props.backgroundcolor === "secondary"
+            : props.backgroundColor === "secondary"
             ? Variables.Colors.Secondary500
-            : props.backgroundcolor === "success"
+            : props.backgroundColor === "success"
             ? Variables.Colors.Success500
-            : props.backgroundcolor === "danger"
+            : props.backgroundColor === "danger"
             ? Variables.Colors.Danger500
-            : props.backgroundcolor === "warning"
+            : props.backgroundColor === "warning"
             ? Variables.Colors.Warning500
-            : props.backgroundcolor === "white"
+            : props.backgroundColor === "white"
             ? Variables.Colors.White
-            : props.backgroundcolor};
+            : props.backgroundColor};
 `
 
-function PageLoading(props) {
+const PageLoading = props => {
     return (
-        <Container backgroundcolor={props.backgroundcolor || "primary"}>
+        <Container
+            backgroundColor={props.backgroundColor || "primary"}
+            {...props}
+        >
             <Loader
                 color={
-                    props.backgroundcolor === "white"
+                    props.backgroundColor === "white"
                         ? Variables.Colors.Primary500
                         : Variables.Colors.White
                 }
-                backgroundcolor={props.backgroundcolor || "primary"}
+                backgroundColor={props.backgroundColor || "primary"}
                 size={48}
                 border={8}
             />

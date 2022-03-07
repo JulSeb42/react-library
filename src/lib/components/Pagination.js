@@ -13,7 +13,7 @@ const Pagination = styled.div`
     justify-content: center;
 
     button:not(:last-child) {
-        margin-right: ${Variables.Margins.XS};
+        margin-right: ${Variables.Spacers.XS};
     }
 `
 
@@ -44,36 +44,40 @@ const Button = styled.button`
         color: ${Variables.Colors.White};
     }
 
-    &.active {
-        background-color: ${Variables.Colors.Primary500};
-        color: ${Variables.Colors.White};
-
-        &:hover {
-            background-color: ${Variables.Colors.Primary300};
-        }
-    }
-
     &:disabled {
         color: ${Variables.Colors.Gray500};
         background-color: transparent;
     }
 
-    ${props => props.icon === "more" && css`
-        cursor: default;
+    ${props =>
+        props.active &&
+        css`
+            background-color: ${Variables.Colors.Primary500};
+            color: ${Variables.Colors.White};
 
-        &:hover {
-            background-color: transparent;
-            color: ${Variables.Colors.Primary500};
-        }
-    `}
+            &:hover {
+                background-color: ${Variables.Colors.Primary300};
+            }
+        `}
+
+    ${props =>
+        props.more &&
+        css`
+            cursor: default;
+
+            &:hover {
+                background-color: transparent;
+                color: ${Variables.Colors.Primary500};
+            }
+        `}
 `
 
-function PaginationButton(props) {
+const PaginationButton = props => {
     return (
         <Button {...props}>
-            {props.icon === "previous" &&
-                (props.customiconprev ? (
-                    <Icon name={props.customiconprev} size={16} />
+            {props.prev &&
+                (props.customIconPrev ? (
+                    <Icon name={props.customIconPrev} size={16} />
                 ) : (
                     <svg
                         width="16"
@@ -89,9 +93,9 @@ function PaginationButton(props) {
                     </svg>
                 ))}
 
-            {props.icon === "more" &&
-                (props.customiconmore ? (
-                    <Icon name={props.customiconmore} size={16} />
+            {props.more &&
+                (props.customIconMore ? (
+                    <Icon name={props.customIconMore} size={16} />
                 ) : (
                     <svg
                         width="16"
@@ -109,9 +113,9 @@ function PaginationButton(props) {
 
             {props.number && props.number}
 
-            {props.icon === "next" &&
-                (props.customiconnext ? (
-                    <Icon name={props.customiconnext} size={16} />
+            {props.next &&
+                (props.customIconNext ? (
+                    <Icon name={props.customIconNext} size={16} />
                 ) : (
                     <svg
                         width="16"

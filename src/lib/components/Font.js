@@ -18,7 +18,7 @@ const H1 = styled.h1`
             color: ${Variables.Colors.Primary300};
         }
 
-        &.active {
+        &:active {
             color: ${Variables.Colors.Primary600};
         }
     }
@@ -51,7 +51,7 @@ const H2 = styled.h2`
             color: ${Variables.Colors.Primary300};
         }
 
-        &.active {
+        &:active {
             color: ${Variables.Colors.Primary600};
         }
     }
@@ -76,7 +76,7 @@ const H3 = styled.h3`
             color: ${Variables.Colors.Primary300};
         }
 
-        &.active {
+        &:active {
             color: ${Variables.Colors.Primary600};
         }
     }
@@ -102,7 +102,7 @@ const H4 = styled.h4`
             color: ${Variables.Colors.Primary300};
         }
 
-        &.active {
+        &:active {
             color: ${Variables.Colors.Primary600};
         }
     }
@@ -127,7 +127,7 @@ const H5 = styled.h5`
             color: ${Variables.Colors.Primary300};
         }
 
-        &.active {
+        &:active {
             color: ${Variables.Colors.Primary600};
         }
     }
@@ -153,7 +153,7 @@ const H6 = styled.h6`
             color: ${Variables.Colors.Primary300};
         }
 
-        &.active {
+        &:active {
             color: ${Variables.Colors.Primary600};
         }
     }
@@ -197,7 +197,7 @@ const Small = styled.small`
             color: ${Variables.Colors.Primary300};
         }
 
-        &.active {
+        &:active {
             color: ${Variables.Colors.Primary600};
         }
     }
@@ -215,7 +215,7 @@ const Strong = styled.strong`
             color: ${Variables.Colors.Primary300};
         }
 
-        &.active {
+        &:active {
             color: ${Variables.Colors.Primary600};
         }
     }
@@ -233,7 +233,7 @@ const Em = styled.em`
             color: ${Variables.Colors.Primary300};
         }
 
-        &.active {
+        &:active {
             color: ${Variables.Colors.Primary600};
         }
     }
@@ -243,14 +243,14 @@ const List = styled.ul`
     padding: 0;
     margin: 0;
     font-size: ${Variables.FontSizes.Body};
-    padding-left: ${Variables.Margins.S};
+    padding-left: ${Variables.Spacers.S};
     display: grid;
     grid-template-columns: 1fr;
-    gap: ${Variables.Margins.XS};
+    gap: ${Variables.Spacers.XS};
     list-style: none;
 
     li {
-        padding-inline-start: ${Variables.Margins.XS};
+        padding-inline-start: ${Variables.Spacers.XS};
         line-height: calc(
             ${Variables.LineHeight} * ${Variables.FontSizes.Body}
         );

@@ -2,6 +2,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import { Link } from "react-router-dom"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
@@ -13,7 +14,7 @@ const Container = styled.button`
     border: 1px solid transparent;
     background: none;
     padding: ${props =>
-        props.nopadding ? 0 : `${Variables.Margins.XS} ${Variables.Margins.S}`};
+        props.nopadding ? 0 : `${Variables.Spacers.XS} ${Variables.Spacers.S}`};
     font-family: ${Variables.FontFamilies.Body};
     font-size: ${Variables.FontSizes.Body};
     font-weight: ${Variables.FontWeights.Bold};
@@ -26,12 +27,12 @@ const Container = styled.button`
     text-decoration: none;
 
     .icon-left {
-        margin-right: ${Variables.Margins.XXS};
+        margin-right: ${Variables.Spacers.XXS};
         height: 100%;
     }
 
     .icon-right {
-        margin-left: ${Variables.Margins.XXS};
+        margin-left: ${Variables.Spacers.XXS};
         height: 100%;
     }
 
@@ -265,7 +266,7 @@ const Container = styled.button`
         `}
 `
 
-function Button(props) {
+const Button = props => {
     return (
         <Container
             as={props.to && Link}
@@ -296,6 +297,10 @@ function Button(props) {
             )}
         </Container>
     )
+}
+
+Button.propTypes = {
+    children: PropTypes.string.isRequired
 }
 
 export default Button

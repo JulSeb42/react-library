@@ -2,40 +2,35 @@
 import React from "react"
 import { Routes, Route } from "react-router-dom"
 
+// Routes
+import routes from "./routes/routes"
+
 // Components
-import DemoNav from "./components/demo/DemoNav"
-import MarkdownPage from "./components/demo/MarkdownPage"
-import NotFound from "./pages/NotFound"
-import scrollToTop from "./components/scrollToTop"
+import Nav from "./components/demo/NavDemo"
+import ContainerDemo from "./components/demo/ContainerDemo"
+import DemoPageLoading from "./pages/demos/DemoPageLoading"
 
-import DemoPageLoading from "./components/demo/DemoPageLoading"
-
-// Data
-import pages from "./components/demo/pages"
-
-function App() {
+const App = () => {
     return (
         <>
-            <DemoNav />
+            <Nav />
 
-            <Routes>
-                <Route path="*" element={<NotFound />} />
+            <ContainerDemo>
+                <Routes>
+                    {routes.map((route, i) => (
+                        <Route
+                            path={route.path}
+                            element={<route.element />}
+                            key={i}
+                        />
+                    ))}
 
-                {pages.map((page, i) => (
                     <Route
-                        path={`/${page === "index" ? "" : page.toLowerCase()}`}
-                        element={<MarkdownPage content={page.toLowerCase()} />}
-                        preload={scrollToTop()}
-                        key={i}
+                        path="/page-loading/demo"
+                        element={<DemoPageLoading />}
                     />
-                ))}
-
-                <Route
-                    path="/loading-page"
-                    element={<DemoPageLoading />}
-                    preload={scrollToTop()}
-                />
-            </Routes>
+                </Routes>
+            </ContainerDemo>
         </>
     )
 }

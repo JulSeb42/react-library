@@ -14,9 +14,9 @@ const Container = styled(Grid)`
     margin: 0 auto;
 `
 
-function Form(props) {
+const Form = props => {
     return (
-        <Container as="form" gap={Variables.Margins.S} {...props}>
+        <Container as="form" gap={Variables.Spacers.S} {...props}>
             {props.children}
 
             {(props.btnprimary || props.btncancel || props.btnreset) && (

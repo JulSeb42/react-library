@@ -1,6 +1,7 @@
 // Packages
 import React from "react"
 import styled, { css } from "styled-components"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
@@ -11,7 +12,7 @@ const Container = styled.span`
     display: inline-flex;
     align-items: center;
     transition: ${Variables.Transitions.Short};
-    padding: ${Variables.Margins.XXS} ${Variables.Margins.S};
+    padding: ${Variables.Spacers.XXS} ${Variables.Spacers.S};
     border-radius: ${props =>
         props.pill ? Variables.Radiuses.Round : Variables.Radiuses.M};
 
@@ -97,7 +98,7 @@ const Input = styled.input`
     display: none;
 
     &:checked ~ .icon {
-        margin-left: ${Variables.Margins.XXS};
+        margin-left: ${Variables.Spacers.XXS};
         width: inherit;
     }
 `
@@ -113,7 +114,7 @@ const IconContainer = styled.label`
     align-items: center;
 `
 
-function Tag(props) {
+const Tag = props => {
     return (
         <Container
             justify={props.justify}
@@ -162,6 +163,10 @@ function Tag(props) {
             )}
         </Container>
     )
+}
+
+Tag.propTypes = {
+    label: PropTypes.string.isRequired,
 }
 
 export default Tag

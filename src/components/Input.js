@@ -20,7 +20,7 @@ const InputStyled = styled.input`
     border: 1px solid ${Variables.Colors.Gray200};
     border-radius: ${Variables.Radiuses.S};
     outline: none;
-    padding: ${Variables.Margins.XS} ${Variables.Margins.XS};
+    padding: ${Variables.Spacers.XS} ${Variables.Spacers.XS};
     font-family: ${Variables.FontFamilies.Body};
     font-size: ${Variables.FontSizes.Body};
     height: 35px;
@@ -42,7 +42,7 @@ const InputStyled = styled.input`
         css`
             min-height: calc(
                 ${Variables.FontSizes.Body} * ${Variables.LineHeight} * 3 +
-                    ${Variables.Margins.XXS} * 2
+                    ${Variables.Spacers.XXS} * 2
             );
             resize: vertical;
         `}
@@ -61,7 +61,7 @@ const InputStyled = styled.input`
     ${props =>
         props.icon &&
         css`
-            padding-left: calc(${Variables.Margins.XS} + 32px);
+            padding-left: calc(${Variables.Spacers.XS} + 32px);
         `}
     
     ${props =>
@@ -106,14 +106,14 @@ const IconContainer = styled.span`
 const RightContainer = styled.span`
     position: absolute;
     top: 0;
-    right: ${Variables.Margins.XS};
+    right: ${Variables.Spacers.XS};
     height: 100%;
     z-index: 1;
     display: inline-flex;
     align-items: center;
 
     & > *:not(:last-child) {
-        margin-right: ${Variables.Margins.XXS};
+        margin-right: ${Variables.Spacers.XXS};
     }
 `
 
@@ -147,7 +147,7 @@ const SelectContainer = styled.div`
         position: absolute;
         z-index: 2;
         top: calc(50% - 18px / 2);
-        right: ${Variables.Margins.XS};
+        right: ${Variables.Spacers.XS};
 
         ${props =>
             props.disabled &&
@@ -157,8 +157,7 @@ const SelectContainer = styled.div`
     }
 `
 
-// Components
-function InputFunction(props) {
+const InputFunction = props => {
     const [isVisible, setIsVisible] = useState(false)
     const visible = isVisible ? "text" : "password"
 
@@ -185,9 +184,9 @@ function InputFunction(props) {
                     {props.validation &&
                         props.value.length > 0 &&
                         (props.validation === "passed" ? (
-                            props.customiconpassed ? (
+                            props.customIconPassed ? (
                                 <Icon
-                                    name={props.customiconpassed}
+                                    name={props.customIconPassed}
                                     color={Variables.Colors.Success500}
                                     size={16}
                                 />
@@ -211,9 +210,9 @@ function InputFunction(props) {
                                     />
                                 </svg>
                             )
-                        ) : props.customiconnotpassed ? (
+                        ) : props.customIconNotPassed ? (
                             <Icon
-                                name={props.customiconnotpassed}
+                                name={props.customIconNotPassed}
                                 color={Variables.Colors.Danger500}
                                 size={16}
                             />
@@ -243,7 +242,7 @@ function InputFunction(props) {
                             onClick={() => setIsVisible(!isVisible)}
                             type="button"
                         >
-                            {props.iconpassword ? (
+                            {props.iconPassword ? (
                                 isVisible ? (
                                     <svg
                                         width="24"
@@ -317,7 +316,7 @@ function InputFunction(props) {
     )
 }
 
-function Input(props) {
+const Input = props => {
     return props.label || props.helper || props.validation || props.counter ? (
         <InputContainer
             label={props.label}
@@ -333,8 +332,8 @@ function Input(props) {
                 validation={props.validation}
                 id={props.id}
                 max={props.counter && props.counter}
-                customiconpassed={props.customiconpassed}
-                customiconnotpassed={props.customiconnotpassed}
+                customIconPassed={props.customIconPassed}
+                customIconNotPassed={props.customIconNotPassed}
                 {...props}
             />
         </InputContainer>

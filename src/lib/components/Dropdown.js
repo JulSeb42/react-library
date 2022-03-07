@@ -1,5 +1,6 @@
 // Packages
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
@@ -27,7 +28,7 @@ const Dropdown = styled.div`
     z-index: 10;
 
     & > a {
-        padding: ${Variables.Margins.XS};
+        padding: ${Variables.Spacers.XS};
         color: ${Variables.Colors.Primary500};
         text-decoration: none;
         font-weight: ${Variables.FontWeights.Bold};
@@ -39,9 +40,16 @@ const Dropdown = styled.div`
         }
     }
 
-    &.open {
-        max-height: 800px;
-    }
+    ${props =>
+        props.open &&
+        css`
+            max-height: 800px;
+            overflow-y: scroll;
+        `}
 `
+
+Dropdown.propTypes = {
+    open: PropTypes.bool.isRequired,
+}
 
 export { DropdownContainer, Dropdown }

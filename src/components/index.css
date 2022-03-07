@@ -93,14 +93,14 @@
     --shadow-s: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 
-    /* Margins */
-    --margin-xxl: 48px;
-    --margin-xl: 32px;
-    --margin-l: 24px;
-    --margin-m: 16px;
-    --margin-s: 12px;
-    --margin-xs: 8px;
-    --margin-xxs: 4px;
+    /* Spacers */
+    --spacer-xxl: 48px;
+    --spacer-xl: 32px;
+    --spacer-l: 24px;
+    --spacer-m: 16px;
+    --spacer-s: 12px;
+    --spacer-xs: 8px;
+    --spacer-xxs: 4px;
 
     /* Font families */
     --font-family-body: "Lato", sans-serif;

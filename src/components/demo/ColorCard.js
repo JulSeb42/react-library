@@ -26,13 +26,13 @@ const Color = styled.span`
 `
 
 const Content = styled.div`
-    padding: ${Variables.Margins.XS};
+    padding: ${Variables.Spacers.XS};
     display: grid;
     grid-template-columns: 1fr;
-    gap: ${Variables.Margins.XS};
+    gap: ${Variables.Spacers.XS};
 `
 
-function ColorCard({ color }) {
+const ColorCard = ({ color }) => {
     return (
         <Container>
             <Color color={color.rgb} />

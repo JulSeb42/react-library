@@ -2,6 +2,7 @@
 import React, { useEffect } from "react"
 import styled, { css } from "styled-components"
 import LazyLoad, { forceCheck } from "react-lazyload"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
@@ -34,16 +35,16 @@ const Caption = styled(Font.P)`
     left: 0;
     width: 100%;
     z-index: 2;
-    padding: ${Variables.Margins.XS} ${Variables.Margins.S};
+    padding: ${Variables.Spacers.XS} ${Variables.Spacers.S};
     background-color: ${Variables.Overlays.Plain.Black50};
     color: ${Variables.Colors.White};
 `
 
-function Image({ scrollPosition, ...props }) {
+const Image = props => {
     useEffect(() => {
         forceCheck()
     })
-    
+
     return (
         <Container
             width={props.width}
@@ -63,6 +64,11 @@ function Image({ scrollPosition, ...props }) {
             {props.caption && <Caption>{props.caption}</Caption>}
         </Container>
     )
+}
+
+Image.propTypes = {
+    src: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
 }
 
 export default Image

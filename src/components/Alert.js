@@ -8,7 +8,7 @@ import Grid from "./Grid"
 
 // Styles
 const Container = styled(Grid)`
-    padding: ${Variables.Margins.S};
+    padding: ${Variables.Spacers.S};
     background-color: ${props =>
         props.color === "primary"
             ? Variables.Colors.Primary50
@@ -37,17 +37,17 @@ const Container = styled(Grid)`
                 ? Variables.Colors.Warning500
                 : props.color === "white"
                 ? Variables.Colors.White
-                : props.bordercolor};
+                : props.borderColor};
     border-radius: ${Variables.Radiuses.M};
 `
 
-function Alert(props) {
+const Alert = props => {
     return (
         <Container
             col={1}
-            gap={Variables.Margins.S}
+            gap={Variables.Spacers.S}
             color={props.color || "success"}
-            bordercolor={props.bordercolor}
+            borderColor={props.borderColor}
             {...props}
         >
             {props.children}

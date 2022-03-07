@@ -1,6 +1,7 @@
 // Packages
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
@@ -63,7 +64,7 @@ const HoverContainer = styled.span`
     justify-content: center;
 `
 
-function Empty(props) {
+const Empty = props => {
     return (
         <EmptyContainer>
             {props.icon ? (
@@ -86,7 +87,7 @@ function Empty(props) {
     )
 }
 
-function Hover(props) {
+const Hover = props => {
     return (
         <HoverContainer className="hover">
             {props.icon ? (
@@ -115,7 +116,7 @@ function Hover(props) {
     )
 }
 
-function InputImage(props) {
+const InputImage = props => {
     return props.label || props.helper || props.validation ? (
         <InputContainer
             label={props.label}
@@ -148,6 +149,13 @@ function InputImage(props) {
             <Hover icon={props.iconhover} />
         </Container>
     )
+}
+
+InputImage.propTypes = {
+    src: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired,
 }
 
 export default InputImage

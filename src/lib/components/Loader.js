@@ -20,19 +20,19 @@ const Container = styled.span`
     height: ${props => `${props.size}px`};
     border: ${props => `${props.border}px`} solid
         ${props =>
-            props.backgroundcolor === "primary"
+            props.backgroundColor === "primary"
                 ? Variables.Colors.Primary500
-                : props.backgroundcolor === "secondary"
+                : props.backgroundColor === "secondary"
                 ? Variables.Colors.Secondary500
-                : props.backgroundcolor === "success"
+                : props.backgroundColor === "success"
                 ? Variables.Colors.Success500
-                : props.backgroundcolor === "danger"
+                : props.backgroundColor === "danger"
                 ? Variables.Colors.Danger500
-                : props.backgroundcolor === "warning"
+                : props.backgroundColor === "warning"
                 ? Variables.Colors.Warning500
-                : props.backgroundcolor === "white"
+                : props.backgroundColor === "white"
                 ? Variables.Colors.White
-                : props.backgroundcolor};
+                : props.backgroundColor};
     border-bottom-color: ${props =>
         props.color === "primary"
             ? Variables.Colors.Primary500
@@ -51,16 +51,17 @@ const Container = styled.span`
     display: inline-block;
     box-sizing: border-box;
     animation: ${Rotation} 1s linear infinite;
-    margin-right: ${Variables.Margins.XS};
+    margin-right: ${Variables.Spacers.XS};
 `
 
-function Loader(props) {
+const Loader = props => {
     return (
         <Container
             border={props.border || 2}
             color={props.color || "primary"}
-            backgroundcolor={props.backgroundcolor || "white"}
+            backgroundColor={props.backgroundColor || "white"}
             size={props.size || 48}
+            {...props}
         />
     )
 }

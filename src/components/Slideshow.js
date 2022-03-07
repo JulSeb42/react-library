@@ -1,6 +1,7 @@
 // Packages
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
@@ -11,7 +12,7 @@ const SlideshowContainer = styled.div`
     position: relative;
     display: inline-grid;
     grid-template-columns: 1fr;
-    gap: ${Variables.Margins.XS};
+    gap: ${Variables.Spacers.XS};
     width: ${props => props.width || "100%"};
 `
 
@@ -31,17 +32,23 @@ const SlideshowItem = styled.div`
     z-index: 1;
     transition: ${Variables.Transitions.Long};
 
-    &.previous {
-        left: -100%;
-    }
+    ${props =>
+        props.position === "previous" &&
+        css`
+            left: -100%;
+        `}
 
-    &.active {
-        left: 0;
-    }
-
-    &.next {
-        left: 100%;
-    }
+    ${props =>
+        props.position === "active" &&
+        css`
+            left: 0;
+        `}
+    
+    ${props =>
+        props.position === "next" &&
+        css`
+            left: 100%;
+        `}
 
     .lazyload-wrapper,
     img {
@@ -72,16 +79,16 @@ const SlideshowButtonContainer = styled.button`
 
     &:first-child {
         left: 0;
-        border-radius: 0 ${Variables.Margins.S} ${Variables.Margins.S} 0;
+        border-radius: 0 ${Variables.Spacers.S} ${Variables.Spacers.S} 0;
     }
 
     &:last-child {
         right: 0;
-        border-radius: ${Variables.Margins.S} 0 0 ${Variables.Margins.S};
+        border-radius: ${Variables.Spacers.S} 0 0 ${Variables.Spacers.S};
     }
 `
 
-function SlideshowButton(props) {
+const SlideshowButton = props => {
     return (
         <SlideshowButtonContainer type="button" {...props}>
             {props.type === "prev" &&
@@ -127,10 +134,10 @@ const SlideshowPaginationContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: ${Variables.Margins.M};
+    margin-top: ${Variables.Spacers.M};
 
     button:not(:last-child) {
-        margin-right: ${Variables.Margins.XS};
+        margin-right: ${Variables.Spacers.XS};
     }
 `
 
@@ -145,11 +152,30 @@ const SlideshowPaginationButton = styled.button`
     display: block;
     padding: 0;
 
-    &:hover,
-    &.active {
-        background-color: ${Variables.Colors.Primary500};
+    &:hover {
+        background-color: ${Variables.Colors.Primary300};
     }
+
+    ${props =>
+        props.active &&
+        css`
+            background-color: ${Variables.Colors.Primary500};
+        `}
 `
+
+SlideshowButton.propTypes = {
+    type: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+}
+
+SlideshowItem.propTypes = {
+    position: PropTypes.string.isRequired,
+}
+
+SlideshowPaginationButton.propTypes = {
+    active: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired,
+}
 
 export {
     SlideshowContainer,

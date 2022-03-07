@@ -8,7 +8,7 @@ import Variables from "./Variables"
 const Aside = styled.aside`
     display: grid;
     grid-template-columns: 1fr;
-    gap: ${props => props.gap || Variables.Margins.L};
+    gap: ${props => props.gap || Variables.Spacers.L};
     align-content: start;
     grid-column: ${props =>
         props.template === "aside-left"
@@ -34,6 +34,12 @@ const Aside = styled.aside`
         props.justify &&
         css`
             justify-items: ${props => props.justify};
+        `}
+
+    ${props =>
+        props.align &&
+        css`
+            align-items: ${props => props.align};
         `}
 `
 

@@ -1,5 +1,0 @@
-# Utils
-
-Utils functions
-
-<DemoUtils />

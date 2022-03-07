@@ -90,15 +90,15 @@ const Variables = {
         XS: "var(--shadow-xs)",
     },
 
-    // Margins
-    Margins: {
-        XXL: "var(--margin-xxl)",
-        XL: "var(--margin-xl)",
-        L: "var(--margin-l)",
-        M: "var(--margin-m)",
-        S: "var(--margin-s)",
-        XS: "var(--margin-xs)",
-        XXS: "var(--margin-xxs)",
+    // Spacers
+    Spacers: {
+        XXL: "var(--spacer-xxl)",
+        XL: "var(--spacer-xl)",
+        L: "var(--spacer-l)",
+        M: "var(--spacer-m)",
+        S: "var(--spacer-s)",
+        XS: "var(--spacer-xs)",
+        XXS: "var(--spacer-xxs)",
     },
 
     // Font family

@@ -1,6 +1,7 @@
 // Packages
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
@@ -19,9 +20,11 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    &.open {
-        display: flex;
-    }
+    ${props =>
+        props.open &&
+        css`
+            display: flex;
+        `}
 
     img {
         width: 90%;
@@ -48,8 +51,8 @@ const Close = styled.button`
     width: var(--size);
     height: var(--size);
     position: absolute;
-    top: ${Variables.Margins.L};
-    right: ${Variables.Margins.L};
+    top: ${Variables.Spacers.L};
+    right: ${Variables.Spacers.L};
     z-index: 2;
     display: inline-flex;
     align-items: center;
@@ -57,13 +60,13 @@ const Close = styled.button`
     color: ${Variables.Colors.White};
     border-radius: 50%;
     transition: ${Variables.Transitions.Short};
-    
+
     &:hover {
-        background-color: ${Variables.Colors.Gray500}
+        background-color: ${Variables.Colors.Gray500};
     }
 `
 
-function Modal(props) {
+const Modal = props => {
     return (
         <Container {...props}>
             {props.close && (
@@ -90,6 +93,10 @@ function Modal(props) {
             {props.children}
         </Container>
     )
+}
+
+Modal.propTypes = {
+    open: PropTypes.bool.isRequired,
 }
 
 export default Modal

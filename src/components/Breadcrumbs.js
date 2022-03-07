@@ -1,20 +1,34 @@
 // Packages
-import styled from "styled-components"
+import React from "react"
 import { Link } from "react-router-dom"
+import styled from "styled-components"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
 import * as Font from "./Font"
 
 // Styles
-export const Breadcrumbs = styled(Font.P)`
+const Breadcrumbs = styled(Font.P)`
     a:after {
         content: "/";
-        margin: 0 ${Variables.Margins.XXS};
+        margin: 0 ${Variables.Spacers.XXS};
         color: ${Variables.Colors.Black};
     }
 `
 
-export const BreadcrumbsLink = styled(Link)``
+const Item = styled.span``
 
-export const BreadcrumbsActive = styled.span``
+const BreadcrumbsItem = props => {
+    return (
+        <Item as={props.to && Link} to={props.to} {...props}>
+            {props.children}
+        </Item>
+    )
+}
+
+BreadcrumbsItem.propTypes = {
+    children: PropTypes.string.isRequired,
+}
+
+export { Breadcrumbs, BreadcrumbsItem }

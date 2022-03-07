@@ -1,8 +1,10 @@
 // Packages
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { ReactSVG } from "react-svg"
+import PropTypes from "prop-types"
 
+// Styles
 const IconStyled = styled(ReactSVG)`
     display: inline-flex;
     width: ${props => `${props.size}px`};
@@ -29,14 +31,10 @@ const IconStyled = styled(ReactSVG)`
     }
 `
 
-export default function Icon(props) {
+const Icon = props => {
     return (
         <IconStyled
-            src={
-                props.component
-                    ? `./icons/${props.name}.svg`
-                    : `/icons/${props.name}.svg`
-            }
+            src={`/icons/${props.name}.svg`}
             color={props.color || "currentColor"}
             size={props.size}
             wrapper="span"
@@ -45,29 +43,15 @@ export default function Icon(props) {
     )
 }
 
+Icon.propTypes = {
+    name: PropTypes.string.isRequired,
+    size: PropTypes.number.isRequired,
+}
+
+export default Icon
+
 // How to use
 // Import in the file you want to use this component
-// import Icon from "/path/to/Icon.js"
+// import Icon from "/path/to/Icon"
 // Use the component
 // <Icon name="name-of-icon" size={32} color="color" />
-
-export const IconMixin = ({ icon, size, color }) => css`
-    content: "";
-    mask: url("./icons/${icon}.svg") no-repeat 50% 50%;
-    mask-size: cover;
-    background-color: ${color || "currentColor"};
-    display: inline-block;
-    width: ${size}px;
-    height: ${size}px;
-`
-
-// How to use the mixin
-// Import in the file you want to use this component
-// import { IconMixin } from "/path/to/Icon.js"
-// div:before {
-//     ${IconMixin({
-//         icon: "name-of-icon",
-//         size: "12px",
-//         color: "black",
-//     })}
-// }

@@ -12,7 +12,7 @@ const TitleFlex = styled.div`
     justify-content: space-between;
 
     & > *:first-child {
-        margin-right: ${Variables.Margins.XS};
+        margin-right: ${Variables.Spacers.XS};
     }
 `
 

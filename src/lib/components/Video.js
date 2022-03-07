@@ -37,12 +37,11 @@ const Container = styled.video`
         `}
 `
 
-function Video(props) {
+const Video = props => {
     return props.youtube ? (
         <Container
             as="iframe"
             src={convertYoutube(props.youtube)}
-            title="Youtube"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

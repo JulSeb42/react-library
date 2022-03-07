@@ -1,6 +1,7 @@
 // Packages
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
@@ -48,30 +49,35 @@ const Container = styled.button`
         }
     }
 
-    &.open span {
-        &:first-child {
-            transform: rotate(45deg);
-            top: 45%;
-        }
+    ${props =>
+        props.open &&
+        css`
+            span {
+                &:first-child {
+                    transform: rotate(45deg);
+                    top: 45%;
+                }
 
-        &:nth-child(2) {
-            width: 0;
-        }
+                &:nth-child(2) {
+                    width: 0;
+                }
 
-        &:last-child {
-            transform: rotate(-45deg);
-            bottom: 45%;
-        }
-    }
+                &:last-child {
+                    transform: rotate(-45deg);
+                    bottom: 45%;
+                }
+            }
+        `}
 `
 
-function Burger(props) {
+const Burger = props => {
     return (
         <Container
             width={props.width || 32}
             height={props.height || 24}
             color={props.color || "primary"}
             border={props.border || 2}
+            aria-label={props.ariaLabel || "Menu button"}
             {...props}
         >
             <span />
@@ -79,6 +85,11 @@ function Burger(props) {
             <span />
         </Container>
     )
+}
+
+Burger.propTypes = {
+    onClick: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
 }
 
 export default Burger

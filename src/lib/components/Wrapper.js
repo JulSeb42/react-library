@@ -6,7 +6,7 @@ import Variables from "./Variables"
 
 const Wrapper = styled.div`
     display: grid;
-    gap: ${Variables.Margins.L};
+    gap: ${Variables.Spacers.L};
     padding: ${Variables.Container.Padding};
     grid-template-columns: ${props =>
         props.template === "aside-left"

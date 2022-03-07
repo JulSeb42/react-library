@@ -8,7 +8,7 @@ import Image from "./Image"
 import Icon from "./Icon"
 
 // Styles
-const Container = styled.span`
+const Container = styled.div`
     width: ${props => `${props.size}px`};
     height: ${props => `${props.size}px`};
     border-radius: 50%;
@@ -24,7 +24,7 @@ const Container = styled.span`
     font-weight: ${Variables.FontWeights.Black};
 `
 
-function Avatar(props) {
+const Avatar = props => {
     return (
         <Container size={props.size || 48} {...props}>
             {props.src && (
@@ -45,5 +45,7 @@ function Avatar(props) {
         </Container>
     )
 }
+
+
 
 export default Avatar

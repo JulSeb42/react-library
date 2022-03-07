@@ -1,8 +1,9 @@
 // Packages
 import React from "react"
 import { Helmet as HelmetMeta } from "react-helmet"
+import PropTypes from "prop-types"
 
-function Helmet(props) {
+const Helmet = props => {
     return (
         <HelmetMeta>
             <title>{props.title}</title>
@@ -24,6 +25,10 @@ function Helmet(props) {
             {props.children}
         </HelmetMeta>
     )
+}
+
+Helmet.propTypes = {
+    title: PropTypes.string.isRequired,
 }
 
 export default Helmet

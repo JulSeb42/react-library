@@ -71,7 +71,7 @@ const allColors = [
     { name: "Warning900", rgb: "rgb(39,15,0)" },
 ]
 
-function DemoColors() {
+const DemoColors = () => {
     return (
         <Grid col={3}>
             {allColors.map((color, i) => (

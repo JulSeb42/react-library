@@ -15,16 +15,18 @@ const Label = styled.label`
 
 const Counter = styled(Font.Small)``
 
-function InputContainer(props) {
+const InputContainer = props => {
     return (
-        <Grid gap={Variables.Margins.XXS}>
+        <Grid gap={Variables.Spacers.XXS}>
             {props.label && <Label>{props.label}</Label>}
 
             {props.helper && <Font.P>{props.helper}</Font.P>}
 
             {props.children}
 
-            {props.helperBottom && <Font.Small>{props.helperBottom}</Font.Small>}
+            {props.helperBottom && (
+                <Font.Small>{props.helperBottom}</Font.Small>
+            )}
 
             {props.validationText &&
                 props.validation &&

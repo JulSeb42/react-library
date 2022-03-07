@@ -10,7 +10,7 @@ const ButtonsContainer = styled.div`
     align-items: center;
 
     & > *:not(:last-child) {
-        margin-right: ${Variables.Margins.S};
+        margin-right: ${Variables.Spacers.S};
     }
 `
 

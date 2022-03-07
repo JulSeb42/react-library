@@ -1,4 +1,3 @@
-// Get time
 const getTimeNow = () => {
     const today = new Date()
     let hours = today.getHours()

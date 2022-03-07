@@ -11,7 +11,7 @@ import Icon from "./Icon"
 // Styles
 const Container = styled(Grid)`
     background-color: ${Variables.Colors.White};
-    padding: ${Variables.Margins.M};
+    padding: ${Variables.Spacers.M};
     box-shadow: ${Variables.Shadows.S};
     border-radius: ${Variables.Radiuses.M};
     max-width: 300px;
@@ -46,14 +46,14 @@ const Title = styled.span`
     align-items: center;
 
     & > span {
-        margin-right: ${Variables.Margins.XXS};
+        margin-right: ${Variables.Spacers.XXS};
     }
 `
 
-function TitleFunction(props) {
+const TitleFunction = props => {
     return props.icon ? (
         <Title>
-            <Icon name={props.icon} size={16} color={props.iconcolor} />
+            <Icon name={props.icon} size={16} color={props.iconColor} />
 
             <Font.H5>{props.title}</Font.H5>
         </Title>
@@ -62,20 +62,20 @@ function TitleFunction(props) {
     )
 }
 
-function Toast(props) {
+const Toast = props => {
     return (
-        <Container gap={Variables.Margins.XS} {...props}>
+        <Container gap={Variables.Spacers.XS} {...props}>
             {props.close ? (
                 <TitleContainer>
                     <TitleFunction
                         title={props.title}
                         icon={props.icon}
-                        iconcolor={props.iconcolor}
+                        iconColor={props.iconColor}
                     />
 
                     <Close onClick={props.close}>
                         {props.customiconclose ? (
-                            <Icon name={props.customiconclose} size={24} />
+                            <Icon name={props.customIconClose} size={24} />
                         ) : (
                             <svg
                                 width="24"
@@ -96,7 +96,7 @@ function Toast(props) {
                 <TitleFunction
                     title={props.title}
                     icon={props.icon}
-                    iconcolor={props.iconcolor}
+                    iconColor={props.iconColor}
                 />
             )}
 

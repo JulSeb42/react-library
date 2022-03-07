@@ -1,21 +1,24 @@
 // Packages
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
+import Grid from "./Grid"
 
 // Styles
-const TabsContainer = styled.div`
+const TabsContainer = styled(Grid)`
     width: 100%;
     position: relative;
+    gap: ${Variables.Spacers.S};
 `
 
 const TabsButtonsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(${props => props.col}, 1fr);
-    gap: ${Variables.Margins.M};
+    gap: ${Variables.Spacers.M};
     position: relative;
-    padding-bottom: ${Variables.Margins.XXS};
+    padding-bottom: ${Variables.Spacers.XXS};
 
     &:after {
         content: "";
@@ -48,18 +51,36 @@ const TabsButton = styled.button`
         z-index: 2;
     }
 
-    &.active:after {
-        background-color: ${Variables.Colors.Primary500};
-    }
+    ${props =>
+        props.active &&
+        css`
+            &:after {
+                background-color: ${Variables.Colors.Primary500};
+            }
+        `}
 `
 
 const TabsContent = styled.div`
     display: none;
-    margin-top: ${Variables.Margins.S};
 
-    &.active {
-        display: block;
-    }
+    ${props =>
+        props.active &&
+        css`
+            display: block;
+        `}
 `
+
+TabsButtonsContainer.propTypes = {
+    col: PropTypes.number.isRequired,
+}
+
+TabsButton.propTypes = {
+    onClick: PropTypes.func.isRequired,
+    active: PropTypes.bool.isRequired,
+}
+
+TabsContent.propTypes = {
+    active: PropTypes.bool.isRequired,
+}
 
 export { TabsContainer, TabsButtonsContainer, TabsButton, TabsContent }

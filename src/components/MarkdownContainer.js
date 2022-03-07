@@ -10,10 +10,10 @@ import Variables from "./Variables"
 const Container = styled(Markdown)`
     display: grid;
     grid-template-columns: 1fr;
-    gap: ${Variables.Margins.XS};
+    gap: ${Variables.Spacers.XS};
 `
 
-function MarkdownContainer(props) {
+const MarkdownContainer = props => {
     return (
         <Container options={props.options} {...props}>
             {props.children}
@@ -22,4 +22,3 @@ function MarkdownContainer(props) {
 }
 
 export default MarkdownContainer
-

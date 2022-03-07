@@ -12,21 +12,21 @@ const AccordionContainer = styled(Grid)`
     gap: 0;
 
     ${props =>
-        props.accordionstyle === "basic" &&
+        props.accordionStyle === "basic" &&
         css`
             width: 100%;
-            gap: ${Variables.Margins.XS};
+            gap: ${Variables.Spacers.XS};
 
             .content-accordion {
                 padding: 0;
             }
 
             .open-accordion {
-                padding: ${Variables.Margins.XS} 0;
+                padding: ${Variables.Spacers.XS} 0;
             }
 
             .content-accordion.open {
-                padding-bottom: ${Variables.Margins.XS};
+                padding-bottom: ${Variables.Spacers.XS};
             }
 
             & > div:not(:last-child) {
@@ -35,7 +35,7 @@ const AccordionContainer = styled(Grid)`
         `}
 
     ${props =>
-        props.accordionstyle === "rounded" &&
+        props.accordionStyle === "rounded" &&
         css`
             width: 100%;
             border-radius: ${Variables.Radiuses.M};
@@ -48,7 +48,7 @@ const AccordionContainer = styled(Grid)`
 
             .open-accordion,
             .content-accordion.open {
-                padding: ${Variables.Margins.S};
+                padding: ${Variables.Spacers.S};
             }
 
             .open-accordion {
@@ -98,22 +98,25 @@ const Content = styled(Font.P)`
     padding: 0;
     overflow: hidden;
     transition: ${Variables.Transitions.Short};
-    padding: 0 ${Variables.Margins.S};
+    padding: 0 ${Variables.Spacers.S};
 
     &.open {
         max-height: 600px;
     }
 `
 
-function Accordion(props) {
+const Accordion = props => {
     return (
-        <AccordionContainer accordionstyle={props.accordionstyle || "basic"} {...props}>
+        <AccordionContainer
+            accordionStyle={props.accordionStyle || "basic"}
+            {...props}
+        >
             {props.children}
         </AccordionContainer>
     )
 }
 
-function AccordionItem(props) {
+const AccordionItem = props => {
     const [isOpen, setIsOpen] = useState(props.isOpen || false)
 
     return (
@@ -156,7 +159,11 @@ function AccordionItem(props) {
                 )}
             </Button>
 
-            <Content className={`content-accordion ${isOpen ? "open" : ""}`}>
+            <Content
+                className={`content-accordion ${isOpen ? "open" : ""} ${
+                    props.className
+                }`}
+            >
                 {props.children}
             </Content>
         </Item>

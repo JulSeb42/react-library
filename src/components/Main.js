@@ -8,7 +8,7 @@ import Variables from "./Variables"
 const Main = styled.main`
     display: grid;
     grid-template-columns: 1fr;
-    gap: ${props => props.gap || Variables.Margins.L};
+    gap: ${props => props.gap || Variables.Spacers.L};
     align-content: start;
     grid-column: ${props =>
         props.template === "aside-left" || props.template === "both-sides"
@@ -24,6 +24,12 @@ const Main = styled.main`
         css`
             justify-items: ${props => props.justify};
         `};
+
+    ${props =>
+        props.align &&
+        css`
+            align-items: ${props => props.align};
+        `}
 `
 
 export default Main

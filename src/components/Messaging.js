@@ -14,13 +14,13 @@ const MessagesContainer = styled.div`
     width: 100%;
     height: 65vh;
     border: 1px solid ${Variables.Colors.Gray100};
-    padding: ${Variables.Margins.M};
+    padding: ${Variables.Spacers.M};
     display: flex;
     flex-direction: column;
     border-radius: ${Variables.Radiuses.M};
 
     hr {
-        margin: ${Variables.Margins.S} 0;
+        margin: ${Variables.Spacers.S} 0;
     }
 `
 
@@ -34,13 +34,13 @@ const Empty = styled.div`
 const ListMessages = styled(ScrollToBottom)`
     flex-grow: 1;
     display: grid;
-    margin-bottom: ${Variables.Margins.S};
+    margin-bottom: ${Variables.Spacers.S};
     overflow-y: scroll;
 
     & > div {
         display: grid;
         grid-template-columns: 1fr;
-        gap: ${Variables.Margins.S};
+        gap: ${Variables.Spacers.S};
         align-content: start;
     }
 `
@@ -54,14 +54,14 @@ const ContainerMessage = styled.div`
 
 const DateTime = styled(Font.Small)`
     color: ${Variables.Colors.Gray500};
-    margin-top: ${Variables.Margins.XXS};
+    margin-top: ${Variables.Spacers.XXS};
 `
 
 const Bubble = styled(Font.P)`
     width: auto;
     display: inline;
     max-width: 70%;
-    padding: ${Variables.Margins.XS} ${Variables.Margins.S};
+    padding: ${Variables.Spacers.XS} ${Variables.Spacers.S};
     border-radius: ${Variables.Radiuses.S};
 
     a {
@@ -107,7 +107,7 @@ const Input = styled.textarea`
     height: 100%;
     font-family: ${Variables.FontFamilies.Body};
     font-size: ${Variables.FontSizes.Body};
-    margin-right: ${Variables.Margins.XS};
+    margin-right: ${Variables.Spacers.XS};
 `
 
 const Send = styled.button`
@@ -153,7 +153,7 @@ const Send = styled.button`
         `}
 `
 
-function EmptyContainer(props) {
+const EmptyContainer = props => {
     return (
         <Empty {...props}>
             <Font.P>{props.children}</Font.P>
@@ -161,7 +161,7 @@ function EmptyContainer(props) {
     )
 }
 
-function Message(props) {
+const Message = props => {
     return (
         <ContainerMessage type={props.type} {...props}>
             <Bubble type={props.type}>
@@ -179,7 +179,7 @@ function Message(props) {
     )
 }
 
-function MessageInput(props) {
+const MessageInput = props => {
     return (
         <ContainerSend onSubmit={props.onSubmit}>
             <Input {...props} />
