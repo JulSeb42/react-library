@@ -13,7 +13,9 @@ import ImagePage from "../pages/ImagePage"
 import VideoPage from "../pages/VideoPage"
 import AvatarPage from "../pages/AvatarPage"
 import ButtonPage from "../pages/ButtonPage"
+import ButtonIconPage from "../pages/ButtonIconPage"
 import TagPage from "../pages/TagPage"
+import BadgePage from "../pages/BadgePage"
 import InputPage from "../pages/InputPage"
 import InputImagePage from "../pages/InputImagePage"
 import InputCheckPage from "../pages/InputCheckPage"
@@ -91,8 +93,16 @@ const routes = [
         element: ButtonPage,
     },
     {
+        path: "/button-icon",
+        element: ButtonIconPage,
+    },
+    {
         path: "/tag",
         element: TagPage,
+    },
+    {
+        path: "/badge",
+        element: BadgePage,
     },
     {
         path: "/input",

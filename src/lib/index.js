@@ -4,9 +4,11 @@ import Alert from "./components/Alert"
 import Aside from "./components/Aside"
 import Autocomplete from "./components/Autocomplete"
 import Avatar from "./components/Avatar"
+import Badge from "./components/Badge"
 import { Breadcrumbs, BreadcrumbsItem } from "./components/Breadcrumbs"
 import Burger from "./components/Burger"
 import Button from "./components/Button"
+import ButtonIcon from "./components/ButtonIcon"
 import ButtonsContainer from "./components/ButtonsContainer"
 import CodeContainer from "./components/CodeContainer"
 import { DropdownContainer, Dropdown } from "./components/Dropdown"
@@ -65,10 +67,12 @@ export {
     Aside,
     Autocomplete,
     Avatar,
+    Badge,
     Breadcrumbs,
     BreadcrumbsItem,
     Burger,
     Button,
+    ButtonIcon,
     ButtonsContainer,
     CodeContainer,
     DropdownContainer,

@@ -14,7 +14,7 @@ const Container = styled.button`
     border: 1px solid transparent;
     background: none;
     padding: ${props =>
-        props.nopadding ? 0 : `${Variables.Spacers.XS} ${Variables.Spacers.S}`};
+        props.noPadding ? 0 : `${Variables.Spacers.XS} ${Variables.Spacers.S}`};
     font-family: ${Variables.FontFamilies.Body};
     font-size: ${Variables.FontSizes.Body};
     font-weight: ${Variables.FontWeights.Bold};
@@ -37,7 +37,7 @@ const Container = styled.button`
     }
 
     ${props =>
-        props.btnstyle === "plain" &&
+        props.btnStyle === "plain" &&
         css`
             background-color: ${props =>
                 props.color === "primary"
@@ -100,7 +100,7 @@ const Container = styled.button`
         `}
 
     ${props =>
-        props.btnstyle === "text" &&
+        props.btnStyle === "text" &&
         css`
             color: ${props =>
                 props.color === "primary"
@@ -157,7 +157,7 @@ const Container = styled.button`
         `}
     
     ${props =>
-        props.btnstyle === "outline" &&
+        props.btnStyle === "outline" &&
         css`
             border-color: ${props =>
                 props.color === "primary"
@@ -271,18 +271,18 @@ const Button = props => {
         <Container
             as={props.to && Link}
             color={props.color || "primary"}
-            btnstyle={props.btnstyle || "plain"}
+            btnStyle={props.btnStyle || "plain"}
             {...props}
         >
-            {!props.loading && props.iconleft && (
-                <Icon name={props.iconleft} size={16} className="icon-left" />
+            {!props.loading && props.iconLeft && (
+                <Icon name={props.iconLeft} size={16} className="icon-left" />
             )}
 
             {props.loading && (
                 <Loader
                     size={16}
                     backgroundcolor={
-                        props.btnstyle === "plain"
+                        props.btnStyle === "plain"
                             ? Variables.Colors.Gray100
                             : Variables.Colors.White
                     }
@@ -292,15 +292,15 @@ const Button = props => {
 
             {props.children}
 
-            {props.iconright && (
-                <Icon name={props.iconright} size={16} className="icon-right" />
+            {props.iconRight && (
+                <Icon name={props.iconRight} size={16} className="icon-right" />
             )}
         </Container>
     )
 }
 
 Button.propTypes = {
-    children: PropTypes.string.isRequired
+    children: PropTypes.string.isRequired,
 }
 
 export default Button

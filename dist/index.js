@@ -41,6 +41,12 @@ Object.defineProperty(exports, "Avatar", {
     return _Avatar.default;
   }
 });
+Object.defineProperty(exports, "Badge", {
+  enumerable: true,
+  get: function get() {
+    return _Badge.default;
+  }
+});
 Object.defineProperty(exports, "Breadcrumbs", {
   enumerable: true,
   get: function get() {
@@ -63,6 +69,12 @@ Object.defineProperty(exports, "Button", {
   enumerable: true,
   get: function get() {
     return _Button.default;
+  }
+});
+Object.defineProperty(exports, "ButtonIcon", {
+  enumerable: true,
+  get: function get() {
+    return _ButtonIcon.default;
   }
 });
 Object.defineProperty(exports, "ButtonsContainer", {
@@ -341,11 +353,15 @@ var _Autocomplete = _interopRequireDefault(require("./components/Autocomplete"))
 
 var _Avatar = _interopRequireDefault(require("./components/Avatar"));
 
+var _Badge = _interopRequireDefault(require("./components/Badge"));
+
 var _Breadcrumbs = require("./components/Breadcrumbs");
 
 var _Burger = _interopRequireDefault(require("./components/Burger"));
 
 var _Button = _interopRequireDefault(require("./components/Button"));
+
+var _ButtonIcon = _interopRequireDefault(require("./components/ButtonIcon"));
 
 var _ButtonsContainer = _interopRequireDefault(require("./components/ButtonsContainer"));
 

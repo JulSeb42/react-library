@@ -23,6 +23,8 @@ var _css = _interopRequireDefault(require("highlight.js/lib/languages/css"));
 
 var _scss = _interopRequireDefault(require("highlight.js/lib/languages/scss"));
 
+var _shell = _interopRequireDefault(require("highlight.js/lib/languages/shell"));
+
 var _Variables = _interopRequireDefault(require("./Variables"));
 
 var _templateObject;
@@ -44,6 +46,8 @@ const CodeContainer = props => {
   _reactLowlight.default.registerLanguage("scss", _scss.default);
 
   _reactLowlight.default.registerLanguage("js", _javascript.default);
+
+  _reactLowlight.default.registerLanguage("shell", _shell.default);
 
   return /*#__PURE__*/_react.default.createElement(Container, _extends({
     language: props.language,

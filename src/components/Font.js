@@ -182,6 +182,14 @@ const P = styled.p`
         css`
             white-space: pre-line;
         `}
+
+    code {
+        color: ${Variables.Colors.Primary500};
+        padding: ${Variables.Spacers.XXS};
+        background-color: ${Variables.Colors.Gray50};
+        line-height: 1.8;
+        border-radius: ${Variables.Radiuses.XS};
+    }
 `
 
 const Small = styled.small`
@@ -246,7 +254,7 @@ const List = styled.ul`
     padding-left: ${Variables.Spacers.S};
     display: grid;
     grid-template-columns: 1fr;
-    gap: ${Variables.Spacers.XS};
+    gap: ${props => props.gap || Variables.Spacers.XXS};
     list-style: none;
 
     li {

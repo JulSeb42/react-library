@@ -9,6 +9,7 @@ import javascript from "highlight.js/lib/languages/javascript"
 import html from "highlight.js/lib/languages/vbscript-html"
 import css from "highlight.js/lib/languages/css"
 import scss from "highlight.js/lib/languages/scss"
+import shell from "highlight.js/lib/languages/shell"
 
 // Components
 import Variables from "./Variables"
@@ -37,6 +38,7 @@ const CodeContainer = props => {
     Lowlight.registerLanguage("css", css)
     Lowlight.registerLanguage("scss", scss)
     Lowlight.registerLanguage("js", javascript)
+    Lowlight.registerLanguage("shell", shell)
 
     return <Container language={props.language} value={props.children} {...props} />
 }
