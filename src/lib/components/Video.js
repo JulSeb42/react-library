@@ -1,9 +1,7 @@
 // Packages
 import React from "react"
 import styled, { css } from "styled-components"
-
-// Components
-import convertYoutube from "./convertYoutube"
+import { convertYoutube } from "js-utils-julseb"
 
 // Styles
 const Container = styled.video`

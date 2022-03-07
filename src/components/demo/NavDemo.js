@@ -2,13 +2,13 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 import styled from "styled-components"
+import { capitalize } from "js-utils-julseb"
 
 // Components
 import Variables from "../Variables"
 
 // Pages
 import routes from "../../routes/routes"
-import capitalize from "../capitalize"
 
 // Styles
 const Container = styled.nav`

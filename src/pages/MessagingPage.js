@@ -2,8 +2,7 @@
 import React from "react"
 
 import * as Font from "../components/Font"
-import getToday from "../components/getToday"
-import getTimeNow from "../components/getTimeNow"
+import { getToday, getTimeNow } from "js-utils-julseb"
 import Hr from "../components/Hr"
 import {
     MessagesContainer,

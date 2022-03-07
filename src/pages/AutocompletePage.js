@@ -4,15 +4,20 @@ import React, { useState, useEffect } from "react"
 import * as Font from "../components/Font"
 import Autocomplete from "../components/Autocomplete"
 
-import allCities from "../components/allCities.json"
-
 const AutocompletePage = () => {
     // List suggestions
-    const [cities, setCities] = useState([])
+    const [allCities, setAllCities] = useState([])
     const [location, setLocation] = useState("")
 
     useEffect(() => {
-        setCities(allCities.map(city => `${city.name}, ${city.country}`))
+        fetch(
+            "https://raw.githubusercontent.com/JulSeb42/js-utils/master/utils/allCities.json"
+        )
+            .then(res => res.json())
+            .then(res =>
+                setAllCities(res.map(city => `${city.name}, ${city.country}`))
+            )
+            .catch(err => console.log(err))
     }, [])
 
     const [filteredCities, setFilteredCities] = useState("")
@@ -22,7 +27,7 @@ const AutocompletePage = () => {
         setFilteredCities(e.target.value)
     }
 
-    let resultsCities = cities.filter(city => {
+    let resultsCities = allCities.filter(city => {
         return city.toLowerCase().includes(filteredCities.toLowerCase())
     })
 
@@ -46,4 +51,3 @@ const AutocompletePage = () => {
 }
 
 export default AutocompletePage
-
