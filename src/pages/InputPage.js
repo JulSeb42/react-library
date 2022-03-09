@@ -74,7 +74,8 @@ const InputPage = () => {
                     id="textarea"
                     value={text}
                     onChange={handleText}
-                    counter={140}
+                    counter
+                    maxLength={140}
                 />
                 <Input type="select" label="Select" id="select">
                     <option>1</option>

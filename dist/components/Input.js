@@ -154,11 +154,12 @@ const Input = props => {
     id: props.id,
     value: props.value,
     counter: props.counter,
+    maxLength: props.maxLength,
     helperBottom: props.helperBottom
   }, /*#__PURE__*/_react.default.createElement(InputFunction, _extends({
     validation: props.validation,
     id: props.id,
-    max: props.counter && props.counter,
+    maxLength: props.maxLength,
     customIconPassed: props.customIconPassed,
     customIconNotPassed: props.customIconNotPassed
   }, props))) : /*#__PURE__*/_react.default.createElement(InputFunction, _extends({

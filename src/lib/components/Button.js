@@ -19,6 +19,7 @@ const Container = styled.button`
     font-size: ${Variables.FontSizes.Body};
     font-weight: ${Variables.FontWeights.Bold};
     border-radius: ${Variables.Radiuses.M};
+    line-height: ${Variables.LineHeight};
     transition: ${Variables.Transitions.Short};
     display: flex;
     align-items: center;

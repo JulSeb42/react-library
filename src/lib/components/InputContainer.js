@@ -34,9 +34,10 @@ const InputContainer = props => {
                     <Font.Small>{props.validationText}</Font.Small>
                 )}
 
-            {props.counter && (
+            {(props.counter || props.maxLength) && (
                 <Counter>
-                    {props.value.length} / {props.counter}
+                    {props.value.length}
+                    {props.maxLength && ` / ${props.maxLength}`}
                 </Counter>
             )}
         </Grid>

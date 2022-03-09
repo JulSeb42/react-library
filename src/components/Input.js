@@ -317,7 +317,11 @@ const InputFunction = props => {
 }
 
 const Input = props => {
-    return props.label || props.helper || props.validation || props.counter || props.helperBottom ? (
+    return props.label ||
+        props.helper ||
+        props.validation ||
+        props.counter ||
+        props.helperBottom ? (
         <InputContainer
             label={props.label}
             helper={props.helper}
@@ -326,12 +330,13 @@ const Input = props => {
             id={props.id}
             value={props.value}
             counter={props.counter}
+            maxLength={props.maxLength}
             helperBottom={props.helperBottom}
         >
             <InputFunction
                 validation={props.validation}
                 id={props.id}
-                max={props.counter && props.counter}
+                maxLength={props.maxLength}
                 customIconPassed={props.customIconPassed}
                 customIconNotPassed={props.customIconNotPassed}
                 {...props}
