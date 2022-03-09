@@ -50,7 +50,8 @@ const Button = props => {
   }), props.loading && /*#__PURE__*/_react.default.createElement(_Loader.default, {
     size: 16,
     backgroundcolor: props.btnStyle === "plain" ? _Variables.default.Colors.Gray100 : _Variables.default.Colors.White,
-    color: "currentColor"
+    color: "currentColor",
+    marginRight: _Variables.default.Spacers.XS
   }), props.children, props.iconRight && /*#__PURE__*/_react.default.createElement(_Icon.default, {
     name: props.iconRight,
     size: 16,

@@ -3,7 +3,6 @@ import React from "react"
 
 import * as Font from "../components/Font"
 import { getToday, getTimeNow } from "js-utils-julseb"
-import Hr from "../components/Hr"
 import {
     MessagesContainer,
     EmptyContainer,
@@ -61,16 +60,12 @@ const MessagingPage = () => {
                     </Message>
                 </ListMessages>
 
-                <Hr />
-
                 <MessageInput placeholder="Type your message" />
             </MessagesContainer>
 
             <Font.H2>Empty</Font.H2>
             <MessagesContainer>
                 <EmptyContainer>No message yet</EmptyContainer>
-
-                <Hr />
 
                 <MessageInput
                     placeholder="Type your message"

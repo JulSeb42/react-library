@@ -128,12 +128,12 @@ const InputImage = props => {
                 <Input type="file" id={props.id} {...props} />
 
                 {props.src === "" ? (
-                    <Empty icon={props.iconempty} />
+                    <Empty icon={props.iconEmpty} />
                 ) : (
                     <Img src={props.src} alt={props.alt} fit="cover" />
                 )}
 
-                <Hover icon={props.iconhover} />
+                <Hover icon={props.iconHover} />
             </Container>
         </InputContainer>
     ) : (
@@ -141,12 +141,12 @@ const InputImage = props => {
             <Input type="file" id={props.id} {...props} />
 
             {props.src === "" ? (
-                <Empty icon={props.iconempty} />
+                <Empty icon={props.iconEmpty} />
             ) : (
                 <Img src={props.src} alt={props.alt} />
             )}
 
-            <Hover icon={props.iconhover} />
+            <Hover icon={props.iconHover} />
         </Container>
     )
 }

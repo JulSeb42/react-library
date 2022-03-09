@@ -49,6 +49,7 @@ const InputPage = () => {
                 <Input id="input" />
                 <Input id="input-password" password iconPassword />
                 <Input label="Label" helper="Helper" id="input-label" />
+                <Input label="Label" helperBottom="Helper" id="input-label-helper" />
                 <Input icon="mail" id="input-icon" />
                 <Input id="input-disabled" disabled value="disabled" />
                 <Input

@@ -2,6 +2,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
+import PropTypes from "prop-types"
 
 // Components
 import Variables from "./Variables"
@@ -91,6 +92,10 @@ const ButtonIcon = props => {
             <Icon name={props.icon} size={props.size * 0.6 || 48 * 0.6} />
         </Container>
     )
+}
+
+ButtonIcon.propTypes = {
+    icon: PropTypes.string.isRequired,
 }
 
 export default ButtonIcon

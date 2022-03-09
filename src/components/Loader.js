@@ -1,6 +1,6 @@
 // Packages
 import React from "react"
-import styled, { keyframes } from "styled-components"
+import styled, { keyframes, css } from "styled-components"
 
 // Components
 import Variables from "./Variables"
@@ -51,7 +51,13 @@ const Container = styled.span`
     display: inline-block;
     box-sizing: border-box;
     animation: ${Rotation} 1s linear infinite;
-    margin-right: ${Variables.Spacers.XS};
+
+    ${props =>
+        (props.marginLeft || props.marginRight) &&
+        css`
+            margin-left: ${props.marginLeft};
+            margin-right: ${props.marginRight};
+        `}
 `
 
 const Loader = props => {

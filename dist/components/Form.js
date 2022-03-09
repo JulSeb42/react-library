@@ -35,24 +35,24 @@ const Form = props => {
     as: "form",
     gap: _Variables.default.Spacers.S
   }, props), props.children, (props.btnPrimary || props.btnCancel || props.btnReset) && /*#__PURE__*/_react.default.createElement(_ButtonsContainer.default, null, props.btnPrimary && /*#__PURE__*/_react.default.createElement(_Button.default, {
-    btnstyle: "plain",
+    btnStyle: "plain",
     color: props.colorPrimary || "primary",
-    iconleft: props.iconLeftPrimary,
-    iconright: props.iconRightPrimary,
+    iconLeft: props.iconLeftPrimary,
+    iconRight: props.iconRightPrimary,
     type: "submit",
     loading: props.loading,
     disabled: props.loading
   }, props.btnPrimary), props.btnCancel && /*#__PURE__*/_react.default.createElement(_Button.default, {
-    btnstyle: "text",
+    btnStyle: "text",
     color: props.colorCancel || "primary",
-    iconleft: props.iconLeftCancel,
-    iconright: props.iconRightCancel,
+    iconLeft: props.iconLeftCancel,
+    iconRight: props.iconRightCancel,
     to: props.btnCancel
-  }, props.textBtnCancel || "Cancel"), props.textBtnReset && /*#__PURE__*/_react.default.createElement(_Button.default, {
-    btnstyle: "text",
+  }, props.textBtnCancel || "Cancel"), (props.btnReset || props.textBtnReset) && /*#__PURE__*/_react.default.createElement(_Button.default, {
+    btnStyle: "text",
     color: props.colorReset || "primary",
-    iconleft: props.iconLeftReset,
-    iconright: props.iconRightReset,
+    iconLeft: props.iconLeftReset,
+    iconRight: props.iconRightReset,
     type: "reset",
     onClick: props.onClickReset
   }, props.textBtnReset || "Reset")));

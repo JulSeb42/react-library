@@ -11,7 +11,7 @@ const DropdownPage = () => {
     return (
         <DropdownContainer>
             <Button
-                btnstyle="plain"
+                btnStyle="plain"
                 color="primary"
                 onClick={() => setIsOpen(!isOpen)}
             >

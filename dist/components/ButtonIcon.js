@@ -13,6 +13,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _Variables = _interopRequireDefault(require("./Variables"));
 
 var _Icon = _interopRequireDefault(require("./Icon"));
@@ -39,5 +41,8 @@ const ButtonIcon = props => {
   }));
 };
 
+ButtonIcon.propTypes = {
+  icon: _propTypes.default.string.isRequired
+};
 var _default = ButtonIcon;
 exports.default = _default;

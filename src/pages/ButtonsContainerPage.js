@@ -7,10 +7,10 @@ import Button from "../components/Button"
 const ButtonsContainerPage = () => {
     return (
         <ButtonsContainer>
-            <Button btnstyle="plain" color="primary" justify="start">
+            <Button btnStyle="plain" color="primary" justify="start">
                 Button
             </Button>
-            <Button btnstyle="text" color="primary" justify="start">
+            <Button btnStyle="text" color="primary" justify="start">
                 Button
             </Button>
         </ButtonsContainer>

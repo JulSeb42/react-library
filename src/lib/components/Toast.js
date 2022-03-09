@@ -74,7 +74,7 @@ const Toast = props => {
                     />
 
                     <Close onClick={props.close}>
-                        {props.customiconclose ? (
+                        {props.customIconclose ? (
                             <Icon name={props.customIconClose} size={24} />
                         ) : (
                             <svg

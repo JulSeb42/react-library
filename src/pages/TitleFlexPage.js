@@ -10,7 +10,7 @@ const TitleFlexPage = () => {
         <TitleFlex>
             <Font.H2>Title</Font.H2>
 
-            <Button btnstyle="plain" color="primary">
+            <Button btnStyle="plain" color="primary">
                 Button
             </Button>
         </TitleFlex>

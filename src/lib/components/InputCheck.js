@@ -73,6 +73,10 @@ const Input = styled.input`
         color: ${Variables.Colors.Gray800};
     }
 
+    &:disabled ~ label {
+        cursor: not-allowed;
+    }
+
     &:checked ~ .radio:before {
         background-color: ${Variables.Colors.Primary500};
     }

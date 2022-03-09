@@ -23,10 +23,10 @@ const Form = props => {
                 <ButtonsContainer>
                     {props.btnPrimary && (
                         <Button
-                            btnstyle="plain"
+                            btnStyle="plain"
                             color={props.colorPrimary || "primary"}
-                            iconleft={props.iconLeftPrimary}
-                            iconright={props.iconRightPrimary}
+                            iconLeft={props.iconLeftPrimary}
+                            iconRight={props.iconRightPrimary}
                             type="submit"
                             loading={props.loading}
                             disabled={props.loading}
@@ -37,22 +37,22 @@ const Form = props => {
 
                     {props.btnCancel && (
                         <Button
-                            btnstyle="text"
+                            btnStyle="text"
                             color={props.colorCancel || "primary"}
-                            iconleft={props.iconLeftCancel}
-                            iconright={props.iconRightCancel}
+                            iconLeft={props.iconLeftCancel}
+                            iconRight={props.iconRightCancel}
                             to={props.btnCancel}
                         >
                             {props.textBtnCancel || "Cancel"}
                         </Button>
                     )}
 
-                    {props.textBtnReset && (
+                    {(props.btnReset || props.textBtnReset) && (
                         <Button
-                            btnstyle="text"
+                            btnStyle="text"
                             color={props.colorReset || "primary"}
-                            iconleft={props.iconLeftReset}
-                            iconright={props.iconRightReset}
+                            iconLeft={props.iconLeftReset}
+                            iconRight={props.iconRightReset}
                             type="reset"
                             onClick={props.onClickReset}
                         >

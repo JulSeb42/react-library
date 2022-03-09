@@ -287,6 +287,7 @@ const Button = props => {
                             : Variables.Colors.White
                     }
                     color="currentColor"
+                    marginRight={Variables.Spacers.XS}
                 />
             )}
 

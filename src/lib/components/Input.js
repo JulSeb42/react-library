@@ -317,7 +317,11 @@ const InputFunction = props => {
 }
 
 const Input = props => {
-    return props.label || props.helper || props.validation || props.counter ? (
+    return props.label ||
+        props.helper ||
+        props.validation ||
+        props.counter ||
+        props.helperBottom ? (
         <InputContainer
             label={props.label}
             helper={props.helper}

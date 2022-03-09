@@ -59,7 +59,7 @@ const Toast = props => {
     iconColor: props.iconColor
   }), /*#__PURE__*/_react.default.createElement(Close, {
     onClick: props.close
-  }, props.customiconclose ? /*#__PURE__*/_react.default.createElement(_Icon.default, {
+  }, props.customIconclose ? /*#__PURE__*/_react.default.createElement(_Icon.default, {
     name: props.customIconClose,
     size: 24
   }) : /*#__PURE__*/_react.default.createElement("svg", {

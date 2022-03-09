@@ -146,7 +146,7 @@ const InputFunction = props => {
 };
 
 const Input = props => {
-  return props.label || props.helper || props.validation || props.counter ? /*#__PURE__*/_react.default.createElement(_InputContainer.default, {
+  return props.label || props.helper || props.validation || props.counter || props.helperBottom ? /*#__PURE__*/_react.default.createElement(_InputContainer.default, {
     label: props.label,
     helper: props.helper,
     validation: props.validation,
