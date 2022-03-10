@@ -6,7 +6,7 @@ import { Breadcrumbs, BreadcrumbsItem } from "../components/Breadcrumbs"
 const BreadcrumbsPage = () => {
     return (
         <>
-            <Breadcrumbs>
+            <Breadcrumbs icon="chevron-right">
                 <BreadcrumbsItem to="#">Link</BreadcrumbsItem>
                 <BreadcrumbsItem to="#">Link</BreadcrumbsItem>
                 <BreadcrumbsItem to="#">Link</BreadcrumbsItem>

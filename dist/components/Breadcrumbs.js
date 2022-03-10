@@ -13,7 +13,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -21,7 +21,9 @@ var _Variables = _interopRequireDefault(require("./Variables"));
 
 var Font = _interopRequireWildcard(require("./Font"));
 
-var _templateObject, _templateObject2;
+var _IconMixin = _interopRequireDefault(require("./IconMixin"));
+
+var _templateObject, _templateObject2, _templateObject3;
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -34,10 +36,14 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const Breadcrumbs = (0, _styledComponents.default)(Font.P)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    a:after {\n        content: \"/\";\n        margin: 0 ", ";\n        color: ", ";\n    }\n"])), _Variables.default.Spacers.XXS, _Variables.default.Colors.Black);
+const Breadcrumbs = (0, _styledComponents.default)(Font.P)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    a:after {\n        content: \"/\";\n        margin: 0 ", ";\n        color: ", ";\n    }\n\n    ", "\n    }\n"])), _Variables.default.Spacers.XXS, _Variables.default.Colors.Gray500, props => props.icon && (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            a {\n                display: inline-flex;\n                align-items: center;\n\n                &:after {\n                    ", ";\n                    margin-top: 2px;\n                }\n            }\n        "])), (0, _IconMixin.default)({
+  icon: props.icon,
+  size: 14,
+  color: _Variables.default.Colors.Gray500
+})));
 exports.Breadcrumbs = Breadcrumbs;
 
-const Item = _styledComponents.default.span(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([""])));
+const Item = _styledComponents.default.span(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral([""])));
 
 const BreadcrumbsItem = props => {
   return /*#__PURE__*/_react.default.createElement(Item, _extends({
