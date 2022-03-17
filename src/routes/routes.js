@@ -7,6 +7,7 @@ import Fonts from "../pages/Fonts"
 import Shadows from "../pages/Shadows"
 import Container from "../pages/Container"
 import Grid from "../pages/Grid"
+import FlexboxPage from "../pages/FlexboxPage"
 import IconPage from "../pages/IconPage"
 import HrPage from "../pages/HrPage"
 import ImagePage from "../pages/ImagePage"
@@ -67,6 +68,10 @@ const routes = [
     {
         path: "/grid",
         element: Grid,
+    },
+    {
+        path: "/flexbox",
+        element: FlexboxPage,
     },
     {
         path: "/icon",
