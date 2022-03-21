@@ -107,6 +107,12 @@ Object.defineProperty(exports, "EmptyContainer", {
     return _Messaging.EmptyContainer;
   }
 });
+Object.defineProperty(exports, "Flexbox", {
+  enumerable: true,
+  get: function get() {
+    return _Flexbox.default;
+  }
+});
 exports.Font = void 0;
 Object.defineProperty(exports, "Form", {
   enumerable: true,
@@ -376,6 +382,8 @@ exports.Font = Font;
 var _Form = _interopRequireDefault(require("./components/Form"));
 
 var _Grid = _interopRequireDefault(require("./components/Grid"));
+
+var _Flexbox = _interopRequireDefault(require("./components/Flexbox"));
 
 var _Helmet = _interopRequireDefault(require("./components/Helmet"));
 

@@ -15,6 +15,7 @@ import { DropdownContainer, Dropdown } from "./components/Dropdown"
 import * as Font from "./components/Font"
 import Form from "./components/Form"
 import Grid from "./components/Grid"
+import Flexbox from "./components/Flexbox"
 import Helmet from "./components/Helmet"
 import Hr from "./components/Hr"
 import Icon from "./components/Icon"
@@ -80,6 +81,7 @@ export {
     Font,
     Form,
     Grid,
+    Flexbox,
     Helmet,
     Hr,
     Icon,

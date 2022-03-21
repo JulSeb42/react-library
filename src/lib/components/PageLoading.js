@@ -30,6 +30,7 @@ const Container = styled.div`
             : props.backgroundColor === "white"
             ? Variables.Colors.White
             : props.backgroundColor};
+    z-index: 999;
 `
 
 const PageLoading = props => {
