@@ -1,6 +1,6 @@
 // Packages
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Link } from "react-router-dom"
 import PropTypes from "prop-types"
 
@@ -21,64 +21,131 @@ const Container = styled.button`
     border: none;
     transition: ${Variables.Transitions.Short};
 
-    background-color: ${props =>
-        props.color === "primary"
-            ? Variables.Colors.Primary500
-            : props.color === "secondary"
-            ? Variables.Colors.Secondary500
-            : props.color === "success"
-            ? Variables.Colors.Success500
-            : props.color === "danger"
-            ? Variables.Colors.Danger500
-            : props.color === "warning"
-            ? Variables.Colors.Warning500
-            : props.color === "white"
-            ? Variables.Colors.White
-            : props.color};
+    ${props =>
+        props.btnStyle === "plain" &&
+        css`
+            background-color: ${props =>
+                props.color === "primary"
+                    ? Variables.Colors.Primary500
+                    : props.color === "secondary"
+                    ? Variables.Colors.Secondary500
+                    : props.color === "success"
+                    ? Variables.Colors.Success500
+                    : props.color === "danger"
+                    ? Variables.Colors.Danger500
+                    : props.color === "warning"
+                    ? Variables.Colors.Warning500
+                    : props.color === "white"
+                    ? Variables.Colors.White
+                    : props.color};
+            color: ${props =>
+                props.color === "white"
+                    ? Variables.Colors.Primary500
+                    : Variables.Colors.White};
 
-    color: ${props =>
-        props.color === "white"
-            ? Variables.Colors.Primary500
-            : Variables.Colors.White};
+            &:hover {
+                background-color: ${props =>
+                    props.color === "primary"
+                        ? Variables.Colors.Primary300
+                        : props.color === "secondary"
+                        ? Variables.Colors.Secondary300
+                        : props.color === "success"
+                        ? Variables.Colors.Success300
+                        : props.color === "danger"
+                        ? Variables.Colors.Danger300
+                        : props.color === "warning"
+                        ? Variables.Colors.Warning300
+                        : props.color === "white"
+                        ? Variables.Colors.Gray100
+                        : props.colorHover};
+            }
 
-    &:hover {
-        background-color: ${props =>
-            props.color === "primary"
-                ? Variables.Colors.Primary300
-                : props.color === "secondary"
-                ? Variables.Colors.Secondary300
-                : props.color === "success"
-                ? Variables.Colors.Success300
-                : props.color === "danger"
-                ? Variables.Colors.Danger300
-                : props.color === "warning"
-                ? Variables.Colors.Warning300
-                : props.color === "white"
-                ? Variables.Colors.Gray100
-                : props.colorHover};
-    }
+            &:active {
+                background-color: ${props =>
+                    props.color === "primary"
+                        ? Variables.Colors.Primary600
+                        : props.color === "secondary"
+                        ? Variables.Colors.Secondary600
+                        : props.color === "success"
+                        ? Variables.Colors.Success600
+                        : props.color === "danger"
+                        ? Variables.Colors.Danger600
+                        : props.color === "warning"
+                        ? Variables.Colors.Warning600
+                        : props.color === "white"
+                        ? Variables.Colors.Gray300
+                        : props.colorActive};
+            }
 
-    &:active {
-        background-color: ${props =>
-            props.color === "primary"
-                ? Variables.Colors.Primary600
-                : props.color === "secondary"
-                ? Variables.Colors.Secondary600
-                : props.color === "success"
-                ? Variables.Colors.Success600
-                : props.color === "danger"
-                ? Variables.Colors.Danger600
-                : props.color === "warning"
-                ? Variables.Colors.Warning600
-                : props.color === "white"
-                ? Variables.Colors.Gray300
-                : props.colorActive};
-    }
+            &:disabled {
+                background-color: ${Variables.Colors.Gray100};
+                color: ${Variables.Colors.Gray500};
+            }
+        `}
 
-    &:disabled {
-        background-color: ${Variables.Colors.Gray100};
-        color: ${Variables.Colors.Gray500};
-    }
+    ${props =>
+        props.btnStyle === "transparent" &&
+        css`
+            background-color: transparent;
+            color: ${props =>
+                props.color === "primary"
+                    ? Variables.Colors.Primary500
+                    : props.color === "secondary"
+                    ? Variables.Colors.Secondary500
+                    : props.color === "success"
+                    ? Variables.Colors.Success500
+                    : props.color === "danger"
+                    ? Variables.Colors.Danger500
+                    : props.color === "warning"
+                    ? Variables.Colors.Warning500
+                    : props.color === "white"
+                    ? Variables.Colors.White
+                    : props.color};
+
+            &:hover {
+                color: ${props =>
+                    props.color === "primary"
+                        ? Variables.Colors.Primary300
+                        : props.color === "secondary"
+                        ? Variables.Colors.Secondary300
+                        : props.color === "success"
+                        ? Variables.Colors.Success300
+                        : props.color === "danger"
+                        ? Variables.Colors.Danger300
+                        : props.color === "warning"
+                        ? Variables.Colors.Warning300
+                        : props.color === "white"
+                        ? Variables.Colors.Gray100
+                        : props.colorHover};
+
+                ${props =>
+                    props.hoverBackground &&
+                    css`
+                        background-color: ${Variables.Colors.Gray50};
+                    `}
+            }
+
+            &:active {
+                color: ${props =>
+                    props.color === "primary"
+                        ? Variables.Colors.Primary600
+                        : props.color === "secondary"
+                        ? Variables.Colors.Secondary600
+                        : props.color === "success"
+                        ? Variables.Colors.Success600
+                        : props.color === "danger"
+                        ? Variables.Colors.Danger600
+                        : props.color === "warning"
+                        ? Variables.Colors.Warning600
+                        : props.color === "white"
+                        ? Variables.Colors.Gray300
+                        : props.colorActive};
+            }
+
+            &:disabled {
+                color: ${Variables.Colors.Gray500};
+            }
+        `}
 `
 
 const ButtonIcon = props => {
@@ -86,6 +153,7 @@ const ButtonIcon = props => {
         <Container
             as={props.to && Link}
             size={props.size || 48}
+            btnStyle={props.btnStyle || "plain"}
             color={props.color || "primary"}
             {...props}
         >

@@ -255,37 +255,7 @@ Object.defineProperty(exports, "ProgressBar", {
 Object.defineProperty(exports, "Slideshow", {
   enumerable: true,
   get: function get() {
-    return _Slideshow.Slideshow;
-  }
-});
-Object.defineProperty(exports, "SlideshowButton", {
-  enumerable: true,
-  get: function get() {
-    return _Slideshow.SlideshowButton;
-  }
-});
-Object.defineProperty(exports, "SlideshowContainer", {
-  enumerable: true,
-  get: function get() {
-    return _Slideshow.SlideshowContainer;
-  }
-});
-Object.defineProperty(exports, "SlideshowItem", {
-  enumerable: true,
-  get: function get() {
-    return _Slideshow.SlideshowItem;
-  }
-});
-Object.defineProperty(exports, "SlideshowPaginationButton", {
-  enumerable: true,
-  get: function get() {
-    return _Slideshow.SlideshowPaginationButton;
-  }
-});
-Object.defineProperty(exports, "SlideshowPaginationContainer", {
-  enumerable: true,
-  get: function get() {
-    return _Slideshow.SlideshowPaginationContainer;
+    return _Slideshow.default;
   }
 });
 Object.defineProperty(exports, "TabsButton", {
@@ -419,7 +389,7 @@ var _Pagination = require("./components/Pagination");
 
 var _ProgressBar = _interopRequireDefault(require("./components/ProgressBar"));
 
-var _Slideshow = require("./components/Slideshow");
+var _Slideshow = _interopRequireDefault(require("./components/Slideshow"));
 
 var _Tabs = require("./components/Tabs");
 
