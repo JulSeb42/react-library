@@ -17,6 +17,7 @@ import ButtonPage from "../pages/ButtonPage"
 import ButtonIconPage from "../pages/ButtonIconPage"
 import TagPage from "../pages/TagPage"
 import BadgePage from "../pages/BadgePage"
+import TooltipPage from "../pages/TooltipPage"
 import InputPage from "../pages/InputPage"
 import InputImagePage from "../pages/InputImagePage"
 import InputCheckPage from "../pages/InputCheckPage"
@@ -109,6 +110,10 @@ const routes = [
     {
         path: "/badge",
         element: BadgePage,
+    },
+    {
+        path: "/tooltip",
+        element: TooltipPage,
     },
     {
         path: "/input",

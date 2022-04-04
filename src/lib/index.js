@@ -50,6 +50,7 @@ import {
 import Tag from "./components/Tag"
 import TitleFlex from "./components/TitleFlex"
 import Toast from "./components/Toast"
+import Tooltip from "./components/Tooltip"
 import Variables from "./components/Variables"
 import Video from "./components/Video"
 import Wrapper from "./components/Wrapper"
@@ -108,6 +109,7 @@ export {
     Tag,
     TitleFlex,
     Toast,
+    Tooltip,
     Variables,
     Video,
     Wrapper,

@@ -1,6 +1,7 @@
 // Packages
 import React from "react"
 import styled, { css } from "styled-components"
+import PropTypes from "prop-types"
 
 // Components
 import InputContainer from "./InputContainer"
@@ -166,6 +167,20 @@ const Select = props => {
             )}
         </Container>
     )
+}
+
+Select.propTypes = {
+    selected: PropTypes.string.isRequired,
+    items: PropTypes.array.isRequired,
+    isOpen: PropTypes.bool.isRequired,
+    onClickSelect: PropTypes.func.isRequired,
+    children: PropTypes.any.isRequired,
+}
+
+Item.propTypes = {
+    onClick: PropTypes.func.isRequired,
+    selected: PropTypes.bool.isRequired,
+    children: PropTypes.any.isRequired,
 }
 
 export { Select, Item }
