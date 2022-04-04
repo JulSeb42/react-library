@@ -122,6 +122,10 @@ const Container = styled.button`
                     props.hoverBackground &&
                     css`
                         background-color: ${Variables.Colors.Gray50};
+
+                        &:disabled {
+                            background-color: transparent;
+                        }
                     `}
             }
 

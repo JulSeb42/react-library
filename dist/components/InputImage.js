@@ -89,23 +89,23 @@ const InputImage = props => {
     type: "file",
     id: props.id
   }, props)), props.src === "" ? /*#__PURE__*/_react.default.createElement(Empty, {
-    icon: props.iconempty
+    icon: props.iconEmpty
   }) : /*#__PURE__*/_react.default.createElement(Img, {
     src: props.src,
     alt: props.alt,
     fit: "cover"
   }), /*#__PURE__*/_react.default.createElement(Hover, {
-    icon: props.iconhover
+    icon: props.iconHover
   }))) : /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(Input, _extends({
     type: "file",
     id: props.id
   }, props)), props.src === "" ? /*#__PURE__*/_react.default.createElement(Empty, {
-    icon: props.iconempty
+    icon: props.iconEmpty
   }) : /*#__PURE__*/_react.default.createElement(Img, {
     src: props.src,
     alt: props.alt
   }), /*#__PURE__*/_react.default.createElement(Hover, {
-    icon: props.iconhover
+    icon: props.iconHover
   }));
 };
 

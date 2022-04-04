@@ -21,6 +21,7 @@ import InputPage from "../pages/InputPage"
 import InputImagePage from "../pages/InputImagePage"
 import InputCheckPage from "../pages/InputCheckPage"
 import AutocompletePage from "../pages/AutocompletePage"
+import SelectPage from "../pages/SelectPage"
 import ButtonsContainerPage from "../pages/ButtonsContainerPage"
 import FormPage from "../pages/FormPage"
 import LoaderPage from "../pages/LoaderPage"
@@ -124,6 +125,10 @@ const routes = [
     {
         path: "/autocomplete",
         element: AutocompletePage,
+    },
+    {
+        path: "/select",
+        element: SelectPage,
     },
     {
         path: "/buttons-container",

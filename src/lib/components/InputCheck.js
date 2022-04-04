@@ -193,6 +193,7 @@ const Toggle = styled.label`
     margin-right: ${Variables.Spacers.XS};
     transition: ${Variables.Transitions.Short};
     position: relative;
+    cursor: pointer;
 
     &:before {
         content: "";
@@ -205,6 +206,7 @@ const Toggle = styled.label`
         left: 2px;
         top: calc(50% - 8px / 2);
         transition: ${Variables.Transitions.Short};
+        cursor: pointer;
     }
 `
 
@@ -287,9 +289,12 @@ const InputCheck = props => {
                     disabled={props.disabled}
                 />
             )}
-            <Label disabled={props.disabled} htmlFor={props.id}>
-                {props.label}
-            </Label>
+
+            {props.label && (
+                <Label disabled={props.disabled} htmlFor={props.id}>
+                    {props.label}
+                </Label>
+            )}
         </Container>
     )
 }

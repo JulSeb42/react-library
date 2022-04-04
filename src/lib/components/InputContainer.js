@@ -18,7 +18,7 @@ const Counter = styled(Font.Small)``
 const InputContainer = props => {
     return (
         <Grid gap={Variables.Spacers.XXS}>
-            {props.label && <Label>{props.label}</Label>}
+            {props.label && <Label htmlFor={props.id}>{props.label}</Label>}
 
             {props.helper && <Font.P>{props.helper}</Font.P>}
 

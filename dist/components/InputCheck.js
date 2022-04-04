@@ -40,7 +40,7 @@ const Checkbox = _styledComponents.default.label(_templateObject8 || (_templateO
 
 const Radio = _styledComponents.default.label(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    --size: 14px;\n    width: var(--size);\n    height: var(--size);\n    border-radius: 50%;\n    border: 1px solid ", ";\n    margin-right: ", ";\n    position: relative;\n\n    &:before {\n        content: \"\";\n        --size: 8px;\n        width: var(--size);\n        height: var(--size);\n        background-color: transparent;\n        position: absolute;\n        top: 2px;\n        left: 2px;\n        border-radius: 50%;\n    }\n\n    ", "\n"])), _Variables.default.Colors.Primary500, _Variables.default.Spacers.XXS, props => props.disabled && (0, _styledComponents.css)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n            border-color: ", ";\n            cursor: not-allowed;\n        "])), _Variables.default.Colors.Gray500));
 
-const Toggle = _styledComponents.default.label(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    width: 24px;\n    height: 14px;\n    display: inline-block;\n    border-radius: 32px;\n    border: 1px solid ", ";\n    margin-right: ", ";\n    transition: ", ";\n    position: relative;\n\n    &:before {\n        content: \"\";\n        position: absolute;\n        --size: 8px;\n        width: var(--size);\n        height: var(--size);\n        background-color: ", ";\n        border-radius: 50%;\n        left: 2px;\n        top: calc(50% - 8px / 2);\n        transition: ", ";\n    }\n"])), _Variables.default.Colors.Primary500, _Variables.default.Spacers.XS, _Variables.default.Transitions.Short, _Variables.default.Colors.Primary500, _Variables.default.Transitions.Short);
+const Toggle = _styledComponents.default.label(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    width: 24px;\n    height: 14px;\n    display: inline-block;\n    border-radius: 32px;\n    border: 1px solid ", ";\n    margin-right: ", ";\n    transition: ", ";\n    position: relative;\n    cursor: pointer;\n\n    &:before {\n        content: \"\";\n        position: absolute;\n        --size: 8px;\n        width: var(--size);\n        height: var(--size);\n        background-color: ", ";\n        border-radius: 50%;\n        left: 2px;\n        top: calc(50% - 8px / 2);\n        transition: ", ";\n        cursor: pointer;\n    }\n"])), _Variables.default.Colors.Primary500, _Variables.default.Spacers.XS, _Variables.default.Transitions.Short, _Variables.default.Colors.Primary500, _Variables.default.Transitions.Short);
 
 const InputCheck = props => {
   return props.selector ? /*#__PURE__*/_react.default.createElement(Container, {
@@ -99,7 +99,7 @@ const InputCheck = props => {
     className: "radio",
     htmlFor: props.id,
     disabled: props.disabled
-  }), /*#__PURE__*/_react.default.createElement(Label, {
+  }), props.label && /*#__PURE__*/_react.default.createElement(Label, {
     disabled: props.disabled,
     htmlFor: props.id
   }, props.label));

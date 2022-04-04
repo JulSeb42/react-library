@@ -39,6 +39,7 @@ import Modal from "./components/Modal"
 import PageLoading from "./components/PageLoading"
 import { Pagination, PaginationButton } from "./components/Pagination"
 import ProgressBar from "./components/ProgressBar"
+import { Select, Item } from "./components/Select"
 import Slideshow from "./components/Slideshow"
 import {
     TabsContainer,
@@ -97,6 +98,8 @@ export {
     Pagination,
     PaginationButton,
     ProgressBar,
+    Select,
+    Item,
     Slideshow,
     TabsContainer,
     TabsButtonsContainer,
