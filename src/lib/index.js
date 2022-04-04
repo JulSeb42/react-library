@@ -41,6 +41,7 @@ import { Pagination, PaginationButton } from "./components/Pagination"
 import ProgressBar from "./components/ProgressBar"
 import { Select, Item } from "./components/Select"
 import Slideshow from "./components/Slideshow"
+import SrOnly from "./components/SrOnly"
 import Stepper from "./components/Stepper"
 import {
     TabsContainer,
@@ -103,6 +104,7 @@ export {
     Select,
     Item,
     Slideshow,
+    SrOnly,
     Stepper,
     TabsContainer,
     TabsButtonsContainer,
