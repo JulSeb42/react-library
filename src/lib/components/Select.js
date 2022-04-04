@@ -100,7 +100,7 @@ const List = styled.ul`
     overflow-y: scroll;
 `
 
-const Item = styled.li`
+const SelectItem = styled.li`
     cursor: pointer;
     padding: ${Variables.Spacers.XS};
     width: 100%;
@@ -177,10 +177,10 @@ Select.propTypes = {
     children: PropTypes.any.isRequired,
 }
 
-Item.propTypes = {
+SelectItem.propTypes = {
     onClick: PropTypes.func.isRequired,
     selected: PropTypes.bool.isRequired,
     children: PropTypes.any.isRequired,
 }
 
-export { Select, Item }
+export { Select, SelectItem }

@@ -39,7 +39,7 @@ import Modal from "./components/Modal"
 import PageLoading from "./components/PageLoading"
 import { Pagination, PaginationButton } from "./components/Pagination"
 import ProgressBar from "./components/ProgressBar"
-import { Select, Item } from "./components/Select"
+import { Select, SelectItem } from "./components/Select"
 import Slideshow from "./components/Slideshow"
 import SrOnly from "./components/SrOnly"
 import Stepper from "./components/Stepper"
@@ -102,7 +102,7 @@ export {
     PaginationButton,
     ProgressBar,
     Select,
-    Item,
+    SelectItem,
     Slideshow,
     SrOnly,
     Stepper,

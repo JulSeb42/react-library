@@ -1,7 +1,7 @@
 // Packages
 import React, { useState } from "react"
 
-import { Select, Item } from "../components/Select"
+import { Select, SelectItem } from "../components/Select"
 
 const SelectPage = () => {
     // Items
@@ -19,18 +19,17 @@ const SelectPage = () => {
     return (
         <Select
             selected={selected}
-            items={items}
             isOpen={isOpen}
             onClickSelect={() => setIsOpen(!isOpen)}
         >
             {items.map((item, i) => (
-                <Item
+                <SelectItem
                     onClick={handleSelect(item)}
                     key={i}
                     selected={selected === item && true}
                 >
                     {item}
-                </Item>
+                </SelectItem>
             ))}
         </Select>
     )
