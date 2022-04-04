@@ -32,6 +32,7 @@ import DropdownPage from "../pages/DropdownPage"
 import ToastPage from "../pages/ToastPage"
 import ModalPage from "../pages/ModalPage"
 import PaginationPage from "../pages/PaginationPage"
+import StepperPage from "../pages/StepperPage"
 import ProgressBarPage from "../pages/ProgressBarPage"
 import TabsPage from "../pages/TabsPage"
 import SlideshowPage from "../pages/SlideshowPage"
@@ -170,6 +171,10 @@ const routes = [
     {
         path: "/pagination",
         element: PaginationPage,
+    },
+    {
+        path: "/stepper",
+        element: StepperPage,
     },
     {
         path: "/progress-bar",
