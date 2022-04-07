@@ -1,14 +1,28 @@
 // Packages
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 // Components
 import Variables from "./Variables"
 
 // Styles
 const Grid = styled.div`
-    display: grid;
+    display: ${props => (props.inline ? "inline-grid" : "grid")};
     grid-template-columns: repeat(${props => props.col || 1}, 1fr);
     gap: ${props => props.gap || Variables.Spacers.L};
+    justify-items: ${props => props.justify || "start"};
+    align-items: ${props => props.align || "start"};
+
+    ${props =>
+        props.row &&
+        css`
+            grid-template-rows: ${props.row};
+        `}
+
+    ${props =>
+        props.area &&
+        css`
+            grid-template-areas: ${props.area};
+        `}
 
     @media ${Variables.Breakpoints.Tablet} {
         grid-template-columns: repeat(
@@ -29,7 +43,6 @@ const Grid = styled.div`
             ${props => (props.col >= 6 ? 2 : 1)},
             1fr
         );
-    }
     }
 `
 

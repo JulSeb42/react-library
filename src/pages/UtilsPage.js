@@ -28,7 +28,7 @@ import {
     getRandomAvatar,
     calculateTotalSum,
     getRandomCity,
-    getRandomLocation
+    getRandomLocation,
 } from "js-utils-julseb"
 
 const UtilsPage = () => {

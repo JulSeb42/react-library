@@ -27,12 +27,16 @@ const Dropdown = styled.div`
     transition: ${Variables.Transitions.Long};
     z-index: 10;
 
-    & > a {
+    & > a,
+    & > button {
         padding: ${Variables.Spacers.XS};
         color: ${Variables.Colors.Primary500};
         text-decoration: none;
         font-weight: ${Variables.FontWeights.Bold};
         transition: ${Variables.Transitions.Short};
+        border: none;
+        background-color: transparent;
+        font-size: ${Variables.FontSizes.Body};
 
         &:hover {
             background-color: ${Variables.Colors.Primary500};

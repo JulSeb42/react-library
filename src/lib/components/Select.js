@@ -98,6 +98,7 @@ const List = styled.ul`
     transition: ${Variables.Transitions.Short};
     max-height: ${props => (props.isOpen ? "200px" : 0)};
     overflow-y: scroll;
+    z-index: ${props => props.index};
 `
 
 const SelectItem = styled.li`
@@ -146,7 +147,9 @@ const Select = props => {
                 </Selected>
 
                 {props.children && (
-                    <List isOpen={props.isOpen}>{props.children}</List>
+                    <List isOpen={props.isOpen} index={props.index}>
+                        {props.children}
+                    </List>
                 )}
             </Container>
         </InputContainer>
@@ -163,7 +166,9 @@ const Select = props => {
             </Selected>
 
             {props.children && (
-                <List isOpen={props.isOpen}>{props.children}</List>
+                <List isOpen={props.isOpen} index={props.index}>
+                    {props.children}
+                </List>
             )}
         </Container>
     )
