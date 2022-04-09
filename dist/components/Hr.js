@@ -16,7 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // Styles
-const Hr = _styledComponents.default.hr(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    border: none;\n    width: 100%;\n    height: 1px;\n    background-color: ", ";\n"])), _Variables.default.Colors.Gray200);
+const Hr = _styledComponents.default.hr(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    border: none;\n    width: 100%;\n    height: 1px;\n    background-color: ", ";\n    margin: 0;\n"])), props => props.color || _Variables.default.Colors.Gray200);
 
 var _default = Hr;
 exports.default = _default;

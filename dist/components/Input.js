@@ -50,7 +50,8 @@ const InputFunction = props => {
   const [isVisible, setIsVisible] = (0, _react.useState)(false);
   const visible = isVisible ? "text" : "password";
   return props.icon || props.password || props.validation ? /*#__PURE__*/_react.default.createElement(Container, {
-    type: props.type
+    type: props.type,
+    "data-color-mode": props.dark ? "dark" : "light"
   }, props.icon && /*#__PURE__*/_react.default.createElement(IconContainer, {
     disabled: props.disabled
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
@@ -134,11 +135,19 @@ const InputFunction = props => {
   }, /*#__PURE__*/_react.default.createElement(InputStyled, _extends({
     as: "select",
     id: props.id
-  }, props), props.children)) : props.type === "markdown" ? /*#__PURE__*/_react.default.createElement(_reactMdEditor.default, _extends({
+  }, props), props.children)) : props.type === "markdown" ? props.dark ? /*#__PURE__*/_react.default.createElement("div", {
+    "data-color-mode": "dark"
+  }, /*#__PURE__*/_react.default.createElement(_reactMdEditor.default, _extends({
     value: props.value,
     onChange: props.onChange,
     preview: props.preview || "edit"
-  }, props)) : /*#__PURE__*/_react.default.createElement(InputStyled, _extends({
+  }, props))) : /*#__PURE__*/_react.default.createElement("div", {
+    "data-color-mode": "light"
+  }, /*#__PURE__*/_react.default.createElement(_reactMdEditor.default, _extends({
+    value: props.value,
+    onChange: props.onChange,
+    preview: props.preview || "edit"
+  }, props))) : /*#__PURE__*/_react.default.createElement(InputStyled, _extends({
     id: props.id,
     maxLength: props.counter,
     type: props.password ? visible : props.type || "text"

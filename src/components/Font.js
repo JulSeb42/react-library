@@ -8,6 +8,7 @@ import Variables from "./Variables"
 const H1 = styled.h1`
     font-size: ${Variables.FontSizes.Titles.ExtraLarge};
     font-weight: ${Variables.FontWeights.Black};
+    color: ${props => props.color || "currentColor"};
 
     a {
         color: ${Variables.Colors.Primary500};
@@ -41,6 +42,7 @@ const H1 = styled.h1`
 const H2 = styled.h2`
     font-size: ${Variables.FontSizes.Titles.Large};
     font-weight: ${Variables.FontWeights.Black};
+    color: ${props => props.color || "currentColor"};
 
     a {
         color: ${Variables.Colors.Primary500};
@@ -66,6 +68,7 @@ const H2 = styled.h2`
 const H3 = styled.h3`
     font-size: ${Variables.FontSizes.Titles.Large};
     font-weight: ${Variables.FontWeights.Bold};
+    color: ${props => props.color || "currentColor"};
 
     a {
         color: ${Variables.Colors.Primary500};
@@ -92,6 +95,7 @@ const H3 = styled.h3`
 const H4 = styled.h4`
     font-size: ${Variables.FontSizes.Titles.Medium};
     font-weight: ${Variables.FontWeights.Black};
+    color: ${props => props.color || "currentColor"};
 
     a {
         color: ${Variables.Colors.Primary500};
@@ -117,6 +121,7 @@ const H4 = styled.h4`
 const H5 = styled.h5`
     font-size: ${Variables.FontSizes.Titles.Medium};
     font-weight: ${Variables.FontWeights.Bold};
+    color: ${props => props.color || "currentColor"};
 
     a {
         color: ${Variables.Colors.Primary500};
@@ -143,6 +148,7 @@ const H5 = styled.h5`
 const H6 = styled.h6`
     font-size: ${Variables.FontSizes.Titles.Small};
     font-weight: ${Variables.FontWeights.Black};
+    color: ${props => props.color || "currentColor"};
 
     a {
         color: ${Variables.Colors.Primary500};
@@ -161,6 +167,7 @@ const H6 = styled.h6`
 
 const P = styled.p`
     font-size: ${Variables.FontSizes.Body};
+    color: ${props => props.color || "currentColor"};
 
     a {
         color: ${Variables.Colors.Primary500};
@@ -194,6 +201,7 @@ const P = styled.p`
 
 const Small = styled.small`
     font-size: ${Variables.FontSizes.Small};
+    color: ${props => props.color || "currentColor"};
 
     a {
         color: ${Variables.Colors.Primary500};
@@ -213,6 +221,7 @@ const Small = styled.small`
 
 const Strong = styled.strong`
     font-weight: ${Variables.FontWeights.Bold};
+    color: ${props => props.color || "currentColor"};
 
     a {
         color: ${Variables.Colors.Primary500};
@@ -231,6 +240,7 @@ const Strong = styled.strong`
 
 const Em = styled.em`
     font-style: italic;
+    color: ${props => props.color || "currentColor"};
 
     a {
         color: ${Variables.Colors.Primary500};
@@ -256,6 +266,7 @@ const List = styled.ul`
     grid-template-columns: 1fr;
     gap: ${props => props.gap || Variables.Spacers.XXS};
     list-style: none;
+    color: ${props => props.color || "currentColor"};
 
     li {
         padding-inline-start: ${Variables.Spacers.XS};

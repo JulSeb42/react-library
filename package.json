@@ -1,7 +1,7 @@
 {
     "name": "components-react-julseb",
     "description": "Basic React components library",
-    "version": "3.0.7",
+    "version": "3.0.10",
     "private": false,
     "main": "./dist/index.js",
     "module": "./dist/index.js",
@@ -11,8 +11,7 @@
         "@testing-library/jest-dom": "^5.16.4",
         "@testing-library/react": "^13.0.0",
         "@testing-library/user-event": "^14.0.4",
-        "@uiw/react-md-editor": "^3.11.2",
-        "components": "^0.1.0",
+        "@uiw/react-md-editor": "^3.11.3",
         "highlight.js": "^11.5.0",
         "js-utils-julseb": "^1.0.17",
         "markdown-to-jsx": "^7.1.7",
@@ -25,7 +24,7 @@
         "react-router-dom": "^6.3.0",
         "react-scripts": "5.0.0",
         "react-scroll-to-bottom": "^4.2.0",
-        "react-svg": "^14.1.17",
+        "react-svg": "^14.1.18",
         "styled-components": "^5.3.5",
         "web-vitals": "^2.1.4"
     },

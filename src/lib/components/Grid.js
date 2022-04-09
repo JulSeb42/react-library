@@ -9,8 +9,8 @@ const Grid = styled.div`
     display: ${props => (props.inline ? "inline-grid" : "grid")};
     grid-template-columns: repeat(${props => props.col || 1}, 1fr);
     gap: ${props => props.gap || Variables.Spacers.L};
-    justify-items: ${props => props.justify || "start"};
-    align-items: ${props => props.align || "start"};
+    justify-items: ${props => props.justify || "stretch"};
+    align-items: ${props => props.align || "stretch"};
 
     ${props =>
         props.row &&

@@ -10,6 +10,7 @@ const Hr = styled.hr`
     width: 100%;
     height: 1px;
     background-color: ${Variables.Colors.Gray200};
+    margin: 0;
 `
 
 export default Hr

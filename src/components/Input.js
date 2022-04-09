@@ -162,7 +162,10 @@ const InputFunction = props => {
     const visible = isVisible ? "text" : "password"
 
     return props.icon || props.password || props.validation ? (
-        <Container type={props.type}>
+        <Container
+            type={props.type}
+            data-color-mode={props.dark ? "dark" : "light"}
+        >
             {props.icon && (
                 <IconContainer disabled={props.disabled}>
                     <Icon name={props.icon} size={16} />
@@ -300,12 +303,25 @@ const InputFunction = props => {
             </InputStyled>
         </SelectContainer>
     ) : props.type === "markdown" ? (
-        <MDEditor
-            value={props.value}
-            onChange={props.onChange}
-            preview={props.preview || "edit"}
-            {...props}
-        />
+        props.dark ? (
+            <div data-color-mode="dark">
+                <MDEditor
+                    value={props.value}
+                    onChange={props.onChange}
+                    preview={props.preview || "edit"}
+                    {...props}
+                />
+            </div>
+        ) : (
+            <div data-color-mode="light">
+                <MDEditor
+                    value={props.value}
+                    onChange={props.onChange}
+                    preview={props.preview || "edit"}
+                    {...props}
+                />
+            </div>
+        )
     ) : (
         <InputStyled
             id={props.id}
